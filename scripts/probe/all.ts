@@ -58,6 +58,7 @@ const PROBES = [
   'paxride',
   'paxtalk',
   'langaren',
+  'terminus',
 ];
 
 const run = (name: string) =>

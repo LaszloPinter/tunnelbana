@@ -297,10 +297,34 @@ export function brakeAtInto(jid: string, stopIdx: number): number | null {
   const m = motionOf(jid);
   const j = journeyById(jid);
   if (!m || !j || stopIdx <= 0 || stopIdx >= j.stops.length) return null;
-  const arrive = j.stops[stopIdx].arriveAt;
-  const seg = m.segs.find((s) => s.t1 === arrive);
+  // the run that ENDS AT THE STOP, found by where it ends, not when: a train
+  // held outside a one-track terminus arrives later than its timetable, so a
+  // search by arrival time found nothing and its riders were never handed to
+  // the terminus. They rode on through it into the dark (from play
+  // 2026-10-13, at Norsborg)
+  const at = m.path.stopS[stopIdx];
+  const seg = m.segs.find((s) => s.S1 === at);
   if (!seg) return null;
   return seg.t1 - seg.tA * 1000;
+}
+
+/**
+ * WHEN THE TRAIN IS ACTUALLY AT A STOP, by its motion: in when the run that
+ * ends there ends, out when the next one starts. The timetable's own times
+ * for every stop but one: a train held outside a one-track terminus gets in
+ * late, and the platform went on reading the timetable, so it showed the
+ * train already departing as it pulled in: no dwell, no doors, and it ran on
+ * into the siding with its riders (from play 2026-10-13, at Norsborg).
+ */
+export function stopWindowOf(jid: string, stopIdx: number): { arriveAt: number; departAt: number } | null {
+  const m = motionOf(jid);
+  const j = journeyById(jid);
+  if (!m || !j || stopIdx < 0 || stopIdx >= j.stops.length) return null;
+  const at = m.path.stopS[stopIdx];
+  const into = m.segs.find((s) => s.S1 === at);
+  const out = m.segs.find((s) => s.S0 === at);
+  const stop = j.stops[stopIdx];
+  return { arriveAt: into ? into.t1 : stop.arriveAt, departAt: out ? out.t0 : stop.departAt };
 }
 
 /** the piece of this journey's path that crosses its `stopIdx`-th station */

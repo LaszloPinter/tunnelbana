@@ -14,6 +14,7 @@ import type { Run } from './run.ts';
 import { downPlayer } from './harm.ts';
 import { levelIndexFor, showLevel } from './stationBuild.ts';
 import { placeTrainBody } from './fleetRealise.ts';
+import { journeyBandAt } from './legView.ts';
 
 /**
  * THE RIDE'S ARRIVAL IS A PLACE CHANGE (§17 stage 5, §18), and the moments
@@ -124,11 +125,25 @@ function arriveByTrain(run: Run, ti: number, now: number) {
   run.host.stationChanging();
   const dest = run.ensurePlace(toName);
   showLevel(run, dest, levelIndexFor(toName, j.service.id, rail.dir));
-  // the destination's own track for this journey; at a terminus the
-  // direction convention flips, so fall back to the service alone
-  let destTi = dest.rails.findIndex((r) =>
-    r.options.some((o) => o.service.id === j.service.id && o.dir === rail.dir),
-  );
+  // the destination's own track for this journey: THE ONE IT RUNS ON, asked
+  // the way the platform asks it (fleetRealise pickJourneyForRail). By
+  // direction, with the first of the service's tracks as the fallback where
+  // a terminus flips the convention, half the termini put the train on the
+  // other track's number: its doors opened onto the rails (from play
+  // 2026-10-13; Mörby centrum, Akalla, Ropsten, Hjulsta, Hässelby strand)
+  const band = journeyBandAt(dest, j.id);
+  let destTi = band
+    ? dest.rails.findIndex(
+        (r) =>
+          Math.abs(r.bandTop - band.bandTop) <= 0.5 &&
+          Math.abs(r.bandBottom - band.bandBottom) <= 0.5 &&
+          r.options.some((o) => o.service.id === j.service.id),
+      )
+    : -1;
+  if (destTi < 0)
+    destTi = dest.rails.findIndex((r) =>
+      r.options.some((o) => o.service.id === j.service.id && o.dir === rail.dir),
+    );
   if (destTi < 0) destTi = dest.rails.findIndex((r) => r.options.some((o) => o.service.id === j.service.id));
   const destRail = destTi >= 0 ? dest.rails[destTi] : undefined;
   if (destRail) {

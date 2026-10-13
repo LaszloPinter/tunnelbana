@@ -2,7 +2,7 @@ import * as C from '../config.ts';
 import { shortName } from '../core/network.ts';
 import type { Rail } from '../core/world.ts';
 import { isShortTrain, journeyById, journeysAt, journeysOfServiceNear, stopAt } from '../core/fleet.ts';
-import { journeyS, motionOf, ownsMetalAt } from '../core/journeyMotion.ts';
+import { journeyS, motionOf, ownsMetalAt, stopWindowOf } from '../core/journeyMotion.ts';
 import { spawnAboardEnemies } from '../combat/enemyCrawlIn.ts';
 import { anyoneAboard } from './player.ts';
 import type { Run } from './run.ts';
@@ -117,7 +117,8 @@ export function placeTrainBody(st: Station, ti: number, jid: string, now: number
   t.x = left.x;
   t.speed = js.speed * left.dlx;
   t.dir = left.dlx;
-  const stop = j.stops[stopIdx];
+  // the motion's window at this stop, not the timetable's (journeyMotion.ts)
+  const stop = stopWindowOf(jid, stopIdx) ?? j.stops[stopIdx];
   t.arriveAt = stop.arriveAt;
   t.departAt = stop.departAt;
   if (now < stop.arriveAt) {

@@ -9,6 +9,7 @@ import { populateIfFresh, stepRides } from './rideArrival.ts';
 import type { Run } from './run.ts';
 import { stepPlayer } from './walk.ts';
 import { stepPassengers } from '../combat/passengers.ts';
+import { endOfLine } from './terminus.ts';
 
 /**
  * ONE STEP OF THE WHOLE WORLD, in the order four clients agree on: which
@@ -35,6 +36,8 @@ export function stepRun(run: Run, dt: number, now: number) {
     if (!run.over && !run.briefing) populateIfFresh(run, st, now);
   }
   stepRides(run, now);
+  // the end of the line empties the train (sim/terminus.ts)
+  endOfLine(run, now);
 
   // a finished run and the pre-run briefing hold the world
   if (run.over || run.briefing) return;
