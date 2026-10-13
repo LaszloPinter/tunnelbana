@@ -252,7 +252,12 @@ export function stepProjectiles(ctx: CombatHost, dt: number, now: number) {
       const body = p.jid ? trainBody(p.jid, now) : null;
       const inside = !!body && inBody(body, p.x, p.y);
       const on = inside ? null : ctx.run.map.at(p.x, p.y);
-      if (on && on.place !== ctx.st) (on.place.projs as Proj[]).push(p);
+      // ...by ID, into the place as the run holds it NOW. Compared as objects,
+      // a map still pointing at the previous run's station took every bolt
+      // into a room nothing steps or draws: the cast played, the mana went,
+      // no bolt (from play 2026-10-13, after a death and a new run)
+      const to = on ? ctx.run.places.get(on.place.id) : undefined;
+      if (to && to.id !== ctx.st.id) (to.projs as Proj[]).push(p);
       else alive.push(p);
     }
   }

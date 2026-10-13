@@ -37,7 +37,13 @@ export function routeTo(
   const a = start ? asStation(start.place) : null;
   const b = asStation(to);
   const c = a && b && a !== b ? corridorOf(a.name, b.name, a.levelIndex, b.levelIndex) : null;
-  return route(run, from, r, (here) => here.place === to && here.kind !== 'bore', c ? legIdOf(c) : undefined);
+  return route(
+    run,
+    from,
+    r,
+    (here) => here.place.id === to.id && here.kind !== 'bore',
+    c ? legIdOf(c) : undefined,
+  );
 }
 
 /** ...and to a POINT on the map, which is how you walk to a door */

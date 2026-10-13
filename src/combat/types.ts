@@ -274,6 +274,9 @@ export interface RunFacts {
   /** the world is one map, not a graph of rooms with frames (src/world/) */
   /** that map: the walkable world, baked flat and gridded */
   map: import('../world/chunks.ts').Chunks;
+  /** every place by id: the CURRENT object for each. The map's own reference
+   * may be one the run has since rebuilt (see projectiles.ts) */
+  readonly places: ReadonlyMap<string, Place>;
   /** the journeys whose metal could be near a point */
   metalNear(x: number, y: number): string[];
   /** is this track's train standing with its doors open? the one way off a

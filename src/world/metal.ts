@@ -184,11 +184,15 @@ function nearStation(st: Station, box: { x0: number; y0: number; x1: number; y1:
 export function reroom(run: Run, from: Place, e: { x: number; y: number }) {
   const on = run.map.at(e.x, e.y, from.id);
   if (!on || on.place.id === from.id) return;
+  // into the place as the run holds it now, never a stale object of the same
+  // id the map may still point at (see combat/projectiles.ts)
+  const to = run.places.get(on.place.id);
+  if (!to) return;
   const list = from.enemies as unknown as { x: number; y: number }[];
   const i = list.indexOf(e);
   if (i < 0) return;
   list.splice(i, 1);
-  (on.place.enemies as unknown as { x: number; y: number }[]).push(e);
+  (to.enemies as unknown as { x: number; y: number }[]).push(e);
 }
 
 /** the last side each journey's doors were known to face, in travel terms,
