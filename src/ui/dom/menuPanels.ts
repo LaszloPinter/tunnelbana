@@ -75,6 +75,8 @@ export function aboutPanel(): HTMLDialogElement {
     'has been woken by them. You have a journey to finish.</p>' +
     '<p style="margin:0;color:var(--tb-dimmer);font-size:13px;line-height:1.6">' +
     'Open source. The network, the platforms and the track geometry are real, from ' +
-    'OpenStreetMap. A fuller about page is still to be written.</p>';
+    'OpenStreetMap. A fuller about page is still to be written.</p>' +
+    '<p style="margin:14px 0 0;color:var(--tb-dimmer);font-size:12px;line-height:1.6">' +
+    'Visits are counted anonymously with GoatCounter: no cookies, nothing about who you are.</p>';
   return panel('tb-about', 'About', body);
 }

@@ -1,6 +1,7 @@
 import './rideDone.css';
 import type { RideSummary } from '../../sim/chain.ts';
 import type { RouteLeg } from '../../core/network.ts';
+import { track } from '../../net/track.ts';
 
 /**
  * BETWEEN RIDES (sim/chain.ts): the world holds, and this is what is on
@@ -50,6 +51,8 @@ export class RideDoneScreen {
   /** the ride was made: bask in it */
   victory(s: RideSummary, next: NextRide) {
     this.next = next;
+    // the funnel: the first three rides one by one, then all the rest together
+    if (!s.wrong) track(s.ride <= 3 ? `ride-${s.ride}-done` : 'ride-4plus-done');
     this.open('victory');
     const late = s.onTime < 1;
     const rows = s.wrong

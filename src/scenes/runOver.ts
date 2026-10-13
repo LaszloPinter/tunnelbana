@@ -7,6 +7,7 @@ import * as save from '../save.ts';
 import type { Session } from './session.ts';
 import { showRunOverScreen } from '../ui/dom/runOverScreen.ts';
 import { myLook } from '../render/look.ts';
+import { track } from '../net/track.ts';
 
 /** the end of a run: the verdict on screen, the score to the board, the
  * result into this browser's book */
@@ -41,6 +42,7 @@ function postScore(session: Session, result: RunResult, score: number) {
       won: sim.ride > 0,
       log,
     });
+    if (posted) track('daily-submitted');
     if (posted && session.dailyDate) session.menu?.setState({ dailyDone: session.dailyDoneToday() });
   })();
 }

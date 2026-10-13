@@ -5,6 +5,7 @@ import { TUTORIAL_TO } from '../../core/network.ts';
 import { asStation } from '../../sim/place.ts';
 import { fromPlatform } from '../../world/floor.ts';
 import { STAGES, type Device } from './tutorialStages.ts';
+import { track } from '../../net/track.ts';
 
 /**
  * THE TUTORIAL: eight things to do, each finished by DOING it. The overlay
@@ -294,6 +295,7 @@ export class Tutorial {
   finish() {
     if (this.finished) return;
     this.finished = true;
+    track('tutorial-done');
     this.marker = null;
     this.endCard();
   }

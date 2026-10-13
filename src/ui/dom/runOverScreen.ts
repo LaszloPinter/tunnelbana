@@ -1,6 +1,7 @@
 import './rideDone.css';
 import './runOverScreen.css';
 import { drawLook, type PlayerLook } from '../../render/look.ts';
+import { track } from '../../net/track.ts';
 
 /**
  * THE END OF A RUN, as a page over the canvas: your commuter and your name,
@@ -42,6 +43,7 @@ const mmss = (s: number) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).
 const ARM_MS = 900;
 
 export function showRunOverScreen(v: RunOverView): { remove(): void } {
+  track(`run-over-${v.kind}`);
   const root = document.createElement('div');
   root.id = 'tb-ride-done';
   root.className = 'tb-ro';

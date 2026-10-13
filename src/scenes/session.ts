@@ -16,6 +16,7 @@ import { showRunOver } from './runOver.ts';
 import { Tutorial } from '../ui/dom/tutorial.ts';
 import { myLook } from '../render/look.ts';
 import { refreshBoard, showBoard } from './board.ts';
+import { track } from '../net/track.ts';
 
 /** what the session drives on the scene */
 export interface SessionScene extends OverlayHost {
@@ -319,6 +320,7 @@ export class Session {
 
   /** the menu chose a run: a seed, and whether it is the day's */
   private startFromMenu(seed: number, daily: string | null) {
+    track(daily ? 'run-start-daily' : 'run-start-quick');
     // a new run replaces the saved one: the landing says so beside Continue
     this.clearSavedRun();
     this.devRun = false;
