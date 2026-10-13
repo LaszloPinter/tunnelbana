@@ -1,0 +1,67 @@
+# The site: teacentralen.com, on GitHub Pages.
+#
+# Built and deployed on every push to main, and again every two hours so the
+# landing page's DAGENS TEA stays fresh. The papers' feeds send no CORS header,
+# so the browser cannot read them; scripts/tea.mjs reads them here instead and
+# writes tea.json into the build. Nothing is committed, so there are no bot
+# commits in the history.
+#
+# Only `dist/` is published. The probes and scripts stay in the repository for
+# contributors and never reach the site.
+#
+# One-time setup: Settings > Pages > Source: "GitHub Actions", and Custom
+# domain: teacentralen.com. The optional secret VITE_DEBUG_KEY_SHA256 turns on
+# the maintainer's debug tools on the live site (src/dev/gate.ts).
+name: pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 */2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: build
+        run: npm run build
+        env:
+          VITE_DEBUG_KEY_SHA256: ${{ secrets.VITE_DEBUG_KEY_SHA256 }}
+
+      # never fails the deploy: without tea, the page uses its own lines
+      - name: dagens tea
+        run: node scripts/tea.mjs dist/tea.json || true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

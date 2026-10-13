@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.DS_Store
+**/.DS_Store
+*.local
+# fetched at build time (scripts/tea.mjs); `npm run tea` for a local copy
+public/tea.json

@@ -1,0 +1,139 @@
+/* YOUR COMMUTER (avatar.ts): the card on the landing and its dialog.
+   Two classes, not one: menu.css's .tb-card is a grid, and in the built
+   bundle it lands AFTER this file and won (the face sat above the name) */
+.tb-card.tb-av-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 300px;
+}
+.tb-av-face {
+  flex: none;
+  padding: 0;
+  width: 68px;
+  height: 68px;
+  display: grid;
+  place-items: center;
+  background: var(--tb-ground);
+  border: 1px solid var(--tb-edge);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.tb-av-face:hover {
+  border-color: var(--tb-amber);
+}
+.tb-av-side {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.tb-av-label {
+  font-family: var(--tb-data);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--tb-amber);
+}
+.tb-av-name {
+  font-family: var(--tb-ui);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--tb-ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tb-av-btns {
+  display: flex;
+  gap: 6px;
+  margin-top: 2px;
+}
+.tb-btn.tb-av-small {
+  padding: 4px 10px;
+  font-size: 11px;
+}
+
+#tb-menu dialog.tb-av-dialog {
+  max-width: 720px;
+}
+.tb-av-body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 22px;
+  align-items: start;
+}
+.tb-av-stage {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+.tb-av-stage canvas {
+  background: radial-gradient(circle, #1a2230 0%, var(--tb-ground) 72%);
+  border: 1px solid var(--tb-edge);
+  border-radius: 50%;
+}
+.tb-av-form {
+  display: grid;
+  gap: 10px;
+}
+.tb-av-row {
+  display: grid;
+  grid-template-columns: 96px 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+.tb-av-row > :nth-child(2):last-child {
+  grid-column: 2 / 4;
+}
+.tb-av-key {
+  font-size: 12px;
+  color: var(--tb-dim);
+}
+.tb-av-input {
+  font-size: 16px;
+}
+.tb-av-swatches,
+.tb-av-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tb-av-sw {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--tb-edge);
+  padding: 0;
+  cursor: pointer;
+}
+.tb-av-sw.is-on {
+  border-color: var(--tb-ink);
+  box-shadow: 0 0 0 2px var(--tb-amber);
+}
+.tb-av-chip {
+  font-family: var(--tb-ui);
+  font-size: 12px;
+  padding: 4px 10px;
+  background: transparent;
+  color: var(--tb-dim);
+  border: 1px solid var(--tb-edge);
+  cursor: pointer;
+}
+.tb-av-chip.is-on {
+  color: var(--tb-ink);
+  border-color: var(--tb-amber);
+  background: rgba(255, 182, 30, 0.1);
+}
+@media (max-width: 620px) {
+  .tb-av-body {
+    grid-template-columns: 1fr;
+  }
+  .tb-av-row {
+    grid-template-columns: 1fr;
+  }
+  .tb-av-row > :nth-child(2):last-child {
+    grid-column: auto;
+  }
+  .tb-card.tb-av-card {
+    min-width: 0;
+  }
+}

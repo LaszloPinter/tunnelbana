@@ -1,0 +1,8 @@
+dist/
+data/
+reference/
+public/
+package-lock.json
+
+# prose is hand-wrapped and DESIGN.md is canon, Prettier must not touch it
+*.md

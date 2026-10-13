@@ -1,0 +1,931 @@
+{
+ "source": "OpenStreetMap via Overpass, ODbL: platform bearings differenced per leg",
+ "built": "2026-08-21T12:22:57.696Z",
+ "note": "turnDeg is how far the line swings between the two platforms, from their real bearings; sign is the direction of the swing, distM is the straight-line gap",
+ "legs": {
+  "Åkeshov|Brommaplan": {
+   "turnDeg": -1.4,
+   "distM": 976,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Brommaplan|Åkeshov": {
+   "turnDeg": 1.4,
+   "distM": 976,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Brommaplan|Abrahamsberg": {
+   "turnDeg": -8.2,
+   "distM": 824,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Abrahamsberg|Brommaplan": {
+   "turnDeg": 8.2,
+   "distM": 824,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Abrahamsberg|Stora mossen": {
+   "turnDeg": -0.5,
+   "distM": 730,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Stora mossen|Abrahamsberg": {
+   "turnDeg": 0.5,
+   "distM": 730,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Stora mossen|Alvik": {
+   "turnDeg": 5.6,
+   "distM": 929,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Alvik|Stora mossen": {
+   "turnDeg": -5.6,
+   "distM": 929,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Alvik|Kristineberg": {
+   "turnDeg": -7.3,
+   "distM": 1243,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Kristineberg|Alvik": {
+   "turnDeg": 7.3,
+   "distM": 1243,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Kristineberg|Thorildsplan": {
+   "turnDeg": 22.2,
+   "distM": 593,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Thorildsplan|Kristineberg": {
+   "turnDeg": -22.2,
+   "distM": 593,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Thorildsplan|Fridhemsplan": {
+   "turnDeg": 43.8,
+   "distM": 965,
+   "coverA": 0,
+   "coverB": 1
+  },
+  "Fridhemsplan|Thorildsplan": {
+   "turnDeg": -43.8,
+   "distM": 965,
+   "coverA": 1,
+   "coverB": 0
+  },
+  "Fridhemsplan|S:t Eriksplan": {
+   "turnDeg": 27.8,
+   "distM": 909,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "S:t Eriksplan|Fridhemsplan": {
+   "turnDeg": -27.8,
+   "distM": 909,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "S:t Eriksplan|Odenplan": {
+   "turnDeg": -71.4,
+   "distM": 665,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Odenplan|S:t Eriksplan": {
+   "turnDeg": 71.4,
+   "distM": 665,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Hötorget|T-Centralen": {
+   "turnDeg": -73,
+   "distM": 455,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "T-Centralen|Hötorget": {
+   "turnDeg": 73,
+   "distM": 455,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "T-Centralen|Gamla stan": {
+   "turnDeg": 72.7,
+   "distM": 1010,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Gamla stan|T-Centralen": {
+   "turnDeg": -72.7,
+   "distM": 1010,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Gamla stan|Slussen": {
+   "turnDeg": -13.1,
+   "distM": 531,
+   "coverA": 0,
+   "coverB": 1
+  },
+  "Slussen|Gamla stan": {
+   "turnDeg": 13.1,
+   "distM": 531,
+   "coverA": 1,
+   "coverB": 0
+  },
+  "Slussen|Medborgarplatsen": {
+   "turnDeg": -12.3,
+   "distM": 461,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Medborgarplatsen|Slussen": {
+   "turnDeg": 12.3,
+   "distM": 461,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Medborgarplatsen|Skanstull": {
+   "turnDeg": 13.5,
+   "distM": 733,
+   "coverA": null,
+   "coverB": null
+  },
+  "Skanstull|Medborgarplatsen": {
+   "turnDeg": -13.5,
+   "distM": 733,
+   "coverA": null,
+   "coverB": null
+  },
+  "Skanstull|Gullmarsplan": {
+   "turnDeg": 3.5,
+   "distM": 1048,
+   "coverA": null,
+   "coverB": 0
+  },
+  "Gullmarsplan|Skanstull": {
+   "turnDeg": -3.5,
+   "distM": 1048,
+   "coverA": 0,
+   "coverB": null
+  },
+  "Gullmarsplan|Skärmarbrink": {
+   "turnDeg": 30.7,
+   "distM": 684,
+   "coverA": 1,
+   "coverB": 0
+  },
+  "Skärmarbrink|Gullmarsplan": {
+   "turnDeg": -30.7,
+   "distM": 684,
+   "coverA": 0,
+   "coverB": 1
+  },
+  "Skärmarbrink|Hammarbyhöjden": {
+   "turnDeg": 42.7,
+   "distM": 824,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Hammarbyhöjden|Skärmarbrink": {
+   "turnDeg": -42.7,
+   "distM": 824,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Hammarbyhöjden|Björkhagen": {
+   "turnDeg": -85.9,
+   "distM": 749,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Björkhagen|Hammarbyhöjden": {
+   "turnDeg": 85.9,
+   "distM": 749,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Björkhagen|Kärrtorp": {
+   "turnDeg": 6,
+   "distM": 781,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Kärrtorp|Björkhagen": {
+   "turnDeg": -6,
+   "distM": 781,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Kärrtorp|Bagarmossen": {
+   "turnDeg": 18.5,
+   "distM": 1296,
+   "coverA": 0,
+   "coverB": 1
+  },
+  "Bagarmossen|Kärrtorp": {
+   "turnDeg": -18.5,
+   "distM": 1296,
+   "coverA": 1,
+   "coverB": 0
+  },
+  "Bagarmossen|Skarpnäck": {
+   "turnDeg": -31.2,
+   "distM": 1085,
+   "coverA": 1,
+   "coverB": null
+  },
+  "Skarpnäck|Bagarmossen": {
+   "turnDeg": 31.2,
+   "distM": 1085,
+   "coverA": null,
+   "coverB": 1
+  },
+  "Skärmarbrink|Blåsut": {
+   "turnDeg": -54,
+   "distM": 565,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Blåsut|Skärmarbrink": {
+   "turnDeg": 54,
+   "distM": 565,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Blåsut|Sandsborg": {
+   "turnDeg": 19.4,
+   "distM": 534,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Sandsborg|Blåsut": {
+   "turnDeg": -19.4,
+   "distM": 534,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Sandsborg|Skogskyrkogården": {
+   "turnDeg": -18.5,
+   "distM": 797,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Skogskyrkogården|Sandsborg": {
+   "turnDeg": 18.5,
+   "distM": 797,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Skogskyrkogården|Tallkrogen": {
+   "turnDeg": -40.9,
+   "distM": 954,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Tallkrogen|Skogskyrkogården": {
+   "turnDeg": 40.9,
+   "distM": 954,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Hökarängen|Farsta": {
+   "turnDeg": 2.6,
+   "distM": 1668,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Farsta|Hökarängen": {
+   "turnDeg": -2.6,
+   "distM": 1668,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Farsta|Farsta strand": {
+   "turnDeg": 15.3,
+   "distM": 1028,
+   "coverA": 0,
+   "coverB": 1
+  },
+  "Farsta strand|Farsta": {
+   "turnDeg": -15.3,
+   "distM": 1028,
+   "coverA": 1,
+   "coverB": 0
+  },
+  "Hässelby strand|Hässelby gård": {
+   "turnDeg": -47.4,
+   "distM": 890,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Hässelby gård|Hässelby strand": {
+   "turnDeg": 47.4,
+   "distM": 890,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Hässelby gård|Johannelund": {
+   "turnDeg": -25.6,
+   "distM": 798,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Johannelund|Hässelby gård": {
+   "turnDeg": 25.6,
+   "distM": 798,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Johannelund|Vällingby": {
+   "turnDeg": -41.1,
+   "distM": 860,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Vällingby|Johannelund": {
+   "turnDeg": 41.1,
+   "distM": 860,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Vällingby|Råcksta": {
+   "turnDeg": -44.4,
+   "distM": 1176,
+   "coverA": 1,
+   "coverB": 0
+  },
+  "Råcksta|Vällingby": {
+   "turnDeg": 44.4,
+   "distM": 1176,
+   "coverA": 0,
+   "coverB": 1
+  },
+  "Råcksta|Blackeberg": {
+   "turnDeg": 41.3,
+   "distM": 714,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Blackeberg|Råcksta": {
+   "turnDeg": -41.3,
+   "distM": 714,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Blackeberg|Islandstorget": {
+   "turnDeg": 32.7,
+   "distM": 687,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Islandstorget|Blackeberg": {
+   "turnDeg": -32.7,
+   "distM": 687,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Islandstorget|Ängbyplan": {
+   "turnDeg": 1.8,
+   "distM": 896,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Ängbyplan|Islandstorget": {
+   "turnDeg": -1.8,
+   "distM": 896,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Ängbyplan|Åkeshov": {
+   "turnDeg": 7.6,
+   "distM": 954,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Åkeshov|Ängbyplan": {
+   "turnDeg": -7.6,
+   "distM": 954,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Gullmarsplan|Globen": {
+   "turnDeg": -84.6,
+   "distM": 643,
+   "coverA": 1,
+   "coverB": 0.13
+  },
+  "Globen|Gullmarsplan": {
+   "turnDeg": 84.6,
+   "distM": 643,
+   "coverA": 0.13,
+   "coverB": 1
+  },
+  "Globen|Enskede gård": {
+   "turnDeg": -86.3,
+   "distM": 647,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Enskede gård|Globen": {
+   "turnDeg": 86.3,
+   "distM": 647,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Enskede gård|Sockenplan": {
+   "turnDeg": -52.3,
+   "distM": 695,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Sockenplan|Enskede gård": {
+   "turnDeg": 52.3,
+   "distM": 695,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Sockenplan|Svedmyra": {
+   "turnDeg": -19.7,
+   "distM": 634,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Svedmyra|Sockenplan": {
+   "turnDeg": 19.7,
+   "distM": 634,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Bandhagen|Högdalen": {
+   "turnDeg": -8.6,
+   "distM": 813,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Högdalen|Bandhagen": {
+   "turnDeg": 8.6,
+   "distM": 813,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Hallunda|Alby": {
+   "turnDeg": 5,
+   "distM": 1205,
+   "coverA": 0,
+   "coverB": 1
+  },
+  "Alby|Hallunda": {
+   "turnDeg": -5,
+   "distM": 1205,
+   "coverA": 1,
+   "coverB": 0
+  },
+  "Alby|Fittja": {
+   "turnDeg": 54.2,
+   "distM": 1269,
+   "coverA": 1,
+   "coverB": 0
+  },
+  "Fittja|Alby": {
+   "turnDeg": -54.2,
+   "distM": 1269,
+   "coverA": 0,
+   "coverB": 1
+  },
+  "Vårby gård|Vårberg": {
+   "turnDeg": 66.8,
+   "distM": 1272,
+   "coverA": null,
+   "coverB": null
+  },
+  "Vårberg|Vårby gård": {
+   "turnDeg": -66.8,
+   "distM": 1272,
+   "coverA": null,
+   "coverB": null
+  },
+  "Vårberg|Skärholmen": {
+   "turnDeg": -8.1,
+   "distM": 921,
+   "coverA": 0,
+   "coverB": null
+  },
+  "Skärholmen|Vårberg": {
+   "turnDeg": 8.1,
+   "distM": 921,
+   "coverA": null,
+   "coverB": 0
+  },
+  "Skärholmen|Sätra": {
+   "turnDeg": 65.7,
+   "distM": 1294,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Sätra|Skärholmen": {
+   "turnDeg": -65.7,
+   "distM": 1294,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Sätra|Bredäng": {
+   "turnDeg": -66.9,
+   "distM": 1201,
+   "coverA": 0.2,
+   "coverB": 0
+  },
+  "Bredäng|Sätra": {
+   "turnDeg": 66.9,
+   "distM": 1201,
+   "coverA": 0,
+   "coverB": 0.2
+  },
+  "Bredäng|Mälarhöjden": {
+   "turnDeg": 33.7,
+   "distM": 1416,
+   "coverA": null,
+   "coverB": 1
+  },
+  "Mälarhöjden|Bredäng": {
+   "turnDeg": -33.7,
+   "distM": 1416,
+   "coverA": 1,
+   "coverB": null
+  },
+  "Mälarhöjden|Axelsberg": {
+   "turnDeg": -32.7,
+   "distM": 1143,
+   "coverA": null,
+   "coverB": 0
+  },
+  "Axelsberg|Mälarhöjden": {
+   "turnDeg": 32.7,
+   "distM": 1143,
+   "coverA": 0,
+   "coverB": null
+  },
+  "Axelsberg|Örnsberg": {
+   "turnDeg": 12.4,
+   "distM": 763,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Örnsberg|Axelsberg": {
+   "turnDeg": -12.4,
+   "distM": 763,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Örnsberg|Aspudden": {
+   "turnDeg": -16.2,
+   "distM": 846,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Aspudden|Örnsberg": {
+   "turnDeg": 16.2,
+   "distM": 846,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Aspudden|Liljeholmen": {
+   "turnDeg": 32.3,
+   "distM": 1265,
+   "coverA": 1,
+   "coverB": 0.25
+  },
+  "Liljeholmen|Aspudden": {
+   "turnDeg": -32.3,
+   "distM": 1265,
+   "coverA": 0.25,
+   "coverB": 1
+  },
+  "Liljeholmen|Hornstull": {
+   "turnDeg": -13.3,
+   "distM": 994,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Hornstull|Liljeholmen": {
+   "turnDeg": 13.3,
+   "distM": 994,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Hornstull|Zinkensdamm": {
+   "turnDeg": -9.5,
+   "distM": 726,
+   "coverA": 1,
+   "coverB": null
+  },
+  "Zinkensdamm|Hornstull": {
+   "turnDeg": 9.5,
+   "distM": 726,
+   "coverA": null,
+   "coverB": 1
+  },
+  "Zinkensdamm|Mariatorget": {
+   "turnDeg": -33.1,
+   "distM": 646,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Mariatorget|Zinkensdamm": {
+   "turnDeg": 33.1,
+   "distM": 646,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Mariatorget|Slussen": {
+   "turnDeg": -55.6,
+   "distM": 709,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Slussen|Mariatorget": {
+   "turnDeg": 55.6,
+   "distM": 709,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "T-Centralen|Östermalmstorg": {
+   "turnDeg": -12.1,
+   "distM": 1030,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Östermalmstorg|T-Centralen": {
+   "turnDeg": 12.1,
+   "distM": 1030,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Östermalmstorg|Karlaplan": {
+   "turnDeg": 20.3,
+   "distM": 954,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Karlaplan|Östermalmstorg": {
+   "turnDeg": -20.3,
+   "distM": 954,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Karlaplan|Gärdet": {
+   "turnDeg": 17.1,
+   "distM": 773,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Gärdet|Karlaplan": {
+   "turnDeg": -17.1,
+   "distM": 773,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Gärdet|Ropsten": {
+   "turnDeg": -15,
+   "distM": 1285,
+   "coverA": 1,
+   "coverB": 0.82
+  },
+  "Ropsten|Gärdet": {
+   "turnDeg": 15,
+   "distM": 1285,
+   "coverA": 0.82,
+   "coverB": 1
+  },
+  "Fruängen|Västertorp": {
+   "turnDeg": -50.7,
+   "distM": 546,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Västertorp|Fruängen": {
+   "turnDeg": 50.7,
+   "distM": 546,
+   "coverA": 0,
+   "coverB": 0
+  },
+  "Telefonplan|Midsommarkransen": {
+   "turnDeg": 32.2,
+   "distM": 811,
+   "coverA": 0,
+   "coverB": 1
+  },
+  "Midsommarkransen|Telefonplan": {
+   "turnDeg": -32.2,
+   "distM": 811,
+   "coverA": 1,
+   "coverB": 0
+  },
+  "Midsommarkransen|Liljeholmen": {
+   "turnDeg": -13.5,
+   "distM": 1223,
+   "coverA": 1,
+   "coverB": 0.25
+  },
+  "Liljeholmen|Midsommarkransen": {
+   "turnDeg": 13.5,
+   "distM": 1223,
+   "coverA": 0.25,
+   "coverB": 1
+  },
+  "Tekniska högskolan|Universitetet": {
+   "turnDeg": -44.7,
+   "distM": 2336,
+   "coverA": null,
+   "coverB": null
+  },
+  "Universitetet|Tekniska högskolan": {
+   "turnDeg": 44.7,
+   "distM": 2336,
+   "coverA": null,
+   "coverB": null
+  },
+  "Universitetet|Bergshamra": {
+   "turnDeg": 9.3,
+   "distM": 1972,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Bergshamra|Universitetet": {
+   "turnDeg": -9.3,
+   "distM": 1972,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Bergshamra|Danderyds sjukhus": {
+   "turnDeg": -14.9,
+   "distM": 1162,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Danderyds sjukhus|Bergshamra": {
+   "turnDeg": 14.9,
+   "distM": 1162,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Danderyds sjukhus|Mörby centrum": {
+   "turnDeg": 33.2,
+   "distM": 901,
+   "coverA": 1,
+   "coverB": null
+  },
+  "Mörby centrum|Danderyds sjukhus": {
+   "turnDeg": -33.2,
+   "distM": 901,
+   "coverA": null,
+   "coverB": 1
+  },
+  "Västra skogen|Stadshagen": {
+   "turnDeg": 0.2,
+   "distM": 1274,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Stadshagen|Västra skogen": {
+   "turnDeg": -0.2,
+   "distM": 1274,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Stadshagen|Fridhemsplan": {
+   "turnDeg": -86.6,
+   "distM": 1005,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Fridhemsplan|Stadshagen": {
+   "turnDeg": 86.6,
+   "distM": 1005,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Fridhemsplan|Rådhuset": {
+   "turnDeg": -46,
+   "distM": 811,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Rådhuset|Fridhemsplan": {
+   "turnDeg": 46,
+   "distM": 811,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Rådhuset|T-Centralen": {
+   "turnDeg": 42.2,
+   "distM": 967,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "T-Centralen|Rådhuset": {
+   "turnDeg": -42.2,
+   "distM": 967,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "T-Centralen|Kungsträdgården": {
+   "turnDeg": -65.6,
+   "distM": 586,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Kungsträdgården|T-Centralen": {
+   "turnDeg": 65.6,
+   "distM": 586,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Akalla|Husby": {
+   "turnDeg": -5.5,
+   "distM": 1197,
+   "coverA": 1,
+   "coverB": null
+  },
+  "Husby|Akalla": {
+   "turnDeg": 5.5,
+   "distM": 1197,
+   "coverA": null,
+   "coverB": 1
+  },
+  "Husby|Kista": {
+   "turnDeg": -7.4,
+   "distM": 959,
+   "coverA": null,
+   "coverB": 0
+  },
+  "Kista|Husby": {
+   "turnDeg": 7.4,
+   "distM": 959,
+   "coverA": 0,
+   "coverB": null
+  },
+  "Kista|Hallonbergen": {
+   "turnDeg": 16.5,
+   "distM": 3511,
+   "coverA": 0,
+   "coverB": 1
+  },
+  "Hallonbergen|Kista": {
+   "turnDeg": -16.5,
+   "distM": 3511,
+   "coverA": 1,
+   "coverB": 0
+  },
+  "Hallonbergen|Näckrosen": {
+   "turnDeg": -6.9,
+   "distM": 1047,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Näckrosen|Hallonbergen": {
+   "turnDeg": 6.9,
+   "distM": 1047,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Näckrosen|Solna centrum": {
+   "turnDeg": -10.5,
+   "distM": 1274,
+   "coverA": null,
+   "coverB": 1
+  },
+  "Solna centrum|Näckrosen": {
+   "turnDeg": 10.5,
+   "distM": 1274,
+   "coverA": 1,
+   "coverB": null
+  },
+  "Solna centrum|Västra skogen": {
+   "turnDeg": 11.9,
+   "distM": 1386,
+   "coverA": 1,
+   "coverB": 1
+  },
+  "Västra skogen|Solna centrum": {
+   "turnDeg": -11.9,
+   "distM": 1386,
+   "coverA": 1,
+   "coverB": 1
+  }
+ }
+}

@@ -1,0 +1,6925 @@
+{
+ "source": "OpenStreetMap via Overpass, ODbL",
+ "fetched": "2026-08-21T18:00:31.272Z",
+ "routes": [
+  {
+   "osmId": 6286469,
+   "ref": "10",
+   "name": "Tunnelbana 10: Hjulsta - Kungsträdgården",
+   "colour": "blue",
+   "from": "Hjulsta",
+   "to": "Kungsträdgården",
+   "calls": [
+    {
+     "type": "node",
+     "ref": 13004751511,
+     "role": "stop",
+     "name": "Hjulsta",
+     "lat": 59.3972528,
+     "lon": 17.8869095
+    },
+    {
+     "type": "way",
+     "ref": 1499319260,
+     "role": "platform",
+     "name": null,
+     "lat": 59.394376324999996,
+     "lon": 17.9015348125,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-1",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "way",
+     "ref": 1499526938,
+     "role": "platform",
+     "name": null,
+     "lat": 59.38891206666668,
+     "lon": 17.927405783333334,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-2",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "way",
+     "ref": 1476149476,
+     "role": "platform",
+     "name": null,
+     "lat": 59.37554665,
+     "lon": 17.940947583333337,
+     "tags": {
+      "indoor": "area",
+      "level": "-1",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "3452",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "way",
+     "ref": 1499005153,
+     "role": "platform",
+     "name": null,
+     "lat": 59.36763173000001,
+     "lon": 17.96407312,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502379,
+     "role": "stop",
+     "name": "Sundbybergs centrum",
+     "lat": 59.3606718,
+     "lon": 17.9724502
+    },
+    {
+     "type": "node",
+     "ref": 4225502374,
+     "role": "stop",
+     "name": "Solna strand",
+     "lat": 59.3544635,
+     "lon": 17.9731887
+    },
+    {
+     "type": "node",
+     "ref": 4225502334,
+     "role": "stop",
+     "name": "Huvudsta",
+     "lat": 59.3496589,
+     "lon": 17.9870728
+    },
+    {
+     "type": "node",
+     "ref": 8936118535,
+     "role": "stop",
+     "name": "Västra skogen",
+     "lat": 59.3473978,
+     "lon": 18.003945
+    },
+    {
+     "type": "way",
+     "ref": 778738545,
+     "role": "platform",
+     "name": null,
+     "lat": 59.347256583333326,
+     "lon": 18.004359466666667,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "level": "-2",
+      "location": "underground",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "2",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9230710392,
+     "role": "stop",
+     "name": "Stadshagen",
+     "lat": 59.3378333,
+     "lon": 18.0158097
+    },
+    {
+     "type": "way",
+     "ref": 999989506,
+     "role": "platform",
+     "name": null,
+     "lat": 59.337668908333335,
+     "lon": 18.015980250000002,
+     "tags": {
+      "indoor": "area",
+      "layer": "-1",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "3162",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 5190430370,
+     "role": "stop",
+     "name": "Fridhemsplan",
+     "lat": 59.3340318,
+     "lon": 18.0285442
+    },
+    {
+     "type": "way",
+     "ref": 967978320,
+     "role": "platform",
+     "name": "track 4",
+     "lat": 59.33405602857143,
+     "lon": 18.02831012857143,
+     "tags": {
+      "area": "yes",
+      "layer": "-4",
+      "level": "-4",
+      "name": "track 4",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9230022032,
+     "role": "stop",
+     "name": "Rådhuset",
+     "lat": 59.330291,
+     "lon": 18.0442473
+    },
+    {
+     "type": "way",
+     "ref": 999894363,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33024334285714,
+     "lon": 18.04395647142857,
+     "tags": {
+      "area": "yes",
+      "layer": "-4",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 5190465485,
+     "role": "stop",
+     "name": "T-Centralen",
+     "lat": 59.3325542,
+     "lon": 18.0597636
+    },
+    {
+     "type": "way",
+     "ref": 552402839,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33249762666667,
+     "lon": 18.059589640000002,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "colour": "blå linje",
+      "layer": "-3",
+      "level": "-4",
+      "location": "underground",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "6",
+      "tactile_paving": "yes",
+      "train": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9102281061,
+     "role": "stop",
+     "name": "Kungsträdgården",
+     "lat": 59.3307108,
+     "lon": 18.0709405
+    },
+    {
+     "type": "way",
+     "ref": 984504784,
+     "role": "platform",
+     "name": null,
+     "lat": 59.3307878,
+     "lon": 18.070789485714283,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "level": "-3",
+      "lit": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    }
+   ],
+   "trackWays": [
+    30852388,
+    965949261,
+    38318483,
+    999037200,
+    998588328,
+    984504780,
+    984504778
+   ]
+  },
+  {
+   "osmId": 6286470,
+   "ref": "10",
+   "name": "Tunnelbana 10: Kungsträdgården - Hjulsta",
+   "colour": "blue",
+   "from": "Kungsträdgården",
+   "to": "Hjulsta",
+   "calls": [
+    {
+     "type": "node",
+     "ref": 9102281061,
+     "role": "stop",
+     "name": "Kungsträdgården",
+     "lat": 59.3307108,
+     "lon": 18.0709405
+    },
+    {
+     "type": "way",
+     "ref": 984504784,
+     "role": "platform",
+     "name": null,
+     "lat": 59.3307878,
+     "lon": 18.070789485714283,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "level": "-3",
+      "lit": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 5190465484,
+     "role": "stop",
+     "name": "T-Centralen",
+     "lat": 59.3322912,
+     "lon": 18.059873
+    },
+    {
+     "type": "way",
+     "ref": 552402838,
+     "role": "platform",
+     "name": null,
+     "lat": 59.3323474923077,
+     "lon": 18.059573184615385,
+     "tags": {
+      "Color": "blå linje",
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "level": "-4",
+      "location": "underground",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "5",
+      "tactile_paving": "yes",
+      "train": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9230022031,
+     "role": "stop",
+     "name": "Rådhuset",
+     "lat": 59.3300271,
+     "lon": 18.0442787
+    },
+    {
+     "type": "way",
+     "ref": 999894362,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33008243333333,
+     "lon": 18.044388122222223,
+     "tags": {
+      "area": "yes",
+      "layer": "-4",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 5190430369,
+     "role": "stop",
+     "name": "Fridhemsplan",
+     "lat": 59.3338166,
+     "lon": 18.0282142
+    },
+    {
+     "type": "way",
+     "ref": 967978319,
+     "role": "platform",
+     "name": "track 3",
+     "lat": 59.33391597142857,
+     "lon": 18.02811287142857,
+     "tags": {
+      "area": "yes",
+      "layer": "-4",
+      "level": "-4",
+      "name": "track 3",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9230710393,
+     "role": "stop",
+     "name": "Stadshagen",
+     "lat": 59.3376542,
+     "lon": 18.0154291
+    },
+    {
+     "type": "way",
+     "ref": 999989505,
+     "role": "platform",
+     "name": null,
+     "lat": 59.337612136363646,
+     "lon": 18.0156495,
+     "tags": {
+      "indoor": "area",
+      "layer": "-1",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "3161",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8936118534,
+     "role": "stop",
+     "name": "Västra skogen",
+     "lat": 59.3473256,
+     "lon": 18.0037574
+    },
+    {
+     "type": "way",
+     "ref": 778738544,
+     "role": "platform",
+     "name": null,
+     "lat": 59.347142122222216,
+     "lon": 18.00395691111111,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "level": "-2",
+      "location": "underground",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502334,
+     "role": "stop",
+     "name": "Huvudsta",
+     "lat": 59.3496589,
+     "lon": 17.9870728
+    },
+    {
+     "type": "node",
+     "ref": 4225502374,
+     "role": "stop",
+     "name": "Solna strand",
+     "lat": 59.3544635,
+     "lon": 17.9731887
+    },
+    {
+     "type": "node",
+     "ref": 4225502379,
+     "role": "stop",
+     "name": "Sundbybergs centrum",
+     "lat": 59.3606718,
+     "lon": 17.9724502
+    },
+    {
+     "type": "node",
+     "ref": 4225502317,
+     "role": "stop",
+     "name": "Duvbo",
+     "lat": 59.3675623,
+     "lon": 17.9643034
+    },
+    {
+     "type": "node",
+     "ref": 4225502359,
+     "role": "stop",
+     "name": "Rissne",
+     "lat": 59.3755762,
+     "lon": 17.9407254
+    },
+    {
+     "type": "node",
+     "ref": 4225502358,
+     "role": "stop",
+     "name": "Rinkeby",
+     "lat": 59.3882541,
+     "lon": 17.9283805
+    },
+    {
+     "type": "node",
+     "ref": 4225502384,
+     "role": "stop",
+     "name": "Tensta",
+     "lat": 59.3947666,
+     "lon": 17.8996949
+    },
+    {
+     "type": "node",
+     "ref": 13004751510,
+     "role": "stop",
+     "name": "Hjulsta",
+     "lat": 59.3970263,
+     "lon": 17.8866591
+    }
+   ],
+   "trackWays": [
+    984504778,
+    984504776,
+    998588329,
+    998588327,
+    422823373,
+    965949262,
+    965949260,
+    422823374
+   ]
+  },
+  {
+   "osmId": 6286471,
+   "ref": "11",
+   "name": "Tunnelbana 11: Akalla - Kungsträdgården",
+   "colour": "blue",
+   "from": "Akalla",
+   "to": "Kungsträdgården",
+   "calls": [
+    {
+     "type": "node",
+     "ref": 249108472,
+     "role": "stop",
+     "name": "Akalla",
+     "lat": 59.4158707,
+     "lon": 17.9134676
+    },
+    {
+     "type": "node",
+     "ref": 262862173,
+     "role": "stop",
+     "name": "Husby",
+     "lat": 59.4082198,
+     "lon": 17.9287053
+    },
+    {
+     "type": "node",
+     "ref": 9194096282,
+     "role": "stop",
+     "name": "Kista",
+     "lat": 59.4032647,
+     "lon": 17.942556
+    },
+    {
+     "type": "way",
+     "ref": 913321325,
+     "role": "platform",
+     "name": null,
+     "lat": 59.374429112499996,
+     "lon": 17.969364225000003,
+     "tags": {
+      "area": "yes",
+      "layer": "-3",
+      "level": "-2",
+      "location": "underground",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "2;3",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8935763298,
+     "role": "stop",
+     "name": "Näckrosen",
+     "lat": 59.3676495,
+     "lon": 17.9819278
+    },
+    {
+     "type": "way",
+     "ref": 965915472,
+     "role": "platform",
+     "name": "Näckrosen",
+     "lat": 59.3676885,
+     "lon": 17.981761925,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "level": "-2",
+      "lit": "yes",
+      "name": "Näckrosen",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8935879646,
+     "role": "stop",
+     "name": "Solna centrum",
+     "lat": 59.3595712,
+     "lon": 17.9980981
+    },
+    {
+     "type": "way",
+     "ref": 965928893,
+     "role": "platform",
+     "name": null,
+     "lat": 59.35947911999999,
+     "lon": 17.998101249999998,
+     "tags": {
+      "area": "yes",
+      "bench": "no",
+      "layer": "-3",
+      "level": "-1",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8936118536,
+     "role": "stop",
+     "name": "Västra skogen",
+     "lat": 59.3475943,
+     "lon": 18.0043188
+    },
+    {
+     "type": "way",
+     "ref": 965953972,
+     "role": "platform",
+     "name": null,
+     "lat": 59.3474338,
+     "lon": 18.0044935875,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "level": "-2",
+      "location": "underground",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "3",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9230710392,
+     "role": "stop",
+     "name": "Stadshagen",
+     "lat": 59.3378333,
+     "lon": 18.0158097
+    },
+    {
+     "type": "way",
+     "ref": 999989506,
+     "role": "platform",
+     "name": null,
+     "lat": 59.337668908333335,
+     "lon": 18.015980250000002,
+     "tags": {
+      "indoor": "area",
+      "layer": "-1",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "3162",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 5190430370,
+     "role": "stop",
+     "name": "Fridhemsplan",
+     "lat": 59.3340318,
+     "lon": 18.0285442
+    },
+    {
+     "type": "way",
+     "ref": 967978320,
+     "role": "platform",
+     "name": "track 4",
+     "lat": 59.33405602857143,
+     "lon": 18.02831012857143,
+     "tags": {
+      "area": "yes",
+      "layer": "-4",
+      "level": "-4",
+      "name": "track 4",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9230022032,
+     "role": "stop",
+     "name": "Rådhuset",
+     "lat": 59.330291,
+     "lon": 18.0442473
+    },
+    {
+     "type": "way",
+     "ref": 999894363,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33024334285714,
+     "lon": 18.04395647142857,
+     "tags": {
+      "area": "yes",
+      "layer": "-4",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 5190465485,
+     "role": "stop",
+     "name": "T-Centralen",
+     "lat": 59.3325542,
+     "lon": 18.0597636
+    },
+    {
+     "type": "way",
+     "ref": 552402839,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33249762666667,
+     "lon": 18.059589640000002,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "colour": "blå linje",
+      "layer": "-3",
+      "level": "-4",
+      "location": "underground",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "6",
+      "tactile_paving": "yes",
+      "train": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9102281060,
+     "role": "stop",
+     "name": "Kungsträdgården",
+     "lat": 59.3309548,
+     "lon": 18.0712798
+    },
+    {
+     "type": "way",
+     "ref": 984504785,
+     "role": "platform",
+     "name": null,
+     "lat": 59.330980628571425,
+     "lon": 18.07094224285714,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "level": "-3",
+      "lit": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    }
+   ],
+   "trackWays": [
+    286366150,
+    995671130,
+    5843382,
+    175896415,
+    175896416,
+    45898850,
+    45898059,
+    35329863,
+    35329862,
+    38318483,
+    999037200,
+    998588328,
+    984504775,
+    984504777
+   ]
+  },
+  {
+   "osmId": 6286472,
+   "ref": "11",
+   "name": "Tunnelbana 11: Kungsträdgården - Akalla",
+   "colour": "blue",
+   "from": "Kungsträdgården",
+   "to": "Akalla",
+   "calls": [
+    {
+     "type": "node",
+     "ref": 9102281060,
+     "role": "stop",
+     "name": "Kungsträdgården",
+     "lat": 59.3309548,
+     "lon": 18.0712798
+    },
+    {
+     "type": "way",
+     "ref": 984504785,
+     "role": "platform",
+     "name": null,
+     "lat": 59.330980628571425,
+     "lon": 18.07094224285714,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "level": "-3",
+      "lit": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 5190465484,
+     "role": "stop",
+     "name": "T-Centralen",
+     "lat": 59.3322912,
+     "lon": 18.059873
+    },
+    {
+     "type": "way",
+     "ref": 552402838,
+     "role": "platform",
+     "name": null,
+     "lat": 59.3323474923077,
+     "lon": 18.059573184615385,
+     "tags": {
+      "Color": "blå linje",
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "level": "-4",
+      "location": "underground",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "5",
+      "tactile_paving": "yes",
+      "train": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9230022031,
+     "role": "stop",
+     "name": "Rådhuset",
+     "lat": 59.3300271,
+     "lon": 18.0442787
+    },
+    {
+     "type": "way",
+     "ref": 999894362,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33008243333333,
+     "lon": 18.044388122222223,
+     "tags": {
+      "area": "yes",
+      "layer": "-4",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 5190430369,
+     "role": "stop",
+     "name": "Fridhemsplan",
+     "lat": 59.3338166,
+     "lon": 18.0282142
+    },
+    {
+     "type": "way",
+     "ref": 967978319,
+     "role": "platform",
+     "name": "track 3",
+     "lat": 59.33391597142857,
+     "lon": 18.02811287142857,
+     "tags": {
+      "area": "yes",
+      "layer": "-4",
+      "level": "-4",
+      "name": "track 3",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9230710393,
+     "role": "stop",
+     "name": "Stadshagen",
+     "lat": 59.3376542,
+     "lon": 18.0154291
+    },
+    {
+     "type": "way",
+     "ref": 999989505,
+     "role": "platform",
+     "name": null,
+     "lat": 59.337612136363646,
+     "lon": 18.0156495,
+     "tags": {
+      "indoor": "area",
+      "layer": "-1",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "3161",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8936118534,
+     "role": "stop",
+     "name": "Västra skogen",
+     "lat": 59.3473256,
+     "lon": 18.0037574
+    },
+    {
+     "type": "way",
+     "ref": 778738544,
+     "role": "platform",
+     "name": null,
+     "lat": 59.347142122222216,
+     "lon": 18.00395691111111,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "level": "-2",
+      "location": "underground",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8935879647,
+     "role": "stop",
+     "name": "Solna centrum",
+     "lat": 59.3594813,
+     "lon": 17.9974977
+    },
+    {
+     "type": "way",
+     "ref": 965928892,
+     "role": "platform",
+     "name": null,
+     "lat": 59.35950762499999,
+     "lon": 17.9975712125,
+     "tags": {
+      "area": "yes",
+      "layer": "-3",
+      "level": "-1",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8935763299,
+     "role": "stop",
+     "name": "Näckrosen",
+     "lat": 59.3675211,
+     "lon": 17.9816211
+    },
+    {
+     "type": "way",
+     "ref": 965915473,
+     "role": "platform",
+     "name": "Näckrosen",
+     "lat": 59.3677009125,
+     "lon": 17.981413699999997,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "level": "-2",
+      "lit": "yes",
+      "name": "Näckrosen",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "way",
+     "ref": 913321325,
+     "role": "platform",
+     "name": null,
+     "lat": 59.374429112499996,
+     "lon": 17.969364225000003,
+     "tags": {
+      "area": "yes",
+      "layer": "-3",
+      "level": "-2",
+      "location": "underground",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "2;3",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9194096281,
+     "role": "stop",
+     "name": "Kista",
+     "lat": 59.4032063,
+     "lon": 17.9420619
+    },
+    {
+     "type": "node",
+     "ref": 4225503117,
+     "role": "stop",
+     "name": "Husby",
+     "lat": 59.4081397,
+     "lon": 17.9286004
+    },
+    {
+     "type": "node",
+     "ref": 4225503122,
+     "role": "stop",
+     "name": "Akalla",
+     "lat": 59.415485,
+     "lon": 17.9130006
+    }
+   ],
+   "trackWays": [
+    984504777,
+    984504779,
+    998588329,
+    998588327,
+    422823373,
+    965949262,
+    965949256,
+    965949257,
+    422823371,
+    5843672,
+    5843634,
+    42264909,
+    5843298,
+    5843243,
+    995671129,
+    422823372
+   ]
+  },
+  {
+   "osmId": 6286473,
+   "ref": "13",
+   "name": "Tunnelbana 13: Norsborg - Ropsten",
+   "colour": "red",
+   "from": "Norsborg",
+   "to": "Ropsten",
+   "calls": [
+    {
+     "type": "node",
+     "ref": 180485553,
+     "role": "stop_entry_only",
+     "name": "Norsborg",
+     "lat": 59.2439607,
+     "lon": 17.8127204
+    },
+    {
+     "type": "way",
+     "ref": 666662600,
+     "role": "platform_entry_only",
+     "name": null,
+     "lat": 59.243867766666675,
+     "lon": 17.813314700000003,
+     "tags": {
+      "highway": "footway",
+      "indoor": "yes",
+      "level": "+2",
+      "lit": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 10057237735,
+     "role": "stop",
+     "name": "Hallunda",
+     "lat": 59.2433793,
+     "lon": 17.8245912
+    },
+    {
+     "type": "way",
+     "ref": 1061683569,
+     "role": "platform",
+     "name": null,
+     "lat": 59.24329764,
+     "lon": 17.825039200000003,
+     "tags": {
+      "area": "yes",
+      "covered": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 14107154391,
+     "role": "stop",
+     "name": "Alby",
+     "lat": 59.2393958,
+     "lon": 17.8433703
+    },
+    {
+     "type": "way",
+     "ref": 1502418641,
+     "role": "platform",
+     "name": null,
+     "lat": 59.23935985,
+     "lon": 17.843704316666667,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-1",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9752967109,
+     "role": "stop",
+     "name": "Fittja",
+     "lat": 59.2469753,
+     "lon": 17.8599066
+    },
+    {
+     "type": "way",
+     "ref": 1061527193,
+     "role": "platform",
+     "name": null,
+     "lat": 59.24703061428572,
+     "lon": 17.860152928571427,
+     "tags": {
+      "area": "yes",
+      "public_transport": "platform",
+      "railway": "platform"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 14107154395,
+     "role": "stop",
+     "name": "Masmo",
+     "lat": 59.2499312,
+     "lon": 17.8819651
+    },
+    {
+     "type": "relation",
+     "ref": 20510215,
+     "role": "platform",
+     "name": null,
+     "lat": 59.24989354,
+     "lon": 17.88200019,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-1",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "type": "multipolygon",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 14107154397,
+     "role": "stop",
+     "name": "Vårby gård",
+     "lat": 59.2652082,
+     "lon": 17.8833313
+    },
+    {
+     "type": "way",
+     "ref": 1501388773,
+     "role": "platform",
+     "name": null,
+     "lat": 59.26508831666666,
+     "lon": 17.883703333333333,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "1",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9210923497,
+     "role": "stop",
+     "name": "Vårberg",
+     "lat": 59.2760857,
+     "lon": 17.8907458
+    },
+    {
+     "type": "way",
+     "ref": 997551804,
+     "role": "platform",
+     "name": null,
+     "lat": 59.27600771875001,
+     "lon": 17.89068091875,
+     "tags": {
+      "area": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 254879652,
+     "role": "stop",
+     "name": "Skärholmen",
+     "lat": 59.2769646,
+     "lon": 17.9067045
+    },
+    {
+     "type": "way",
+     "ref": 1502772744,
+     "role": "platform",
+     "name": null,
+     "lat": 59.27694257142857,
+     "lon": 17.90669397857143,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-1",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 1912549318,
+     "role": "stop",
+     "name": "Sätra",
+     "lat": 59.2860133,
+     "lon": 17.9216007
+    },
+    {
+     "type": "way",
+     "ref": 504877039,
+     "role": "platform",
+     "name": null,
+     "lat": 59.28573259444444,
+     "lon": 17.921540977777777,
+     "tags": {
+      "area": "yes",
+      "level": "-1",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 254879675,
+     "role": "stop",
+     "name": "Bredäng",
+     "lat": 59.2947985,
+     "lon": 17.9325445
+    },
+    {
+     "type": "way",
+     "ref": 180805649,
+     "role": "platform",
+     "name": null,
+     "lat": 59.29473352352941,
+     "lon": 17.932857517647058,
+     "tags": {
+      "area": "yes",
+      "layer": "2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 254883011,
+     "role": "stop",
+     "name": "Mälarhöjden",
+     "lat": 59.3000643,
+     "lon": 17.9542624
+    },
+    {
+     "type": "way",
+     "ref": 1502792297,
+     "role": "platform",
+     "name": null,
+     "lat": 59.300227725,
+     "lon": 17.9550014875,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-1",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 247189523,
+     "role": "stop",
+     "name": "Axelsberg",
+     "lat": 59.304323,
+     "lon": 17.9732972
+    },
+    {
+     "type": "way",
+     "ref": 181159281,
+     "role": "platform",
+     "name": null,
+     "lat": 59.30425867058823,
+     "lon": 17.97327842352941,
+     "tags": {
+      "area": "yes",
+      "level": "-1",
+      "platform:colour": "#d3d3d3",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 247189514,
+     "role": "stop",
+     "name": "Örnsberg",
+     "lat": 59.3052932,
+     "lon": 17.987309
+    },
+    {
+     "type": "way",
+     "ref": 568505696,
+     "role": "platform",
+     "name": null,
+     "lat": 59.305183884615374,
+     "lon": 17.986953500000002,
+     "tags": {
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9101538901,
+     "role": "stop",
+     "name": "Aspudden",
+     "lat": 59.3067134,
+     "lon": 18.0024916
+    },
+    {
+     "type": "way",
+     "ref": 984412927,
+     "role": "platform",
+     "name": null,
+     "lat": 59.306584314285715,
+     "lon": 18.002141657142854,
+     "tags": {
+      "area": "yes",
+      "layer": "-1",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9102150447,
+     "role": "stop",
+     "name": "Liljeholmen",
+     "lat": 59.3108432,
+     "lon": 18.0229935
+    },
+    {
+     "type": "way",
+     "ref": 984486469,
+     "role": "platform",
+     "name": null,
+     "lat": 59.31086157142859,
+     "lon": 18.023253200000003,
+     "tags": {
+      "area": "yes",
+      "layer": "-2",
+      "level": "-1",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002601001;SE:001:Quay:9022001002601003",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9102120373,
+     "role": "stop",
+     "name": "Hornstull",
+     "lat": 59.3165126,
+     "lon": 18.0365651
+    },
+    {
+     "type": "way",
+     "ref": 984483511,
+     "role": "platform",
+     "name": null,
+     "lat": 59.31646165714285,
+     "lon": 18.036475099999997,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "local_ref": "1",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002531001",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 12409465073,
+     "role": "stop",
+     "name": "Zinkensdamm",
+     "lat": 59.3179664,
+     "lon": 18.0491403
+    },
+    {
+     "type": "way",
+     "ref": 1504348399,
+     "role": "platform",
+     "name": null,
+     "lat": 59.31784473333334,
+     "lon": 18.048352383333334,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-2",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8957422798,
+     "role": "stop",
+     "name": "Mariatorget",
+     "lat": 59.3171925,
+     "lon": 18.060632
+    },
+    {
+     "type": "way",
+     "ref": 968196193,
+     "role": "platform",
+     "name": "Mariatorget",
+     "lat": 59.3172088,
+     "lon": 18.060376499999997,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "lit": "yes",
+      "local_ref": "1",
+      "name": "Mariatorget",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002511001",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "paved",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8922248875,
+     "role": "stop",
+     "name": "Slussen",
+     "lat": 59.3192816,
+     "lon": 18.0721794
+    },
+    {
+     "type": "way",
+     "ref": 964573296,
+     "role": "platform",
+     "name": null,
+     "lat": 59.319153899999996,
+     "lon": 18.072083924999998,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001011001;SE:001:Quay:9022001001011003",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8920088873,
+     "role": "stop",
+     "name": "Gamla stan",
+     "lat": 59.3233552,
+     "lon": 18.066912
+    },
+    {
+     "type": "way",
+     "ref": 964356237,
+     "role": "platform",
+     "name": null,
+     "lat": 59.32325104545457,
+     "lon": 18.066923763636364,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "lit": "yes",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001021001;SE:001:Quay:9022001001021003",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "paved",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502945,
+     "role": "stop",
+     "name": "T-Centralen",
+     "lat": 59.3317111,
+     "lon": 18.0612526
+    },
+    {
+     "type": "relation",
+     "ref": 12966438,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331654925641,
+     "lon": 18.061380976923072,
+     "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "colour": "grön linje",
+      "layer": "-2",
+      "level": "-3",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001051001;SE:001:Quay:9022001001051002",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "3;4",
+      "tactile_paving": "yes",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 293340663,
+     "role": "stop",
+     "name": "Östermalmstorg",
+     "lat": 59.3355682,
+     "lon": 18.077663
+    },
+    {
+     "type": "way",
+     "ref": 968213455,
+     "role": "platform",
+     "name": null,
+     "lat": 59.3355833375,
+     "lon": 18.077830575,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-3",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 2475572484,
+     "role": "stop",
+     "name": "Karlaplan",
+     "lat": 59.3396541,
+     "lon": 18.0917664
+    },
+    {
+     "type": "way",
+     "ref": 1516994813,
+     "role": "platform",
+     "name": null,
+     "lat": 59.339865024999995,
+     "lon": 18.09242610833333,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "fixme": "perrongen är i fel position jämfört med spåren",
+      "layer": "-2",
+      "level": "-2",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8955423490,
+     "role": "stop",
+     "name": "Gärdet",
+     "lat": 59.345841,
+     "lon": 18.0986085
+    },
+    {
+     "type": "way",
+     "ref": 967993165,
+     "role": "platform",
+     "name": null,
+     "lat": 59.34600167999999,
+     "lon": 18.0988023,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "1",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002121001",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 3160187270,
+     "role": "stop",
+     "name": "Ropsten",
+     "lat": 59.3574248,
+     "lon": 18.1022239
+    },
+    {
+     "type": "way",
+     "ref": 348442501,
+     "role": "platform",
+     "name": null,
+     "lat": 59.357337666666666,
+     "lon": 18.102181386666665,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "2",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    }
+   ],
+   "trackWays": [
+    666662599,
+    17442585,
+    17442899,
+    230834382,
+    230834384,
+    34608801,
+    34608802,
+    115565465,
+    115565463,
+    17442900,
+    17442901,
+    24991446,
+    230759206,
+    230759198,
+    230759203,
+    24991458,
+    23537795,
+    24991484,
+    24991481,
+    154415114,
+    154415112,
+    24991492,
+    23537888,
+    23537890,
+    23537945,
+    97467633,
+    97467653,
+    23537972,
+    22945616,
+    181159276,
+    181159278,
+    181159286,
+    23537782,
+    103008286,
+    103008283,
+    126051375,
+    126051382,
+    1090866609,
+    993071375,
+    175909724,
+    141790007,
+    25009709,
+    239789657,
+    310576265,
+    967993167,
+    239789660,
+    239789659,
+    239789661,
+    239789658
+   ]
+  },
+  {
+   "osmId": 6286474,
+   "ref": "13",
+   "name": "Tunnelbana 13: Ropsten - Norsborg",
+   "colour": "red",
+   "from": "Ropsten",
+   "to": "Norsborg",
+   "calls": [
+    {
+     "type": "node",
+     "ref": 10158208876,
+     "role": "stop",
+     "name": "Ropsten",
+     "lat": 59.35731,
+     "lon": 18.1025351
+    },
+    {
+     "type": "way",
+     "ref": 617008671,
+     "role": "platform",
+     "name": null,
+     "lat": 59.35730499523809,
+     "lon": 18.10243612857143,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "2",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8955423491,
+     "role": "stop",
+     "name": "Gärdet",
+     "lat": 59.3457822,
+     "lon": 18.099026
+    },
+    {
+     "type": "way",
+     "ref": 967993166,
+     "role": "platform",
+     "name": null,
+     "lat": 59.345959045454535,
+     "lon": 18.099085045454544,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002121002",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 271890346,
+     "role": "stop",
+     "name": "Karlaplan",
+     "lat": 59.3395547,
+     "lon": 18.0922367
+    },
+    {
+     "type": "way",
+     "ref": 1516994813,
+     "role": "platform",
+     "name": null,
+     "lat": 59.339865024999995,
+     "lon": 18.09242610833333,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "fixme": "perrongen är i fel position jämfört med spåren",
+      "layer": "-2",
+      "level": "-2",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 3160187326,
+     "role": "stop",
+     "name": "Östermalmstorg",
+     "lat": 59.3353929,
+     "lon": 18.0779138
+    },
+    {
+     "type": "way",
+     "ref": 968213454,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33541664444445,
+     "lon": 18.077843277777777,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-3",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 1465269232,
+     "role": "stop",
+     "name": "T-Centralen",
+     "lat": 59.3315968,
+     "lon": 18.0613783
+    },
+    {
+     "type": "relation",
+     "ref": 12966439,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331634697560986,
+     "lon": 18.061344802439024,
+     "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "level": "-2",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001051003;SE:001:Quay:9022001001051004",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1;2",
+      "tactile_paving": "yes",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8920088909,
+     "role": "stop",
+     "name": "Gamla stan",
+     "lat": 59.3233647,
+     "lon": 18.0669831
+    },
+    {
+     "type": "way",
+     "ref": 964356238,
+     "role": "platform",
+     "name": null,
+     "lat": 59.323331725,
+     "lon": 18.0671411625,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "lit": "yes",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001021004;SE:001:Quay:9022001001021002",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "paved",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8922248891,
+     "role": "stop",
+     "name": "Slussen",
+     "lat": 59.3192646,
+     "lon": 18.0722724
+    },
+    {
+     "type": "way",
+     "ref": 964573295,
+     "role": "platform",
+     "name": null,
+     "lat": 59.319310492857134,
+     "lon": 18.072308589285715,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001011002;SE:001:Quay:9022001001011004",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8957422797,
+     "role": "stop",
+     "name": "Mariatorget",
+     "lat": 59.3170074,
+     "lon": 18.0604211
+    },
+    {
+     "type": "way",
+     "ref": 968196192,
+     "role": "platform",
+     "name": "Mariatorget",
+     "lat": 59.31708149999999,
+     "lon": 18.0602886,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "lit": "yes",
+      "local_ref": "2",
+      "name": "Mariatorget",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002511002",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "paved",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 12409465074,
+     "role": "stop",
+     "name": "Zinkensdamm",
+     "lat": 59.3177717,
+     "lon": 18.0492117
+    },
+    {
+     "type": "way",
+     "ref": 1504348400,
+     "role": "platform",
+     "name": null,
+     "lat": 59.31773474285715,
+     "lon": 18.048510928571428,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-2",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9102120374,
+     "role": "stop",
+     "name": "Hornstull",
+     "lat": 59.3163151,
+     "lon": 18.0367798
+    },
+    {
+     "type": "way",
+     "ref": 984483510,
+     "role": "platform",
+     "name": null,
+     "lat": 59.31628898750001,
+     "lon": 18.0365159375,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "local_ref": "2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002531002",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 2163321582,
+     "role": "stop",
+     "name": "Liljeholmen",
+     "lat": 59.3107237,
+     "lon": 18.0234885
+    },
+    {
+     "type": "way",
+     "ref": 984486468,
+     "role": "platform",
+     "name": null,
+     "lat": 59.31074529285714,
+     "lon": 18.023362157142856,
+     "tags": {
+      "area": "yes",
+      "layer": "-2",
+      "level": "-1",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002601002;SE:001:Quay:9022001002601005",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9101538900,
+     "role": "stop",
+     "name": "Aspudden",
+     "lat": 59.3063963,
+     "lon": 18.0025286
+    },
+    {
+     "type": "way",
+     "ref": 984412926,
+     "role": "platform",
+     "name": null,
+     "lat": 59.306346680000004,
+     "lon": 18.002684879999997,
+     "tags": {
+      "area": "yes",
+      "layer": "-1",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 2774972046,
+     "role": "stop",
+     "name": "Örnsberg",
+     "lat": 59.3051942,
+     "lon": 17.9873589
+    },
+    {
+     "type": "way",
+     "ref": 568505696,
+     "role": "platform",
+     "name": null,
+     "lat": 59.305183884615374,
+     "lon": 17.986953500000002,
+     "tags": {
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 2774972001,
+     "role": "stop",
+     "name": "Axelsberg",
+     "lat": 59.3042105,
+     "lon": 17.9733181
+    },
+    {
+     "type": "way",
+     "ref": 181159281,
+     "role": "platform",
+     "name": null,
+     "lat": 59.30425867058823,
+     "lon": 17.97327842352941,
+     "tags": {
+      "area": "yes",
+      "level": "-1",
+      "platform:colour": "#d3d3d3",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 2774972100,
+     "role": "stop",
+     "name": "Mälarhöjden",
+     "lat": 59.2998746,
+     "lon": 17.9545309
+    },
+    {
+     "type": "way",
+     "ref": 1502792297,
+     "role": "platform",
+     "name": null,
+     "lat": 59.300227725,
+     "lon": 17.9550014875,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-1",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 1128662625,
+     "role": "stop",
+     "name": "Bredäng",
+     "lat": 59.2946626,
+     "lon": 17.9325172
+    },
+    {
+     "type": "way",
+     "ref": 180805649,
+     "role": "platform",
+     "name": null,
+     "lat": 59.29473352352941,
+     "lon": 17.932857517647058,
+     "tags": {
+      "area": "yes",
+      "layer": "2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9048059144,
+     "role": "stop",
+     "name": "Sätra",
+     "lat": 59.2859446,
+     "lon": 17.922043
+    },
+    {
+     "type": "way",
+     "ref": 504877040,
+     "role": "platform",
+     "name": null,
+     "lat": 59.28573212352941,
+     "lon": 17.92177629411765,
+     "tags": {
+      "area": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 2392009139,
+     "role": "stop",
+     "name": "Skärholmen",
+     "lat": 59.2768702,
+     "lon": 17.9067432
+    },
+    {
+     "type": "way",
+     "ref": 1502772744,
+     "role": "platform",
+     "name": null,
+     "lat": 59.27694257142857,
+     "lon": 17.90669397857143,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-1",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 1912555271,
+     "role": "stop",
+     "name": "Vårberg",
+     "lat": 59.2759652,
+     "lon": 17.8909308
+    },
+    {
+     "type": "way",
+     "ref": 997551804,
+     "role": "platform",
+     "name": null,
+     "lat": 59.27600771875001,
+     "lon": 17.89068091875,
+     "tags": {
+      "area": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 2392108029,
+     "role": "stop",
+     "name": "Vårby gård",
+     "lat": 59.2652866,
+     "lon": 17.8835547
+    },
+    {
+     "type": "way",
+     "ref": 1501388773,
+     "role": "platform",
+     "name": null,
+     "lat": 59.26508831666666,
+     "lon": 17.883703333333333,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "1",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 14107154396,
+     "role": "stop",
+     "name": "Masmo",
+     "lat": 59.2498572,
+     "lon": 17.8820403
+    },
+    {
+     "type": "relation",
+     "ref": 20510215,
+     "role": "platform",
+     "name": null,
+     "lat": 59.24989354,
+     "lon": 17.88200019,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-1",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "type": "multipolygon",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 14107154394,
+     "role": "stop",
+     "name": "Fittja",
+     "lat": 59.246887,
+     "lon": 17.8601767
+    },
+    {
+     "type": "way",
+     "ref": 1061527193,
+     "role": "platform",
+     "name": null,
+     "lat": 59.24703061428572,
+     "lon": 17.860152928571427,
+     "tags": {
+      "area": "yes",
+      "public_transport": "platform",
+      "railway": "platform"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 14107154393,
+     "role": "stop",
+     "name": "Alby",
+     "lat": 59.2392263,
+     "lon": 17.8433607
+    },
+    {
+     "type": "way",
+     "ref": 1502418642,
+     "role": "platform",
+     "name": null,
+     "lat": 59.23927163333334,
+     "lon": 17.843699849999997,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-1",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 10057237736,
+     "role": "stop",
+     "name": "Hallunda",
+     "lat": 59.2432414,
+     "lon": 17.8245613
+    },
+    {
+     "type": "way",
+     "ref": 1061683569,
+     "role": "platform",
+     "name": null,
+     "lat": 59.24329764,
+     "lon": 17.825039200000003,
+     "tags": {
+      "area": "yes",
+      "covered": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 1573916549,
+     "role": "stop_exit_only",
+     "name": "Norsborg",
+     "lat": 59.2438345,
+     "lon": 17.8127244
+    },
+    {
+     "type": "way",
+     "ref": 666662600,
+     "role": "platform_exit_only",
+     "name": null,
+     "lat": 59.243867766666675,
+     "lon": 17.813314700000003,
+     "tags": {
+      "highway": "footway",
+      "indoor": "yes",
+      "level": "+2",
+      "lit": "yes",
+      "wheelchair": "yes"
+     }
+    }
+   ],
+   "trackWays": [
+    4700164,
+    5176995,
+    232183981,
+    42264492,
+    967993168,
+    30480618,
+    310576262,
+    1102806331,
+    1102806332,
+    424124422,
+    4876583,
+    23745134,
+    23745133,
+    1090866608,
+    30480615,
+    22945792,
+    206326921,
+    103008265,
+    984379926,
+    984379925,
+    272556098,
+    1502829736,
+    1502829735,
+    272556100,
+    272556097,
+    272556099,
+    272556096,
+    97467634,
+    97467630,
+    97467651,
+    180790205,
+    180790202,
+    183724788,
+    183724795,
+    183724783,
+    180790208,
+    230746638,
+    180790972,
+    230759204,
+    24991450,
+    230759199,
+    230759205,
+    230759202,
+    230759200,
+    230759201,
+    230813991,
+    230813994,
+    230813992,
+    230814808,
+    230834383,
+    230834381,
+    230814807,
+    422823379,
+    143828463
+   ]
+  },
+  {
+   "osmId": 6286475,
+   "ref": "14",
+   "name": "Tunnelbana 14: Fruängen - Mörby centrum",
+   "colour": "red",
+   "from": "Fruängen",
+   "to": "Mörby centrum",
+   "calls": [
+    {
+     "type": "node",
+     "ref": 186124536,
+     "role": "stop",
+     "name": "Fruängen",
+     "lat": 59.2864602,
+     "lon": 17.9647374
+    },
+    {
+     "type": "way",
+     "ref": 1183033749,
+     "role": "platform",
+     "name": null,
+     "lat": 59.28669543750001,
+     "lon": 17.964790462499998,
+     "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "tactile_paving": "yes"
+     }
+    },
+    {
+     "type": "way",
+     "ref": 145840458,
+     "role": "platform",
+     "name": null,
+     "lat": 59.29126278750001,
+     "lon": 17.96665869583333,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "lit": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "tactile_paving": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 1332810633,
+     "role": "platform",
+     "name": "Hägerstensåsen",
+     "lat": 59.294998,
+     "lon": 17.9779191
+    },
+    {
+     "type": "node",
+     "ref": 6963267,
+     "role": "stop",
+     "name": "Telefonplan",
+     "lat": 59.2984206,
+     "lon": 17.9982092
+    },
+    {
+     "type": "way",
+     "ref": 180569550,
+     "role": "platform",
+     "name": null,
+     "lat": 59.29847344444444,
+     "lon": 17.99885518888889,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002821001;SE:001:Quay:9022001002821002",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "asphalt",
+      "tactile_paving": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9101420574,
+     "role": "stop",
+     "name": "Midsommarkransen",
+     "lat": 59.3016868,
+     "lon": 18.0107515
+    },
+    {
+     "type": "way",
+     "ref": 984385382,
+     "role": "platform",
+     "name": null,
+     "lat": 59.301635733333335,
+     "lon": 18.010781400000003,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "1",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002811001",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9102150448,
+     "role": "stop",
+     "name": "Liljeholmen",
+     "lat": 59.3107248,
+     "lon": 18.0230445
+    },
+    {
+     "type": "way",
+     "ref": 984486469,
+     "role": "platform",
+     "name": null,
+     "lat": 59.31086157142859,
+     "lon": 18.023253200000003,
+     "tags": {
+      "area": "yes",
+      "layer": "-2",
+      "level": "-1",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002601001;SE:001:Quay:9022001002601003",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9102120373,
+     "role": "stop",
+     "name": "Hornstull",
+     "lat": 59.3165126,
+     "lon": 18.0365651
+    },
+    {
+     "type": "way",
+     "ref": 984483511,
+     "role": "platform",
+     "name": null,
+     "lat": 59.31646165714285,
+     "lon": 18.036475099999997,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "local_ref": "1",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002531001",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 12409465073,
+     "role": "stop",
+     "name": "Zinkensdamm",
+     "lat": 59.3179664,
+     "lon": 18.0491403
+    },
+    {
+     "type": "node",
+     "ref": 8957422798,
+     "role": "stop",
+     "name": "Mariatorget",
+     "lat": 59.3171925,
+     "lon": 18.060632
+    },
+    {
+     "type": "way",
+     "ref": 968196193,
+     "role": "platform",
+     "name": "Mariatorget",
+     "lat": 59.3172088,
+     "lon": 18.060376499999997,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "lit": "yes",
+      "local_ref": "1",
+      "name": "Mariatorget",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002511001",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "paved",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8922248875,
+     "role": "stop",
+     "name": "Slussen",
+     "lat": 59.3192816,
+     "lon": 18.0721794
+    },
+    {
+     "type": "way",
+     "ref": 964573296,
+     "role": "platform",
+     "name": null,
+     "lat": 59.319153899999996,
+     "lon": 18.072083924999998,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001011001;SE:001:Quay:9022001001011003",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8920088873,
+     "role": "stop",
+     "name": "Gamla stan",
+     "lat": 59.3233552,
+     "lon": 18.066912
+    },
+    {
+     "type": "way",
+     "ref": 964356237,
+     "role": "platform",
+     "name": null,
+     "lat": 59.32325104545457,
+     "lon": 18.066923763636364,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "lit": "yes",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001021001;SE:001:Quay:9022001001021003",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "paved",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502945,
+     "role": "stop",
+     "name": "T-Centralen",
+     "lat": 59.3317111,
+     "lon": 18.0612526
+    },
+    {
+     "type": "relation",
+     "ref": 12966438,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331654925641,
+     "lon": 18.061380976923072,
+     "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "colour": "grön linje",
+      "layer": "-2",
+      "level": "-3",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001051001;SE:001:Quay:9022001001051002",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "3;4",
+      "tactile_paving": "yes",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 293340663,
+     "role": "stop",
+     "name": "Östermalmstorg",
+     "lat": 59.3355682,
+     "lon": 18.077663
+    },
+    {
+     "type": "way",
+     "ref": 968213455,
+     "role": "platform",
+     "name": null,
+     "lat": 59.3355833375,
+     "lon": 18.077830575,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-3",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502375,
+     "role": "platform",
+     "name": "Stadion",
+     "lat": 59.3422852,
+     "lon": 18.080447
+    },
+    {
+     "type": "node",
+     "ref": 60746176,
+     "role": "platform",
+     "name": "Tekniska högskolan",
+     "lat": 59.3457935,
+     "lon": 18.0708628
+    },
+    {
+     "type": "node",
+     "ref": 13952047580,
+     "role": "stop",
+     "name": "Universitetet",
+     "lat": 59.3664618,
+     "lon": 18.0535671
+    },
+    {
+     "type": "way",
+     "ref": 1516912351,
+     "role": "platform",
+     "name": null,
+     "lat": 59.3663628,
+     "lon": 18.053722883333336,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "layer": "-2",
+      "level": "-2",
+      "lit": "yes",
+      "local_ref": "1;2",
+      "location": "underground",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "no",
+      "tunnel": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9102217269,
+     "role": "stop",
+     "name": "Bergshamra",
+     "lat": 59.3807408,
+     "lon": 18.0370496
+    },
+    {
+     "type": "way",
+     "ref": 984497318,
+     "role": "platform",
+     "name": null,
+     "lat": 59.380816749999994,
+     "lon": 18.03715295,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "1",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002241001",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 91778256,
+     "role": "stop",
+     "name": "Danderyds sjukhus",
+     "lat": 59.3909507,
+     "lon": 18.0419207
+    },
+    {
+     "type": "node",
+     "ref": 91778254,
+     "role": "stop",
+     "name": "Mörby centrum",
+     "lat": 59.3985794,
+     "lon": 18.0364022
+    }
+   ],
+   "trackWays": [
+    17983498,
+    17983472,
+    17983575,
+    17983595,
+    1350091914,
+    1350091915,
+    74927131,
+    74927129,
+    118518975,
+    118518970,
+    17981282,
+    17981252,
+    180569309,
+    180569313,
+    180569315,
+    180569321,
+    17981259,
+    326158264,
+    103008275,
+    103008274,
+    126051375,
+    126051382,
+    1090866609,
+    993071375,
+    175909724,
+    141790007,
+    25009709,
+    6236730,
+    967995030,
+    967995032,
+    1447820314,
+    5174161,
+    38161370,
+    5174173,
+    10578000
+   ]
+  },
+  {
+   "osmId": 6286476,
+   "ref": "14",
+   "name": "Tunnelbana 14: Mörby centrum - Fruängen",
+   "colour": "red",
+   "from": "Mörby centrum",
+   "to": "Fruängen",
+   "calls": [
+    {
+     "type": "node",
+     "ref": 3160187269,
+     "role": "stop",
+     "name": "Mörby centrum",
+     "lat": 59.3987186,
+     "lon": 18.0369114
+    },
+    {
+     "type": "node",
+     "ref": 3160187268,
+     "role": "stop",
+     "name": "Danderyds sjukhus",
+     "lat": 59.3909519,
+     "lon": 18.0420085
+    },
+    {
+     "type": "node",
+     "ref": 9102217268,
+     "role": "stop",
+     "name": "Bergshamra",
+     "lat": 59.3808324,
+     "lon": 18.0375681
+    },
+    {
+     "type": "way",
+     "ref": 984497317,
+     "role": "platform",
+     "name": null,
+     "lat": 59.38086167499999,
+     "lon": 18.03741815,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002241002",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 13952047579,
+     "role": "stop",
+     "name": "Universitetet",
+     "lat": 59.3664709,
+     "lon": 18.0537798
+    },
+    {
+     "type": "way",
+     "ref": 1516912351,
+     "role": "platform",
+     "name": null,
+     "lat": 59.3663628,
+     "lon": 18.053722883333336,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "layer": "-2",
+      "level": "-2",
+      "lit": "yes",
+      "local_ref": "1;2",
+      "location": "underground",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "no",
+      "tunnel": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 60746176,
+     "role": "platform",
+     "name": "Tekniska högskolan",
+     "lat": 59.3457935,
+     "lon": 18.0708628
+    },
+    {
+     "type": "node",
+     "ref": 4225502375,
+     "role": "stop",
+     "name": "Stadion",
+     "lat": 59.3422852,
+     "lon": 18.080447
+    },
+    {
+     "type": "node",
+     "ref": 3160187326,
+     "role": "stop",
+     "name": "Östermalmstorg",
+     "lat": 59.3353929,
+     "lon": 18.0779138
+    },
+    {
+     "type": "way",
+     "ref": 968213454,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33541664444445,
+     "lon": 18.077843277777777,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "level": "-3",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "subway": "yes",
+      "tactile_paving": "yes",
+      "tram": "yes",
+      "wheelchair": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 1465269232,
+     "role": "stop",
+     "name": "T-Centralen",
+     "lat": 59.3315968,
+     "lon": 18.0613783
+    },
+    {
+     "type": "relation",
+     "ref": 12966439,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331634697560986,
+     "lon": 18.061344802439024,
+     "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "level": "-2",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001051003;SE:001:Quay:9022001001051004",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1;2",
+      "tactile_paving": "yes",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8920088909,
+     "role": "stop",
+     "name": "Gamla stan",
+     "lat": 59.3233647,
+     "lon": 18.0669831
+    },
+    {
+     "type": "way",
+     "ref": 964356238,
+     "role": "platform",
+     "name": null,
+     "lat": 59.323331725,
+     "lon": 18.0671411625,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "lit": "yes",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001021004;SE:001:Quay:9022001001021002",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "paved",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8922248891,
+     "role": "stop",
+     "name": "Slussen",
+     "lat": 59.3192646,
+     "lon": 18.0722724
+    },
+    {
+     "type": "way",
+     "ref": 964573295,
+     "role": "platform",
+     "name": null,
+     "lat": 59.319310492857134,
+     "lon": 18.072308589285715,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001011002;SE:001:Quay:9022001001011004",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8957422797,
+     "role": "stop",
+     "name": "Mariatorget",
+     "lat": 59.3170074,
+     "lon": 18.0604211
+    },
+    {
+     "type": "way",
+     "ref": 968196192,
+     "role": "platform",
+     "name": "Mariatorget",
+     "lat": 59.31708149999999,
+     "lon": 18.0602886,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-3",
+      "lit": "yes",
+      "local_ref": "2",
+      "name": "Mariatorget",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002511002",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "paved",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 12409465074,
+     "role": "stop",
+     "name": "Zinkensdamm",
+     "lat": 59.3177717,
+     "lon": 18.0492117
+    },
+    {
+     "type": "node",
+     "ref": 9102120374,
+     "role": "stop",
+     "name": "Hornstull",
+     "lat": 59.3163151,
+     "lon": 18.0367798
+    },
+    {
+     "type": "way",
+     "ref": 984483510,
+     "role": "platform",
+     "name": null,
+     "lat": 59.31628898750001,
+     "lon": 18.0365159375,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "local_ref": "2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002531002",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 2163321582,
+     "role": "stop",
+     "name": "Liljeholmen",
+     "lat": 59.3107237,
+     "lon": 18.0234885
+    },
+    {
+     "type": "way",
+     "ref": 984486468,
+     "role": "platform",
+     "name": null,
+     "lat": 59.31074529285714,
+     "lon": 18.023362157142856,
+     "tags": {
+      "area": "yes",
+      "layer": "-2",
+      "level": "-1",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002601002;SE:001:Quay:9022001002601005",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9101420575,
+     "role": "stop",
+     "name": "Midsommarkransen",
+     "lat": 59.3015283,
+     "lon": 18.0112377
+    },
+    {
+     "type": "way",
+     "ref": 984385381,
+     "role": "platform",
+     "name": null,
+     "lat": 59.301563428571434,
+     "lon": 18.011190728571428,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002811002",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 9101488572,
+     "role": "stop",
+     "name": "Telefonplan",
+     "lat": 59.2983041,
+     "lon": 17.9981844
+    },
+    {
+     "type": "way",
+     "ref": 180569550,
+     "role": "platform",
+     "name": null,
+     "lat": 59.29847344444444,
+     "lon": 17.99885518888889,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001002821001;SE:001:Quay:9022001002821002",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "asphalt",
+      "tactile_paving": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 1332810633,
+     "role": "stop",
+     "name": "Hägerstensåsen",
+     "lat": 59.294998,
+     "lon": 17.9779191
+    },
+    {
+     "type": "node",
+     "ref": 4225502388,
+     "role": "stop",
+     "name": "Västertorp",
+     "lat": 59.2913152,
+     "lon": 17.966692
+    },
+    {
+     "type": "node",
+     "ref": 10985180235,
+     "role": "stop",
+     "name": "Fruängen",
+     "lat": 59.2864706,
+     "lon": 17.9649739
+    },
+    {
+     "type": "way",
+     "ref": 1183033749,
+     "role": "platform",
+     "name": null,
+     "lat": 59.28669543750001,
+     "lon": 17.964790462499998,
+     "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "tactile_paving": "yes"
+     }
+    }
+   ],
+   "trackWays": [
+    310576274,
+    310576271,
+    310576264,
+    310576268,
+    1447820313,
+    967995033,
+    967995031,
+    310576269,
+    310576262,
+    1102806331,
+    1102806332,
+    424124422,
+    4876583,
+    23745134,
+    23745133,
+    1090866608,
+    30480615,
+    22945792,
+    206326921,
+    103008265,
+    984379926,
+    984379924,
+    22945678,
+    180569319,
+    180569320,
+    180569308,
+    180569311,
+    180569323,
+    195334628,
+    73565179,
+    118518969,
+    118518971,
+    118518972,
+    118518966,
+    1350091917,
+    1350091916,
+    118518967,
+    118518968,
+    73565177,
+    1350091918,
+    422823383,
+    73565164
+   ]
+  },
+  {
+   "osmId": 6286477,
+   "ref": "17",
+   "name": "Tunnelbana 17: Skarpnäck - Hässelby strand",
+   "colour": "green",
+   "from": "Skarpnäck",
+   "to": "Hässelby strand",
+   "calls": [
+    {
+     "type": "node",
+     "ref": 4225502368,
+     "role": "platform",
+     "name": "Skarpnäck",
+     "lat": 59.2664056,
+     "lon": 18.132987
+    },
+    {
+     "type": "node",
+     "ref": 4225502310,
+     "role": "platform",
+     "name": "Bagarmossen",
+     "lat": 59.2761858,
+     "lon": 18.13134
+    },
+    {
+     "type": "node",
+     "ref": 4225502345,
+     "role": "platform",
+     "name": "Kärrtorp",
+     "lat": 59.2841561,
+     "lon": 18.1146325
+    },
+    {
+     "type": "node",
+     "ref": 146868479,
+     "role": "platform",
+     "name": "Björkhagen",
+     "lat": 59.291204,
+     "lon": 18.1154858
+    },
+    {
+     "type": "node",
+     "ref": 4225502330,
+     "role": "platform",
+     "name": "Hammarbyhöjden",
+     "lat": 59.294805,
+     "lon": 18.1043275
+    },
+    {
+     "type": "node",
+     "ref": 4225502370,
+     "role": "platform",
+     "name": "Skärmarbrink",
+     "lat": 59.2955761,
+     "lon": 18.0899019
+    },
+    {
+     "type": "node",
+     "ref": 4225502326,
+     "role": "platform",
+     "name": "Gullmarsplan",
+     "lat": 59.2995292,
+     "lon": 18.0806392
+    },
+    {
+     "type": "node",
+     "ref": 4225502367,
+     "role": "platform",
+     "name": "Skanstull",
+     "lat": 59.308699,
+     "lon": 18.075958
+    },
+    {
+     "type": "node",
+     "ref": 4225502349,
+     "role": "platform",
+     "name": "Medborgarplatsen",
+     "lat": 59.3151746,
+     "lon": 18.0732073
+    },
+    {
+     "type": "node",
+     "ref": 8922267318,
+     "role": "stop",
+     "name": "Slussen",
+     "lat": 59.3192448,
+     "lon": 18.07198
+    },
+    {
+     "type": "way",
+     "ref": 964573296,
+     "role": "platform",
+     "name": null,
+     "lat": 59.319153899999996,
+     "lon": 18.072083924999998,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001011001;SE:001:Quay:9022001001011003",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8920088901,
+     "role": "stop",
+     "name": "Gamla stan",
+     "lat": 59.323334,
+     "lon": 18.0667202
+    },
+    {
+     "type": "way",
+     "ref": 964356237,
+     "role": "platform",
+     "name": null,
+     "lat": 59.32325104545457,
+     "lon": 18.066923763636364,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "lit": "yes",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001021001;SE:001:Quay:9022001001021003",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "paved",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502944,
+     "role": "stop",
+     "name": "T-Centralen",
+     "lat": 59.3317122,
+     "lon": 18.0612583
+    },
+    {
+     "type": "relation",
+     "ref": 12966439,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331634697560986,
+     "lon": 18.061344802439024,
+     "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "level": "-2",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001051003;SE:001:Quay:9022001001051004",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1;2",
+      "tactile_paving": "yes",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502338,
+     "role": "platform",
+     "name": "Hötorget",
+     "lat": 59.3358309,
+     "lon": 18.0632652
+    },
+    {
+     "type": "node",
+     "ref": 4225502363,
+     "role": "platform",
+     "name": "Rådmansgatan",
+     "lat": 59.3402737,
+     "lon": 18.0590682
+    },
+    {
+     "type": "node",
+     "ref": 8916965564,
+     "role": "stop",
+     "name": "Odenplan",
+     "lat": 59.3429345,
+     "lon": 18.047948
+    },
+    {
+     "type": "way",
+     "ref": 776357706,
+     "role": "platform",
+     "name": null,
+     "lat": 59.34297738125,
+     "lon": 18.047858093749998,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "layer": "-3",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1;2",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502366,
+     "role": "platform",
+     "name": "Sankt Eriksplan",
+     "lat": 59.3405394,
+     "lon": 18.0372227
+    },
+    {
+     "type": "node",
+     "ref": 271664918,
+     "role": "stop",
+     "name": "Fridhemsplan",
+     "lat": 59.3332214,
+     "lon": 18.0317964
+    },
+    {
+     "type": "relation",
+     "ref": 20514998,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33299709473683,
+     "lon": 18.031251821052628,
+     "tags": {
+      "layer": "-2",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 1799738358,
+     "role": "stop",
+     "name": "Thorildsplan",
+     "lat": 59.3313903,
+     "lon": 18.0140736
+    },
+    {
+     "type": "way",
+     "ref": 62194314,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331457040000004,
+     "lon": 18.014728993333335,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "tactile_paving": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502344,
+     "role": "platform",
+     "name": "Kristineberg",
+     "lat": 59.3325611,
+     "lon": 18.0041091
+    },
+    {
+     "type": "node",
+     "ref": 4225502307,
+     "role": "platform",
+     "name": "Alvik",
+     "lat": 59.3334008,
+     "lon": 17.9822792
+    },
+    {
+     "type": "node",
+     "ref": 4225502377,
+     "role": "platform",
+     "name": "Stora mossen",
+     "lat": 59.3345554,
+     "lon": 17.9660645
+    },
+    {
+     "type": "node",
+     "ref": 4225502304,
+     "role": "platform",
+     "name": "Abrahamsberg",
+     "lat": 59.3364679,
+     "lon": 17.9537633
+    },
+    {
+     "type": "node",
+     "ref": 2090537381,
+     "role": "stop",
+     "name": "Brommaplan",
+     "lat": 59.3381401,
+     "lon": 17.9407207
+    },
+    {
+     "type": "way",
+     "ref": 198990846,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33823585,
+     "lon": 17.940414566666664,
+     "tags": {
+      "area": "yes",
+      "departures_board": "realtime",
+      "level": "1",
+      "network": "SL",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1232",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225503125,
+     "role": "platform",
+     "name": "Åkeshov",
+     "lat": 59.3421394,
+     "lon": 17.9242192
+    },
+    {
+     "type": "node",
+     "ref": 4225503124,
+     "role": "platform",
+     "name": "Ängbyplan",
+     "lat": 59.3418894,
+     "lon": 17.9074126
+    },
+    {
+     "type": "node",
+     "ref": 4225502339,
+     "role": "platform",
+     "name": "Islandstorget",
+     "lat": 59.3459382,
+     "lon": 17.8937453
+    },
+    {
+     "type": "node",
+     "ref": 4225502313,
+     "role": "platform",
+     "name": "Blackeberg",
+     "lat": 59.3484727,
+     "lon": 17.8826992
+    },
+    {
+     "type": "node",
+     "ref": 4225502361,
+     "role": "platform",
+     "name": "Råcksta",
+     "lat": 59.3549132,
+     "lon": 17.8818481
+    },
+    {
+     "type": "node",
+     "ref": 4225502387,
+     "role": "platform",
+     "name": "Vällingby",
+     "lat": 59.3639335,
+     "lon": 17.8708429
+    },
+    {
+     "type": "node",
+     "ref": 4225502340,
+     "role": "platform",
+     "name": "Johannelund",
+     "lat": 59.3679477,
+     "lon": 17.8578532
+    },
+    {
+     "type": "node",
+     "ref": 4225502335,
+     "role": "platform",
+     "name": "Hässelby gård",
+     "lat": 59.3669672,
+     "lon": 17.8439084
+    },
+    {
+     "type": "node",
+     "ref": 13727207825,
+     "role": "stop",
+     "name": "Hässelby strand",
+     "lat": 59.3616612,
+     "lon": 17.8327481
+    },
+    {
+     "type": "way",
+     "ref": 547510646,
+     "role": "platform",
+     "name": null,
+     "lat": 59.36168924545454,
+     "lon": 17.832634036363636,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes"
+     }
+    }
+   ],
+   "trackWays": [
+    241976007,
+    161604796,
+    161604788,
+    161604792,
+    161604791,
+    328870272,
+    161604790,
+    161604805,
+    161604789,
+    1350089623,
+    161604802,
+    161604797,
+    161604798,
+    161604794,
+    110152700,
+    110152705,
+    110152702,
+    110152704,
+    110152506,
+    1355153205,
+    1355153204,
+    110152520,
+    422823377,
+    110152505,
+    110152530,
+    112630523,
+    112630537,
+    112630535,
+    112630534,
+    112632002,
+    898036932,
+    126051378,
+    126051388,
+    1090866610,
+    126051380,
+    175909725,
+    776357705,
+    776357702,
+    30480616,
+    25009422,
+    25009421,
+    41359693,
+    31064434,
+    31064433,
+    24990214,
+    141784044,
+    141784058,
+    33696153,
+    38426209,
+    141720406,
+    141720404,
+    115027268,
+    26534491,
+    141784065,
+    141784035,
+    23315723,
+    141784041,
+    197978991,
+    197978990,
+    172278287,
+    422823376,
+    198990844,
+    198990852,
+    198990854,
+    198990851,
+    261211548,
+    261211542,
+    261211550,
+    261211546,
+    261211544,
+    261211541,
+    261211539,
+    261211545,
+    261211549,
+    261211538,
+    261212204,
+    546654824,
+    1085868562,
+    261212209,
+    261212202,
+    261212203,
+    272160488,
+    272160489,
+    261212208,
+    261212207,
+    261212211,
+    261212205,
+    261213379,
+    261213378,
+    198990848
+   ]
+  },
+  {
+   "osmId": 6286478,
+   "ref": "17",
+   "name": "Tunnelbana 17: Hässelby strand - Skarpnäck",
+   "colour": "green",
+   "from": "Hässelby strand",
+   "to": "Skarpnäck",
+   "calls": [
+    {
+     "type": "node",
+     "ref": 13727207824,
+     "role": "stop",
+     "name": "Hässelby strand",
+     "lat": 59.3617077,
+     "lon": 17.8325069
+    },
+    {
+     "type": "way",
+     "ref": 547510646,
+     "role": "platform",
+     "name": null,
+     "lat": 59.36168924545454,
+     "lon": 17.832634036363636,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502335,
+     "role": "stop",
+     "name": "Hässelby gård",
+     "lat": 59.3669672,
+     "lon": 17.8439084
+    },
+    {
+     "type": "node",
+     "ref": 4225502340,
+     "role": "stop",
+     "name": "Johannelund",
+     "lat": 59.3679477,
+     "lon": 17.8578532
+    },
+    {
+     "type": "node",
+     "ref": 4225502387,
+     "role": "stop",
+     "name": "Vällingby",
+     "lat": 59.3639335,
+     "lon": 17.8708429
+    },
+    {
+     "type": "node",
+     "ref": 4225502361,
+     "role": "stop",
+     "name": "Råcksta",
+     "lat": 59.3549132,
+     "lon": 17.8818481
+    },
+    {
+     "type": "node",
+     "ref": 4225502313,
+     "role": "stop",
+     "name": "Blackeberg",
+     "lat": 59.3484727,
+     "lon": 17.8826992
+    },
+    {
+     "type": "node",
+     "ref": 4225502339,
+     "role": "stop",
+     "name": "Islandstorget",
+     "lat": 59.3459382,
+     "lon": 17.8937453
+    },
+    {
+     "type": "node",
+     "ref": 4225503124,
+     "role": "stop",
+     "name": "Ängbyplan",
+     "lat": 59.3418894,
+     "lon": 17.9074126
+    },
+    {
+     "type": "node",
+     "ref": 4225503125,
+     "role": "stop",
+     "name": "Åkeshov",
+     "lat": 59.3421394,
+     "lon": 17.9242192
+    },
+    {
+     "type": "node",
+     "ref": 2090537399,
+     "role": "stop",
+     "name": "Brommaplan",
+     "lat": 59.3382295,
+     "lon": 17.9407636
+    },
+    {
+     "type": "way",
+     "ref": 198990846,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33823585,
+     "lon": 17.940414566666664,
+     "tags": {
+      "area": "yes",
+      "departures_board": "realtime",
+      "level": "1",
+      "network": "SL",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1232",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502304,
+     "role": "stop",
+     "name": "Abrahamsberg",
+     "lat": 59.3364679,
+     "lon": 17.9537633
+    },
+    {
+     "type": "node",
+     "ref": 4225502377,
+     "role": "stop",
+     "name": "Stora mossen",
+     "lat": 59.3345554,
+     "lon": 17.9660645
+    },
+    {
+     "type": "node",
+     "ref": 4225502307,
+     "role": "stop",
+     "name": "Alvik",
+     "lat": 59.3334008,
+     "lon": 17.9822792
+    },
+    {
+     "type": "node",
+     "ref": 4225502344,
+     "role": "stop",
+     "name": "Kristineberg",
+     "lat": 59.3325611,
+     "lon": 18.0041091
+    },
+    {
+     "type": "node",
+     "ref": 1799738365,
+     "role": "stop",
+     "name": "Thorildsplan",
+     "lat": 59.3314972,
+     "lon": 18.0141923
+    },
+    {
+     "type": "way",
+     "ref": 62194314,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331457040000004,
+     "lon": 18.014728993333335,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "tactile_paving": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 1799968464,
+     "role": "stop",
+     "name": "Fridhemsplan",
+     "lat": 59.3333721,
+     "lon": 18.031494
+    },
+    {
+     "type": "relation",
+     "ref": 20514996,
+     "role": "platform",
+     "name": null,
+     "lat": 59.333069493023274,
+     "lon": 18.03101565813954,
+     "tags": {
+      "layer": "-2",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502366,
+     "role": "stop",
+     "name": "Sankt Eriksplan",
+     "lat": 59.3405394,
+     "lon": 18.0372227
+    },
+    {
+     "type": "node",
+     "ref": 8916965565,
+     "role": "stop",
+     "name": "Odenplan",
+     "lat": 59.3430357,
+     "lon": 18.0479116
+    },
+    {
+     "type": "way",
+     "ref": 776357706,
+     "role": "platform",
+     "name": null,
+     "lat": 59.34297738125,
+     "lon": 18.047858093749998,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "layer": "-3",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1;2",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502363,
+     "role": "stop",
+     "name": "Rådmansgatan",
+     "lat": 59.3402737,
+     "lon": 18.0590682
+    },
+    {
+     "type": "node",
+     "ref": 4225502338,
+     "role": "stop",
+     "name": "Hötorget",
+     "lat": 59.3358309,
+     "lon": 18.0632652
+    },
+    {
+     "type": "node",
+     "ref": 4225502941,
+     "role": "stop",
+     "name": "T-Centralen",
+     "lat": 59.3316345,
+     "lon": 18.0614624
+    },
+    {
+     "type": "relation",
+     "ref": 12966438,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331654925641,
+     "lon": 18.061380976923072,
+     "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "colour": "grön linje",
+      "layer": "-2",
+      "level": "-3",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001051001;SE:001:Quay:9022001001051002",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "3;4",
+      "tactile_paving": "yes",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8920088829,
+     "role": "stop",
+     "name": "Gamla stan",
+     "lat": 59.3234028,
+     "lon": 18.0671671
+    },
+    {
+     "type": "way",
+     "ref": 964356238,
+     "role": "platform",
+     "name": null,
+     "lat": 59.323331725,
+     "lon": 18.0671411625,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "lit": "yes",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001021004;SE:001:Quay:9022001001021002",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "paved",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8922248904,
+     "role": "stop",
+     "name": "Slussen",
+     "lat": 59.3193358,
+     "lon": 18.0724563
+    },
+    {
+     "type": "way",
+     "ref": 964573295,
+     "role": "platform",
+     "name": null,
+     "lat": 59.319310492857134,
+     "lon": 18.072308589285715,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001011002;SE:001:Quay:9022001001011004",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502349,
+     "role": "stop",
+     "name": "Medborgarplatsen",
+     "lat": 59.3151746,
+     "lon": 18.0732073
+    },
+    {
+     "type": "node",
+     "ref": 4225502367,
+     "role": "stop",
+     "name": "Skanstull",
+     "lat": 59.308699,
+     "lon": 18.075958
+    },
+    {
+     "type": "node",
+     "ref": 4225502326,
+     "role": "stop",
+     "name": "Gullmarsplan",
+     "lat": 59.2995292,
+     "lon": 18.0806392
+    },
+    {
+     "type": "node",
+     "ref": 4225502370,
+     "role": "stop",
+     "name": "Skärmarbrink",
+     "lat": 59.2955761,
+     "lon": 18.0899019
+    },
+    {
+     "type": "node",
+     "ref": 4225502330,
+     "role": "stop",
+     "name": "Hammarbyhöjden",
+     "lat": 59.294805,
+     "lon": 18.1043275
+    },
+    {
+     "type": "node",
+     "ref": 146868479,
+     "role": "stop",
+     "name": "Björkhagen",
+     "lat": 59.291204,
+     "lon": 18.1154858
+    },
+    {
+     "type": "node",
+     "ref": 4225502345,
+     "role": "stop",
+     "name": "Kärrtorp",
+     "lat": 59.2841561,
+     "lon": 18.1146325
+    },
+    {
+     "type": "node",
+     "ref": 4225502310,
+     "role": "stop",
+     "name": "Bagarmossen",
+     "lat": 59.2761858,
+     "lon": 18.13134
+    },
+    {
+     "type": "node",
+     "ref": 4225502368,
+     "role": "stop",
+     "name": "Skarpnäck",
+     "lat": 59.2664056,
+     "lon": 18.132987
+    }
+   ],
+   "trackWays": [
+    121963374,
+    146976750,
+    121963376,
+    261212210,
+    261212206,
+    121963372,
+    121963368,
+    121963375,
+    121963370,
+    121963369,
+    20181650,
+    19851948,
+    20887764,
+    20887763,
+    261246501,
+    261246502,
+    261211543,
+    261211540,
+    193953580,
+    193953574,
+    24990465,
+    24990463,
+    146221844,
+    146221834,
+    69289838,
+    69289833,
+    422823378,
+    198990847,
+    198990849,
+    198990842,
+    198990855,
+    144270596,
+    141784049,
+    141784038,
+    141784047,
+    115027295,
+    115027269,
+    141720410,
+    141720408,
+    38426208,
+    141720405,
+    141720407,
+    42263718,
+    141784053,
+    141784045,
+    141784068,
+    62194320,
+    62194316,
+    56259257,
+    56259287,
+    168760201,
+    168782522,
+    237781247,
+    237781248,
+    776357703,
+    776357704,
+    424124418,
+    424124419,
+    135509179,
+    135509177,
+    126051387,
+    1090866607,
+    126051379,
+    23538389,
+    898036933,
+    112630528,
+    112630521,
+    38427341,
+    14870593,
+    14870613,
+    30421560,
+    30421562,
+    8115609,
+    38427342,
+    1355153208,
+    1355153209,
+    110152518,
+    110152531,
+    110152703,
+    110152706,
+    14864501,
+    14864518,
+    161604800,
+    100654466,
+    100654495,
+    29199635,
+    29199632,
+    29199591,
+    29199586,
+    65512085,
+    58529661,
+    328870270,
+    58529649,
+    161604799,
+    29199506,
+    161604795,
+    29181970,
+    29181926
+   ]
+  },
+  {
+   "osmId": 6286479,
+   "ref": "18",
+   "name": "Tunnelbana 18: Hässelby strand - Farsta strand",
+   "colour": "green",
+   "from": "Hässelby strand",
+   "to": "Farsta strand",
+   "calls": [
+    {
+     "type": "node",
+     "ref": 13727207824,
+     "role": "stop",
+     "name": "Hässelby strand",
+     "lat": 59.3617077,
+     "lon": 17.8325069
+    },
+    {
+     "type": "way",
+     "ref": 547510646,
+     "role": "platform",
+     "name": null,
+     "lat": 59.36168924545454,
+     "lon": 17.832634036363636,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502335,
+     "role": "stop",
+     "name": "Hässelby gård",
+     "lat": 59.3669672,
+     "lon": 17.8439084
+    },
+    {
+     "type": "node",
+     "ref": 4225502340,
+     "role": "stop",
+     "name": "Johannelund",
+     "lat": 59.3679477,
+     "lon": 17.8578532
+    },
+    {
+     "type": "node",
+     "ref": 4225502387,
+     "role": "stop",
+     "name": "Vällingby",
+     "lat": 59.3639335,
+     "lon": 17.8708429
+    },
+    {
+     "type": "node",
+     "ref": 4225502361,
+     "role": "stop",
+     "name": "Råcksta",
+     "lat": 59.3549132,
+     "lon": 17.8818481
+    },
+    {
+     "type": "node",
+     "ref": 4225502313,
+     "role": "stop",
+     "name": "Blackeberg",
+     "lat": 59.3484727,
+     "lon": 17.8826992
+    },
+    {
+     "type": "node",
+     "ref": 4225502339,
+     "role": "stop",
+     "name": "Islandstorget",
+     "lat": 59.3459382,
+     "lon": 17.8937453
+    },
+    {
+     "type": "node",
+     "ref": 4225503124,
+     "role": "stop",
+     "name": "Ängbyplan",
+     "lat": 59.3418894,
+     "lon": 17.9074126
+    },
+    {
+     "type": "node",
+     "ref": 4225503125,
+     "role": "stop",
+     "name": "Åkeshov",
+     "lat": 59.3421394,
+     "lon": 17.9242192
+    },
+    {
+     "type": "node",
+     "ref": 2090537399,
+     "role": "stop",
+     "name": "Brommaplan",
+     "lat": 59.3382295,
+     "lon": 17.9407636
+    },
+    {
+     "type": "way",
+     "ref": 198990846,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33823585,
+     "lon": 17.940414566666664,
+     "tags": {
+      "area": "yes",
+      "departures_board": "realtime",
+      "level": "1",
+      "network": "SL",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1232",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502304,
+     "role": "stop",
+     "name": "Abrahamsberg",
+     "lat": 59.3364679,
+     "lon": 17.9537633
+    },
+    {
+     "type": "node",
+     "ref": 4225502377,
+     "role": "stop",
+     "name": "Stora mossen",
+     "lat": 59.3345554,
+     "lon": 17.9660645
+    },
+    {
+     "type": "node",
+     "ref": 4225502307,
+     "role": "stop",
+     "name": "Alvik",
+     "lat": 59.3334008,
+     "lon": 17.9822792
+    },
+    {
+     "type": "node",
+     "ref": 4225502344,
+     "role": "stop",
+     "name": "Kristineberg",
+     "lat": 59.3325611,
+     "lon": 18.0041091
+    },
+    {
+     "type": "node",
+     "ref": 1799738365,
+     "role": "stop",
+     "name": "Thorildsplan",
+     "lat": 59.3314972,
+     "lon": 18.0141923
+    },
+    {
+     "type": "way",
+     "ref": 62194314,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331457040000004,
+     "lon": 18.014728993333335,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "tactile_paving": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 1799968464,
+     "role": "stop",
+     "name": "Fridhemsplan",
+     "lat": 59.3333721,
+     "lon": 18.031494
+    },
+    {
+     "type": "relation",
+     "ref": 20514996,
+     "role": "platform",
+     "name": null,
+     "lat": 59.333069493023274,
+     "lon": 18.03101565813954,
+     "tags": {
+      "layer": "-2",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502366,
+     "role": "stop",
+     "name": "Sankt Eriksplan",
+     "lat": 59.3405394,
+     "lon": 18.0372227
+    },
+    {
+     "type": "node",
+     "ref": 8916965565,
+     "role": "stop",
+     "name": "Odenplan",
+     "lat": 59.3430357,
+     "lon": 18.0479116
+    },
+    {
+     "type": "way",
+     "ref": 776357706,
+     "role": "platform",
+     "name": null,
+     "lat": 59.34297738125,
+     "lon": 18.047858093749998,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "layer": "-3",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1;2",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502363,
+     "role": "stop",
+     "name": "Rådmansgatan",
+     "lat": 59.3402737,
+     "lon": 18.0590682
+    },
+    {
+     "type": "node",
+     "ref": 4225502338,
+     "role": "stop",
+     "name": "Hötorget",
+     "lat": 59.3358309,
+     "lon": 18.0632652
+    },
+    {
+     "type": "node",
+     "ref": 4225502941,
+     "role": "stop",
+     "name": "T-Centralen",
+     "lat": 59.3316345,
+     "lon": 18.0614624
+    },
+    {
+     "type": "relation",
+     "ref": 12966438,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331654925641,
+     "lon": 18.061380976923072,
+     "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "colour": "grön linje",
+      "layer": "-2",
+      "level": "-3",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001051001;SE:001:Quay:9022001001051002",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "3;4",
+      "tactile_paving": "yes",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8920088829,
+     "role": "stop",
+     "name": "Gamla stan",
+     "lat": 59.3234028,
+     "lon": 18.0671671
+    },
+    {
+     "type": "way",
+     "ref": 964356238,
+     "role": "platform",
+     "name": null,
+     "lat": 59.323331725,
+     "lon": 18.0671411625,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "lit": "yes",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001021004;SE:001:Quay:9022001001021002",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "paved",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8922248904,
+     "role": "stop",
+     "name": "Slussen",
+     "lat": 59.3193358,
+     "lon": 18.0724563
+    },
+    {
+     "type": "way",
+     "ref": 964573295,
+     "role": "platform",
+     "name": null,
+     "lat": 59.319310492857134,
+     "lon": 18.072308589285715,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001011002;SE:001:Quay:9022001001011004",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502349,
+     "role": "stop",
+     "name": "Medborgarplatsen",
+     "lat": 59.3151746,
+     "lon": 18.0732073
+    },
+    {
+     "type": "node",
+     "ref": 4225502367,
+     "role": "stop",
+     "name": "Skanstull",
+     "lat": 59.308699,
+     "lon": 18.075958
+    },
+    {
+     "type": "node",
+     "ref": 4225502326,
+     "role": "stop",
+     "name": "Gullmarsplan",
+     "lat": 59.2995292,
+     "lon": 18.0806392
+    },
+    {
+     "type": "node",
+     "ref": 4225502370,
+     "role": "stop",
+     "name": "Skärmarbrink",
+     "lat": 59.2955761,
+     "lon": 18.0899019
+    },
+    {
+     "type": "node",
+     "ref": 4225502314,
+     "role": "stop",
+     "name": "Blåsut",
+     "lat": 59.2905028,
+     "lon": 18.0911605
+    },
+    {
+     "type": "node",
+     "ref": 4225502365,
+     "role": "stop",
+     "name": "Sandsborg",
+     "lat": 59.2856892,
+     "lon": 18.0919812
+    },
+    {
+     "type": "node",
+     "ref": 4225502369,
+     "role": "stop",
+     "name": "Skogskyrkogården",
+     "lat": 59.2786934,
+     "lon": 18.0953984
+    },
+    {
+     "type": "node",
+     "ref": 4225502382,
+     "role": "stop",
+     "name": "Tallkrogen",
+     "lat": 59.2715291,
+     "lon": 18.0860589
+    },
+    {
+     "type": "node",
+     "ref": 4225502325,
+     "role": "stop",
+     "name": "Gubbängen",
+     "lat": 59.2636202,
+     "lon": 18.0820785
+    },
+    {
+     "type": "node",
+     "ref": 4225502337,
+     "role": "stop",
+     "name": "Hökarängen",
+     "lat": 59.2573192,
+     "lon": 18.0828456
+    },
+    {
+     "type": "node",
+     "ref": 4225502320,
+     "role": "stop",
+     "name": "Farsta",
+     "lat": 59.243353,
+     "lon": 18.0939285
+    },
+    {
+     "type": "node",
+     "ref": 258159605,
+     "role": "stop",
+     "name": "Farsta strand",
+     "lat": 59.2350447,
+     "lon": 18.1021013
+    }
+   ],
+   "trackWays": [
+    121963374,
+    146976750,
+    121963376,
+    261212210,
+    261212206,
+    121963372,
+    121963368,
+    121963375,
+    121963370,
+    121963369,
+    20181650,
+    19851948,
+    20887764,
+    20887763,
+    261246501,
+    261246502,
+    261211543,
+    261211540,
+    193953580,
+    193953574,
+    24990465,
+    24990463,
+    146221844,
+    146221834,
+    69289838,
+    69289833,
+    422823378,
+    198990847,
+    198990849,
+    198990842,
+    198990855,
+    144270596,
+    141784049,
+    141784038,
+    141784047,
+    115027295,
+    115027269,
+    141720410,
+    141720408,
+    38426208,
+    141720405,
+    141720407,
+    42263718,
+    141784053,
+    141784045,
+    141784068,
+    62194320,
+    62194316,
+    56259257,
+    56259287,
+    168760201,
+    168782522,
+    237781247,
+    237781248,
+    776357703,
+    776357704,
+    424124418,
+    424124419,
+    135509179,
+    135509177,
+    126051387,
+    1090866607,
+    126051379,
+    23538389,
+    898036933,
+    112630528,
+    112630521,
+    38427341,
+    14870593,
+    14870613,
+    30421560,
+    30421562,
+    8115609,
+    1355151237,
+    1355151236,
+    1355153207,
+    23654846,
+    104387740,
+    23538487,
+    23538492,
+    104387736,
+    23538459,
+    23538461,
+    14862862,
+    1350089617,
+    1350089618,
+    14862914,
+    111869161,
+    114716768,
+    29199777,
+    29199767,
+    23538602,
+    1210593142,
+    1210593146,
+    114719602,
+    40798344,
+    40798345,
+    114719601,
+    114719599,
+    23820183,
+    23820199,
+    23820240
+   ]
+  },
+  {
+   "osmId": 6286480,
+   "ref": "18",
+   "name": "Tunnelbana 18: Farsta strand - Hässelby strand",
+   "colour": "green",
+   "from": "Farsta strand",
+   "to": "Hässelby strand",
+   "calls": [
+    {
+     "type": "node",
+     "ref": 10059708912,
+     "role": "stop",
+     "name": "Farsta strand",
+     "lat": 59.2349776,
+     "lon": 18.1019538
+    },
+    {
+     "type": "node",
+     "ref": 4225502320,
+     "role": "stop",
+     "name": "Farsta",
+     "lat": 59.243353,
+     "lon": 18.0939285
+    },
+    {
+     "type": "node",
+     "ref": 4225502337,
+     "role": "stop",
+     "name": "Hökarängen",
+     "lat": 59.2573192,
+     "lon": 18.0828456
+    },
+    {
+     "type": "node",
+     "ref": 4225502325,
+     "role": "stop",
+     "name": "Gubbängen",
+     "lat": 59.2636202,
+     "lon": 18.0820785
+    },
+    {
+     "type": "node",
+     "ref": 4225502382,
+     "role": "stop",
+     "name": "Tallkrogen",
+     "lat": 59.2715291,
+     "lon": 18.0860589
+    },
+    {
+     "type": "node",
+     "ref": 4225502369,
+     "role": "stop",
+     "name": "Skogskyrkogården",
+     "lat": 59.2786934,
+     "lon": 18.0953984
+    },
+    {
+     "type": "node",
+     "ref": 4225502365,
+     "role": "stop",
+     "name": "Sandsborg",
+     "lat": 59.2856892,
+     "lon": 18.0919812
+    },
+    {
+     "type": "node",
+     "ref": 4225502314,
+     "role": "stop",
+     "name": "Blåsut",
+     "lat": 59.2905028,
+     "lon": 18.0911605
+    },
+    {
+     "type": "node",
+     "ref": 4225502370,
+     "role": "stop",
+     "name": "Skärmarbrink",
+     "lat": 59.2955761,
+     "lon": 18.0899019
+    },
+    {
+     "type": "node",
+     "ref": 4225502326,
+     "role": "stop",
+     "name": "Gullmarsplan",
+     "lat": 59.2995292,
+     "lon": 18.0806392
+    },
+    {
+     "type": "node",
+     "ref": 4225502367,
+     "role": "stop",
+     "name": "Skanstull",
+     "lat": 59.308699,
+     "lon": 18.075958
+    },
+    {
+     "type": "node",
+     "ref": 4225502349,
+     "role": "stop",
+     "name": "Medborgarplatsen",
+     "lat": 59.3151746,
+     "lon": 18.0732073
+    },
+    {
+     "type": "node",
+     "ref": 8922267318,
+     "role": "stop",
+     "name": "Slussen",
+     "lat": 59.3192448,
+     "lon": 18.07198
+    },
+    {
+     "type": "way",
+     "ref": 964573296,
+     "role": "platform",
+     "name": null,
+     "lat": 59.319153899999996,
+     "lon": 18.072083924999998,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001011001;SE:001:Quay:9022001001011003",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8920088901,
+     "role": "stop",
+     "name": "Gamla stan",
+     "lat": 59.323334,
+     "lon": 18.0667202
+    },
+    {
+     "type": "way",
+     "ref": 964356237,
+     "role": "platform",
+     "name": null,
+     "lat": 59.32325104545457,
+     "lon": 18.066923763636364,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "lit": "yes",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001021001;SE:001:Quay:9022001001021003",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "paved",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502944,
+     "role": "stop",
+     "name": "T-Centralen",
+     "lat": 59.3317122,
+     "lon": 18.0612583
+    },
+    {
+     "type": "relation",
+     "ref": 12966439,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331634697560986,
+     "lon": 18.061344802439024,
+     "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "level": "-2",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001051003;SE:001:Quay:9022001001051004",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1;2",
+      "tactile_paving": "yes",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502338,
+     "role": "stop",
+     "name": "Hötorget",
+     "lat": 59.3358309,
+     "lon": 18.0632652
+    },
+    {
+     "type": "node",
+     "ref": 4225502363,
+     "role": "stop",
+     "name": "Rådmansgatan",
+     "lat": 59.3402737,
+     "lon": 18.0590682
+    },
+    {
+     "type": "node",
+     "ref": 8916965564,
+     "role": "stop",
+     "name": "Odenplan",
+     "lat": 59.3429345,
+     "lon": 18.047948
+    },
+    {
+     "type": "way",
+     "ref": 776357706,
+     "role": "platform",
+     "name": null,
+     "lat": 59.34297738125,
+     "lon": 18.047858093749998,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "layer": "-3",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1;2",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502366,
+     "role": "stop",
+     "name": "Sankt Eriksplan",
+     "lat": 59.3405394,
+     "lon": 18.0372227
+    },
+    {
+     "type": "node",
+     "ref": 271664918,
+     "role": "stop",
+     "name": "Fridhemsplan",
+     "lat": 59.3332214,
+     "lon": 18.0317964
+    },
+    {
+     "type": "relation",
+     "ref": 20514998,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33299709473683,
+     "lon": 18.031251821052628,
+     "tags": {
+      "layer": "-2",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 1799738358,
+     "role": "stop",
+     "name": "Thorildsplan",
+     "lat": 59.3313903,
+     "lon": 18.0140736
+    },
+    {
+     "type": "way",
+     "ref": 62194314,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331457040000004,
+     "lon": 18.014728993333335,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "tactile_paving": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502344,
+     "role": "stop",
+     "name": "Kristineberg",
+     "lat": 59.3325611,
+     "lon": 18.0041091
+    },
+    {
+     "type": "node",
+     "ref": 4225502307,
+     "role": "stop",
+     "name": "Alvik",
+     "lat": 59.3334008,
+     "lon": 17.9822792
+    },
+    {
+     "type": "node",
+     "ref": 4225502377,
+     "role": "stop",
+     "name": "Stora mossen",
+     "lat": 59.3345554,
+     "lon": 17.9660645
+    },
+    {
+     "type": "node",
+     "ref": 4225502304,
+     "role": "stop",
+     "name": "Abrahamsberg",
+     "lat": 59.3364679,
+     "lon": 17.9537633
+    },
+    {
+     "type": "node",
+     "ref": 2090537381,
+     "role": "stop",
+     "name": "Brommaplan",
+     "lat": 59.3381401,
+     "lon": 17.9407207
+    },
+    {
+     "type": "way",
+     "ref": 198990846,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33823585,
+     "lon": 17.940414566666664,
+     "tags": {
+      "area": "yes",
+      "departures_board": "realtime",
+      "level": "1",
+      "network": "SL",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1232",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225503125,
+     "role": "stop",
+     "name": "Åkeshov",
+     "lat": 59.3421394,
+     "lon": 17.9242192
+    },
+    {
+     "type": "node",
+     "ref": 4225503124,
+     "role": "stop",
+     "name": "Ängbyplan",
+     "lat": 59.3418894,
+     "lon": 17.9074126
+    },
+    {
+     "type": "node",
+     "ref": 4225502339,
+     "role": "stop",
+     "name": "Islandstorget",
+     "lat": 59.3459382,
+     "lon": 17.8937453
+    },
+    {
+     "type": "node",
+     "ref": 4225502313,
+     "role": "stop",
+     "name": "Blackeberg",
+     "lat": 59.3484727,
+     "lon": 17.8826992
+    },
+    {
+     "type": "node",
+     "ref": 4225502361,
+     "role": "stop",
+     "name": "Råcksta",
+     "lat": 59.3549132,
+     "lon": 17.8818481
+    },
+    {
+     "type": "node",
+     "ref": 4225502387,
+     "role": "stop",
+     "name": "Vällingby",
+     "lat": 59.3639335,
+     "lon": 17.8708429
+    },
+    {
+     "type": "node",
+     "ref": 4225502340,
+     "role": "stop",
+     "name": "Johannelund",
+     "lat": 59.3679477,
+     "lon": 17.8578532
+    },
+    {
+     "type": "node",
+     "ref": 4225502335,
+     "role": "stop",
+     "name": "Hässelby gård",
+     "lat": 59.3669672,
+     "lon": 17.8439084
+    },
+    {
+     "type": "node",
+     "ref": 13727207825,
+     "role": "stop",
+     "name": "Hässelby strand",
+     "lat": 59.3616612,
+     "lon": 17.8327481
+    },
+    {
+     "type": "way",
+     "ref": 547510646,
+     "role": "platform",
+     "name": null,
+     "lat": 59.36168924545454,
+     "lon": 17.832634036363636,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes"
+     }
+    }
+   ],
+   "trackWays": [
+    111869166,
+    251142803,
+    251142805,
+    251142804,
+    114719587,
+    114719589,
+    114719598,
+    1210593144,
+    114719593,
+    1210593140,
+    114717116,
+    114717115,
+    114717117,
+    114717110,
+    111869160,
+    111869159,
+    1350089620,
+    1350089619,
+    111869194,
+    111869163,
+    110152522,
+    112518503,
+    241178308,
+    241178309,
+    1355153206,
+    1355151238,
+    1355151239,
+    422823377,
+    110152505,
+    110152530,
+    112630523,
+    112630537,
+    112630535,
+    112630534,
+    112632002,
+    898036932,
+    126051378,
+    126051388,
+    1090866610,
+    126051380,
+    175909725,
+    776357705,
+    776357702,
+    30480616,
+    25009422,
+    25009421,
+    41359693,
+    31064434,
+    31064433,
+    24990214,
+    141784044,
+    141784058,
+    33696153,
+    38426209,
+    141720406,
+    141720404,
+    115027268,
+    26534491,
+    141784065,
+    141784035,
+    23315723,
+    141784041,
+    197978991,
+    197978990,
+    172278287,
+    422823376,
+    198990844,
+    198990852,
+    198990854,
+    198990851,
+    261211548,
+    261211542,
+    261211550,
+    261211546,
+    261211544,
+    261211541,
+    261211539,
+    261211545,
+    261211549,
+    261211538,
+    261212204,
+    546654824,
+    1085868562,
+    261212209,
+    261212202,
+    261212203,
+    272160488,
+    272160489,
+    261212208,
+    261212207,
+    261212211,
+    261212205,
+    261213379,
+    261213378,
+    198990848
+   ]
+  },
+  {
+   "osmId": 6286481,
+   "ref": "19",
+   "name": "Tunnelbana 19: Hagsätra - Hässelby strand",
+   "colour": "green",
+   "from": "Hagsätra",
+   "to": "Hässelby strand",
+   "calls": [
+    {
+     "type": "node",
+     "ref": 1596684510,
+     "role": "stop",
+     "name": "Hagsätra",
+     "lat": 59.2630808,
+     "lon": 18.0123398
+    },
+    {
+     "type": "way",
+     "ref": 146396284,
+     "role": "platform",
+     "name": null,
+     "lat": 59.262851579999996,
+     "lon": 18.012466240000002,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "building": "roof",
+      "lit": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "tactile_paving": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502364,
+     "role": "platform",
+     "name": "Rågsved",
+     "lat": 59.2566889,
+     "lon": 18.0284454
+    },
+    {
+     "type": "node",
+     "ref": 2069718820,
+     "role": "platform",
+     "name": "Högdalen",
+     "lat": 59.2637643,
+     "lon": 18.0430573
+    },
+    {
+     "type": "node",
+     "ref": 4225502311,
+     "role": "platform",
+     "name": "Bandhagen",
+     "lat": 59.2703049,
+     "lon": 18.0495879
+    },
+    {
+     "type": "node",
+     "ref": 4225502378,
+     "role": "platform",
+     "name": "Stureby",
+     "lat": 59.2746446,
+     "lon": 18.055816
+    },
+    {
+     "type": "node",
+     "ref": 4225502380,
+     "role": "platform",
+     "name": "Svedmyra",
+     "lat": 59.2774915,
+     "lon": 18.0671282
+    },
+    {
+     "type": "node",
+     "ref": 4225502372,
+     "role": "platform",
+     "name": "Sockenplan",
+     "lat": 59.2829955,
+     "lon": 18.0702825
+    },
+    {
+     "type": "node",
+     "ref": 4225502318,
+     "role": "platform",
+     "name": "Enskede gård",
+     "lat": 59.2892869,
+     "lon": 18.0702041
+    },
+    {
+     "type": "node",
+     "ref": 4225502324,
+     "role": "platform",
+     "name": "Globen",
+     "lat": 59.2940576,
+     "lon": 18.0767849
+    },
+    {
+     "type": "node",
+     "ref": 4225502326,
+     "role": "platform",
+     "name": "Gullmarsplan",
+     "lat": 59.2995292,
+     "lon": 18.0806392
+    },
+    {
+     "type": "node",
+     "ref": 4225502367,
+     "role": "platform",
+     "name": "Skanstull",
+     "lat": 59.308699,
+     "lon": 18.075958
+    },
+    {
+     "type": "node",
+     "ref": 4225502349,
+     "role": "platform",
+     "name": "Medborgarplatsen",
+     "lat": 59.3151746,
+     "lon": 18.0732073
+    },
+    {
+     "type": "node",
+     "ref": 8922267318,
+     "role": "stop",
+     "name": "Slussen",
+     "lat": 59.3192448,
+     "lon": 18.07198
+    },
+    {
+     "type": "way",
+     "ref": 964573296,
+     "role": "platform",
+     "name": null,
+     "lat": 59.319153899999996,
+     "lon": 18.072083924999998,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001011001;SE:001:Quay:9022001001011003",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8920088901,
+     "role": "stop",
+     "name": "Gamla stan",
+     "lat": 59.323334,
+     "lon": 18.0667202
+    },
+    {
+     "type": "way",
+     "ref": 964356237,
+     "role": "platform",
+     "name": null,
+     "lat": 59.32325104545457,
+     "lon": 18.066923763636364,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "lit": "yes",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001021001;SE:001:Quay:9022001001021003",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "paved",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502944,
+     "role": "stop",
+     "name": "T-Centralen",
+     "lat": 59.3317122,
+     "lon": 18.0612583
+    },
+    {
+     "type": "relation",
+     "ref": 12966439,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331634697560986,
+     "lon": 18.061344802439024,
+     "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "level": "-2",
+      "local_ref": "1;2",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001051003;SE:001:Quay:9022001001051004",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1;2",
+      "tactile_paving": "yes",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502338,
+     "role": "platform",
+     "name": "Hötorget",
+     "lat": 59.3358309,
+     "lon": 18.0632652
+    },
+    {
+     "type": "node",
+     "ref": 4225502363,
+     "role": "platform",
+     "name": "Rådmansgatan",
+     "lat": 59.3402737,
+     "lon": 18.0590682
+    },
+    {
+     "type": "node",
+     "ref": 8916965564,
+     "role": "stop",
+     "name": "Odenplan",
+     "lat": 59.3429345,
+     "lon": 18.047948
+    },
+    {
+     "type": "way",
+     "ref": 776357706,
+     "role": "platform",
+     "name": null,
+     "lat": 59.34297738125,
+     "lon": 18.047858093749998,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "layer": "-3",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1;2",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502366,
+     "role": "platform",
+     "name": "Sankt Eriksplan",
+     "lat": 59.3405394,
+     "lon": 18.0372227
+    },
+    {
+     "type": "node",
+     "ref": 271664918,
+     "role": "stop",
+     "name": "Fridhemsplan",
+     "lat": 59.3332214,
+     "lon": 18.0317964
+    },
+    {
+     "type": "relation",
+     "ref": 20514998,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33299709473683,
+     "lon": 18.031251821052628,
+     "tags": {
+      "layer": "-2",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 1799738358,
+     "role": "stop",
+     "name": "Thorildsplan",
+     "lat": 59.3313903,
+     "lon": 18.0140736
+    },
+    {
+     "type": "way",
+     "ref": 62194314,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331457040000004,
+     "lon": 18.014728993333335,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "tactile_paving": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502344,
+     "role": "platform",
+     "name": "Kristineberg",
+     "lat": 59.3325611,
+     "lon": 18.0041091
+    },
+    {
+     "type": "node",
+     "ref": 4225502307,
+     "role": "platform",
+     "name": "Alvik",
+     "lat": 59.3334008,
+     "lon": 17.9822792
+    },
+    {
+     "type": "node",
+     "ref": 4225502377,
+     "role": "platform",
+     "name": "Stora mossen",
+     "lat": 59.3345554,
+     "lon": 17.9660645
+    },
+    {
+     "type": "node",
+     "ref": 4225502304,
+     "role": "platform",
+     "name": "Abrahamsberg",
+     "lat": 59.3364679,
+     "lon": 17.9537633
+    },
+    {
+     "type": "node",
+     "ref": 2090537381,
+     "role": "stop",
+     "name": "Brommaplan",
+     "lat": 59.3381401,
+     "lon": 17.9407207
+    },
+    {
+     "type": "way",
+     "ref": 198990846,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33823585,
+     "lon": 17.940414566666664,
+     "tags": {
+      "area": "yes",
+      "departures_board": "realtime",
+      "level": "1",
+      "network": "SL",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1232",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225503125,
+     "role": "platform",
+     "name": "Åkeshov",
+     "lat": 59.3421394,
+     "lon": 17.9242192
+    },
+    {
+     "type": "node",
+     "ref": 4225503124,
+     "role": "platform",
+     "name": "Ängbyplan",
+     "lat": 59.3418894,
+     "lon": 17.9074126
+    },
+    {
+     "type": "node",
+     "ref": 4225502339,
+     "role": "platform",
+     "name": "Islandstorget",
+     "lat": 59.3459382,
+     "lon": 17.8937453
+    },
+    {
+     "type": "node",
+     "ref": 4225502313,
+     "role": "platform",
+     "name": "Blackeberg",
+     "lat": 59.3484727,
+     "lon": 17.8826992
+    },
+    {
+     "type": "node",
+     "ref": 4225502361,
+     "role": "platform",
+     "name": "Råcksta",
+     "lat": 59.3549132,
+     "lon": 17.8818481
+    },
+    {
+     "type": "node",
+     "ref": 4225502387,
+     "role": "platform",
+     "name": "Vällingby",
+     "lat": 59.3639335,
+     "lon": 17.8708429
+    },
+    {
+     "type": "node",
+     "ref": 4225502340,
+     "role": "platform",
+     "name": "Johannelund",
+     "lat": 59.3679477,
+     "lon": 17.8578532
+    },
+    {
+     "type": "node",
+     "ref": 4225502335,
+     "role": "platform",
+     "name": "Hässelby gård",
+     "lat": 59.3669672,
+     "lon": 17.8439084
+    },
+    {
+     "type": "node",
+     "ref": 13727207825,
+     "role": "stop",
+     "name": "Hässelby strand",
+     "lat": 59.3616612,
+     "lon": 17.8327481
+    },
+    {
+     "type": "way",
+     "ref": 547510646,
+     "role": "platform",
+     "name": null,
+     "lat": 59.36168924545454,
+     "lon": 17.832634036363636,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes"
+     }
+    }
+   ],
+   "trackWays": [
+    1415217225,
+    146396293,
+    146396292,
+    146396295,
+    146396278,
+    146396282,
+    146396280,
+    1023620592,
+    674147534,
+    132051504,
+    132051508,
+    132051501,
+    132051505,
+    132051507,
+    132051506,
+    160828106,
+    1350082279,
+    1350082280,
+    160828101,
+    132050660,
+    132050657,
+    114114821,
+    114114822,
+    114114817,
+    156962539,
+    156962541,
+    156962542,
+    112631226,
+    112631232,
+    112631219,
+    112631206,
+    112631242,
+    112631214,
+    112631222,
+    112631227,
+    112631230,
+    112631241,
+    1539015742,
+    14870203,
+    14870320,
+    112632002,
+    898036932,
+    126051378,
+    126051388,
+    1090866610,
+    126051380,
+    175909725,
+    776357705,
+    776357702,
+    30480616,
+    25009422,
+    25009421,
+    41359693,
+    31064434,
+    31064433,
+    24990214,
+    141784044,
+    141784058,
+    33696153,
+    38426209,
+    141720406,
+    141720404,
+    115027268,
+    26534491,
+    141784065,
+    141784035,
+    23315723,
+    141784041,
+    197978991,
+    197978990,
+    172278287,
+    422823376,
+    198990844,
+    198990852,
+    198990854,
+    198990851,
+    261211548,
+    261211542,
+    261211550,
+    261211546,
+    261211544,
+    261211541,
+    261211539,
+    261211545,
+    261211549,
+    261211538,
+    261212204,
+    546654824,
+    1085868562,
+    261212209,
+    261212202,
+    261212203,
+    272160488,
+    272160489,
+    261212208,
+    261212207,
+    261212211,
+    261212205,
+    261213379,
+    261213378,
+    198990848
+   ]
+  },
+  {
+   "osmId": 6286482,
+   "ref": "19",
+   "name": "Tunnelbana 19: Hässelby strand - Hagsätra",
+   "colour": "green",
+   "from": "Hässelby strand",
+   "to": "Hagsätra",
+   "calls": [
+    {
+     "type": "node",
+     "ref": 13727207824,
+     "role": "stop",
+     "name": "Hässelby strand",
+     "lat": 59.3617077,
+     "lon": 17.8325069
+    },
+    {
+     "type": "way",
+     "ref": 547510646,
+     "role": "platform",
+     "name": null,
+     "lat": 59.36168924545454,
+     "lon": 17.832634036363636,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502335,
+     "role": "stop",
+     "name": "Hässelby gård",
+     "lat": 59.3669672,
+     "lon": 17.8439084
+    },
+    {
+     "type": "node",
+     "ref": 4225502340,
+     "role": "stop",
+     "name": "Johannelund",
+     "lat": 59.3679477,
+     "lon": 17.8578532
+    },
+    {
+     "type": "node",
+     "ref": 4225502387,
+     "role": "stop",
+     "name": "Vällingby",
+     "lat": 59.3639335,
+     "lon": 17.8708429
+    },
+    {
+     "type": "node",
+     "ref": 4225502361,
+     "role": "stop",
+     "name": "Råcksta",
+     "lat": 59.3549132,
+     "lon": 17.8818481
+    },
+    {
+     "type": "node",
+     "ref": 4225502313,
+     "role": "stop",
+     "name": "Blackeberg",
+     "lat": 59.3484727,
+     "lon": 17.8826992
+    },
+    {
+     "type": "node",
+     "ref": 4225502339,
+     "role": "stop",
+     "name": "Islandstorget",
+     "lat": 59.3459382,
+     "lon": 17.8937453
+    },
+    {
+     "type": "node",
+     "ref": 4225503124,
+     "role": "stop",
+     "name": "Ängbyplan",
+     "lat": 59.3418894,
+     "lon": 17.9074126
+    },
+    {
+     "type": "node",
+     "ref": 4225503125,
+     "role": "stop",
+     "name": "Åkeshov",
+     "lat": 59.3421394,
+     "lon": 17.9242192
+    },
+    {
+     "type": "node",
+     "ref": 2090537399,
+     "role": "stop",
+     "name": "Brommaplan",
+     "lat": 59.3382295,
+     "lon": 17.9407636
+    },
+    {
+     "type": "way",
+     "ref": 198990846,
+     "role": "platform",
+     "name": null,
+     "lat": 59.33823585,
+     "lon": 17.940414566666664,
+     "tags": {
+      "area": "yes",
+      "departures_board": "realtime",
+      "level": "1",
+      "network": "SL",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1232",
+      "subway": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502304,
+     "role": "stop",
+     "name": "Abrahamsberg",
+     "lat": 59.3364679,
+     "lon": 17.9537633
+    },
+    {
+     "type": "node",
+     "ref": 4225502377,
+     "role": "stop",
+     "name": "Stora mossen",
+     "lat": 59.3345554,
+     "lon": 17.9660645
+    },
+    {
+     "type": "node",
+     "ref": 4225502307,
+     "role": "stop",
+     "name": "Alvik",
+     "lat": 59.3334008,
+     "lon": 17.9822792
+    },
+    {
+     "type": "node",
+     "ref": 4225502344,
+     "role": "stop",
+     "name": "Kristineberg",
+     "lat": 59.3325611,
+     "lon": 18.0041091
+    },
+    {
+     "type": "node",
+     "ref": 1799738365,
+     "role": "stop",
+     "name": "Thorildsplan",
+     "lat": 59.3314972,
+     "lon": 18.0141923
+    },
+    {
+     "type": "way",
+     "ref": 62194314,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331457040000004,
+     "lon": 18.014728993333335,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "lit": "yes",
+      "operator": "SL",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "tactile_paving": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 1799968464,
+     "role": "stop",
+     "name": "Fridhemsplan",
+     "lat": 59.3333721,
+     "lon": 18.031494
+    },
+    {
+     "type": "relation",
+     "ref": 20514996,
+     "role": "platform",
+     "name": null,
+     "lat": 59.333069493023274,
+     "lon": 18.03101565813954,
+     "tags": {
+      "layer": "-2",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502366,
+     "role": "stop",
+     "name": "Sankt Eriksplan",
+     "lat": 59.3405394,
+     "lon": 18.0372227
+    },
+    {
+     "type": "node",
+     "ref": 8916965565,
+     "role": "stop",
+     "name": "Odenplan",
+     "lat": 59.3430357,
+     "lon": 18.0479116
+    },
+    {
+     "type": "way",
+     "ref": 776357706,
+     "role": "platform",
+     "name": null,
+     "lat": 59.34297738125,
+     "lon": 18.047858093749998,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "departures_board": "realtime",
+      "layer": "-3",
+      "level": "-2",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "1;2",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502363,
+     "role": "stop",
+     "name": "Rådmansgatan",
+     "lat": 59.3402737,
+     "lon": 18.0590682
+    },
+    {
+     "type": "node",
+     "ref": 4225502338,
+     "role": "stop",
+     "name": "Hötorget",
+     "lat": 59.3358309,
+     "lon": 18.0632652
+    },
+    {
+     "type": "node",
+     "ref": 4225502941,
+     "role": "stop",
+     "name": "T-Centralen",
+     "lat": 59.3316345,
+     "lon": 18.0614624
+    },
+    {
+     "type": "relation",
+     "ref": 12966438,
+     "role": "platform",
+     "name": null,
+     "lat": 59.331654925641,
+     "lon": 18.061380976923072,
+     "tags": {
+      "bench": "yes",
+      "bin": "yes",
+      "colour": "grön linje",
+      "layer": "-2",
+      "level": "-3",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001051001;SE:001:Quay:9022001001051002",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "ref": "3;4",
+      "tactile_paving": "yes",
+      "tunnel": "yes",
+      "type": "multipolygon"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8920088829,
+     "role": "stop",
+     "name": "Gamla stan",
+     "lat": 59.3234028,
+     "lon": 18.0671671
+    },
+    {
+     "type": "way",
+     "ref": 964356238,
+     "role": "platform",
+     "name": null,
+     "lat": 59.323331725,
+     "lon": 18.0671411625,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-1",
+      "lit": "yes",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001021004;SE:001:Quay:9022001001021002",
+      "passenger_information_display": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "subway": "yes",
+      "surface": "paved",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 8922248904,
+     "role": "stop",
+     "name": "Slussen",
+     "lat": 59.3193358,
+     "lon": 18.0724563
+    },
+    {
+     "type": "way",
+     "ref": 964573295,
+     "role": "platform",
+     "name": null,
+     "lat": 59.319310492857134,
+     "lon": 18.072308589285715,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "layer": "-2",
+      "lit": "yes",
+      "local_ref": "3;4",
+      "netex:quay:id:SE-SL": "SE:001:Quay:9022001001011002;SE:001:Quay:9022001001011004",
+      "public_transport": "platform",
+      "railway": "platform",
+      "tactile_paving": "yes",
+      "tunnel": "yes"
+     }
+    },
+    {
+     "type": "node",
+     "ref": 4225502349,
+     "role": "stop",
+     "name": "Medborgarplatsen",
+     "lat": 59.3151746,
+     "lon": 18.0732073
+    },
+    {
+     "type": "node",
+     "ref": 4225502367,
+     "role": "stop",
+     "name": "Skanstull",
+     "lat": 59.308699,
+     "lon": 18.075958
+    },
+    {
+     "type": "node",
+     "ref": 4225502326,
+     "role": "stop",
+     "name": "Gullmarsplan",
+     "lat": 59.2995292,
+     "lon": 18.0806392
+    },
+    {
+     "type": "node",
+     "ref": 4225502324,
+     "role": "stop",
+     "name": "Globen",
+     "lat": 59.2940576,
+     "lon": 18.0767849
+    },
+    {
+     "type": "node",
+     "ref": 4225502318,
+     "role": "stop",
+     "name": "Enskede gård",
+     "lat": 59.2892869,
+     "lon": 18.0702041
+    },
+    {
+     "type": "node",
+     "ref": 4225502372,
+     "role": "stop",
+     "name": "Sockenplan",
+     "lat": 59.2829955,
+     "lon": 18.0702825
+    },
+    {
+     "type": "node",
+     "ref": 4225502380,
+     "role": "stop",
+     "name": "Svedmyra",
+     "lat": 59.2774915,
+     "lon": 18.0671282
+    },
+    {
+     "type": "node",
+     "ref": 4225502378,
+     "role": "stop",
+     "name": "Stureby",
+     "lat": 59.2746446,
+     "lon": 18.055816
+    },
+    {
+     "type": "node",
+     "ref": 4225502311,
+     "role": "stop",
+     "name": "Bandhagen",
+     "lat": 59.2703049,
+     "lon": 18.0495879
+    },
+    {
+     "type": "node",
+     "ref": 2069718820,
+     "role": "stop",
+     "name": "Högdalen",
+     "lat": 59.2637643,
+     "lon": 18.0430573
+    },
+    {
+     "type": "node",
+     "ref": 4225502364,
+     "role": "stop",
+     "name": "Rågsved",
+     "lat": 59.2566889,
+     "lon": 18.0284454
+    },
+    {
+     "type": "node",
+     "ref": 1596684490,
+     "role": "stop",
+     "name": "Hagsätra",
+     "lat": 59.2630213,
+     "lon": 18.0121194
+    },
+    {
+     "type": "way",
+     "ref": 146396284,
+     "role": "platform",
+     "name": null,
+     "lat": 59.262851579999996,
+     "lon": 18.012466240000002,
+     "tags": {
+      "area": "yes",
+      "bench": "yes",
+      "bin": "yes",
+      "building": "roof",
+      "lit": "yes",
+      "public_transport": "platform",
+      "railway": "platform",
+      "shelter": "yes",
+      "tactile_paving": "yes"
+     }
+    }
+   ],
+   "trackWays": [
+    121963374,
+    146976750,
+    121963376,
+    261212210,
+    261212206,
+    121963372,
+    121963368,
+    121963375,
+    121963370,
+    121963369,
+    20181650,
+    19851948,
+    20887764,
+    20887763,
+    261246501,
+    261246502,
+    261211543,
+    261211540,
+    193953580,
+    193953574,
+    24990465,
+    24990463,
+    146221844,
+    146221834,
+    69289838,
+    69289833,
+    422823378,
+    198990847,
+    198990849,
+    198990842,
+    198990855,
+    144270596,
+    141784049,
+    141784038,
+    141784047,
+    115027295,
+    115027269,
+    141720410,
+    141720408,
+    38426208,
+    141720405,
+    141720407,
+    42263718,
+    141784053,
+    141784045,
+    141784068,
+    62194320,
+    62194316,
+    56259257,
+    56259287,
+    168760201,
+    168782522,
+    237781247,
+    237781248,
+    776357703,
+    776357704,
+    424124418,
+    424124419,
+    135509179,
+    135509177,
+    126051387,
+    1090866607,
+    126051379,
+    23538389,
+    898036933,
+    112630528,
+    112630521,
+    112632004,
+    1086046965,
+    112630529,
+    8116725,
+    112630531,
+    112631235,
+    112631231,
+    112630539,
+    112631236,
+    112631223,
+    34868884,
+    34868893,
+    26532101,
+    26532108,
+    26532072,
+    26532074,
+    114114816,
+    26532081,
+    26532079,
+    26532022,
+    26532021,
+    26531930,
+    26531923,
+    1350082278,
+    1350082277,
+    132050650,
+    132050658,
+    25945472,
+    132050656,
+    132050654,
+    25945445,
+    25945484,
+    25945482,
+    674147535,
+    28994885,
+    28995766,
+    25945489,
+    24395635,
+    24395636,
+    146396288,
+    1415217226
+   ]
+  },
+  {
+   "osmId": 21104772,
+   "ref": null,
+   "name": "Gul linje till Älvsjö",
+   "colour": "#f5c700",
+   "from": "Fridhemsplan",
+   "to": "Älvsjö",
+   "calls": [],
+   "trackWays": [
+    1452125746,
+    1452125745,
+    1452125749,
+    1452125750,
+    1454699706,
+    1454699705,
+    1550194696,
+    1550105676,
+    1550105675
+   ]
+  }
+ ]
+}

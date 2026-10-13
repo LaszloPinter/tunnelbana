@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Tunnelbana: a dark tile, the three lines of the network, and a tunnel mouth.
+       Not SL's mark: no T in a circle, no SL blue. -->
+  <rect width="64" height="64" rx="14" fill="#0b0f16"/>
+  <path d="M12 44 a20 20 0 0 1 40 0 v6 h-40z" fill="#1e2938"/>
+  <path d="M18 44 a14 14 0 0 1 28 0 v6 h-28z" fill="#070a11"/>
+  <rect x="10" y="14" width="44" height="5" rx="2.5" fill="#3fae5a"/>
+  <rect x="10" y="22" width="44" height="5" rx="2.5" fill="#d6584f"/>
+  <rect x="10" y="30" width="44" height="5" rx="2.5" fill="#2f9bd8"/>
+  <rect x="26" y="41" width="12" height="9" rx="1.5" fill="#ffb61e"/>
+</svg>

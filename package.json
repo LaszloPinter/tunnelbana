@@ -1,0 +1,39 @@
+{
+  "name": "tunnelbana",
+  "private": true,
+  "version": "0.1.0-alpha",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "tea": "node scripts/tea.mjs public/tea.json",
+    "preview": "vite preview",
+    "release": "tsc && vite build",
+    "relay": "node --experimental-strip-types server/relay.ts",
+    "host": "npm run build && (node --experimental-strip-types server/relay.ts & vite preview --host)",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check:sim": "node scripts/check-depth.mjs && node scripts/check-size.mjs && node --experimental-strip-types scripts/check-det.mjs && node --experimental-strip-types scripts/check-plan.ts && node --experimental-strip-types scripts/check-replay.ts && node --experimental-strip-types scripts/check-log.ts && node --experimental-strip-types scripts/check-golden.ts",
+    "check:world": "node --experimental-strip-types scripts/probe/all.ts",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm run check:sim && npm run check:world"
+  },
+  "dependencies": {
+    "firebase": "^12.18.0",
+    "phaser": "^4.1.0",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.4.0",
+    "@types/ws": "^8.18.1",
+    "eslint": "^10.9.1",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.11.0",
+    "prettier": "^3.9.6",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.68.0",
+    "vite": "^7.0.0"
+  }
+}

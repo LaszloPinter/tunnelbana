@@ -1,0 +1,48 @@
+#tb-resume {
+  position: fixed;
+  inset: 0;
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tb-ground, #070a11);
+  color: var(--tb-ink, #edf1f7);
+  font-family: var(--tb-ui, 'Barlow', 'Helvetica Neue', Arial, sans-serif);
+}
+.tb-resume-box {
+  width: min(520px, 90vw);
+  padding: 28px 32px;
+  border: 1px solid var(--tb-edge, #1e2938);
+  border-radius: 10px;
+  background: var(--tb-surface, #0e141e);
+}
+.tb-resume-kicker {
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--tb-amber, #ffb61e);
+}
+.tb-resume-title {
+  font-family: var(--tb-display, 'Archivo', sans-serif);
+  font-weight: 800;
+  font-size: 28px;
+  margin: 6px 0 18px;
+}
+.tb-resume-track {
+  height: 10px;
+  border-radius: 5px;
+  background: var(--tb-surface-2, #131b28);
+  border: 1px solid var(--tb-edge, #1e2938);
+  overflow: hidden;
+}
+.tb-resume-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--tb-amber, #ffb61e);
+  transition: width 120ms linear;
+}
+.tb-resume-label {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--tb-dim, #79849a);
+}

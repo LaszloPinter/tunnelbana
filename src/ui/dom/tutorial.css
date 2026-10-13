@@ -1,0 +1,232 @@
+/* THE TUTORIAL OVERLAY: big keys where the keys are, a mouse that nudges, a
+   skip that is never hidden. Sits over the canvas, under the landing. */
+#tb-tutorial {
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  pointer-events: none;
+  font-family: var(--tb-ui, 'Barlow', 'Helvetica Neue', Arial, sans-serif);
+  color: var(--tb-ink, #edf1f7);
+  -webkit-font-smoothing: antialiased;
+}
+#tb-tutorial[hidden] {
+  display: none;
+}
+#tb-tutorial * {
+  box-sizing: border-box;
+}
+.tb-tut-top {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  min-width: 520px;
+  max-width: 720px;
+  padding: 16px 28px;
+  border: 1px solid var(--tb-edge, #1e2938);
+  background: rgba(7, 10, 17, 0.86);
+  border-radius: 8px;
+}
+.tb-tut-stage {
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--tb-amber, #ffb61e);
+}
+.tb-tut-title {
+  font-family: var(--tb-display, 'Archivo', sans-serif);
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 1.1;
+  margin: 4px 0 2px;
+  letter-spacing: 0.02em;
+}
+.tb-tut-hint {
+  font-size: 18px;
+  color: var(--tb-dim, #79849a);
+}
+.tb-tut-hint b {
+  color: var(--tb-ink, #edf1f7);
+}
+.tb-tut-skip {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  pointer-events: auto;
+  cursor: pointer;
+  font-family: var(--tb-ui, sans-serif);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tb-ink, #edf1f7);
+  background: rgba(7, 10, 17, 0.86);
+  border: 1px solid var(--tb-amber, #ffb61e);
+  border-radius: 6px;
+  padding: 10px 16px;
+}
+.tb-tut-skip:hover {
+  background: rgba(255, 182, 30, 0.14);
+}
+/* the keys and the mouse together, mid-screen */
+.tb-tut-body {
+  position: absolute;
+  left: 50%;
+  top: 76%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+.tb-tut-keys {
+  display: grid;
+  grid-template-columns: repeat(3, 72px);
+  grid-auto-rows: 72px;
+  gap: 10px;
+}
+.tb-tut-keys.is-wide {
+  grid-template-columns: repeat(auto-flow, minmax(72px, auto));
+  grid-auto-flow: column;
+}
+.tb-keycap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  height: 72px;
+  padding: 0 18px;
+  border: 2px solid var(--tb-dim, #79849a);
+  border-bottom-width: 6px;
+  border-radius: 10px;
+  background: rgba(14, 20, 30, 0.92);
+  font-family: var(--tb-display, 'Archivo', sans-serif);
+  font-weight: 800;
+  font-size: 30px;
+  letter-spacing: 0.04em;
+  color: var(--tb-ink, #edf1f7);
+  transition:
+    transform 80ms,
+    border-color 120ms,
+    background 120ms;
+}
+.tb-keycap.is-small {
+  font-size: 16px;
+  letter-spacing: 0.14em;
+}
+.tb-keycap.is-lit {
+  transform: translateY(4px);
+  border-bottom-width: 2px;
+  border-color: var(--tb-amber, #ffb61e);
+  background: rgba(255, 182, 30, 0.18);
+}
+.tb-keycap.is-done {
+  border-color: var(--tb-green, #3fae5a);
+  background: rgba(63, 174, 90, 0.2);
+  color: var(--tb-green, #3fae5a);
+}
+.tb-keycap.is-empty {
+  visibility: hidden;
+}
+/* the mouse, beside the keys, nudging until it has been used */
+.tb-tut-mouse {
+  width: 110px;
+  height: 170px;
+  animation: tb-mouse-nudge 1.6s ease-in-out infinite;
+}
+.tb-tut-mouse.is-done {
+  animation: none;
+  opacity: 0.35;
+}
+.tb-tut-mouse .btn {
+  animation: tb-mouse-click 1.6s ease-in-out infinite;
+}
+.tb-tut-mouse.is-done .btn {
+  animation: none;
+  fill: rgba(63, 174, 90, 0.5);
+}
+@keyframes tb-mouse-nudge {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-14px, -10px);
+  }
+  60% {
+    transform: translate(10px, 8px);
+  }
+}
+@keyframes tb-mouse-click {
+  0%,
+  70%,
+  100% {
+    fill: rgba(255, 182, 30, 0.12);
+  }
+  80%,
+  90% {
+    fill: rgba(255, 182, 30, 0.7);
+  }
+}
+/* the stick, for a pad: same place as the mouse */
+.tb-tut-pad {
+  width: 120px;
+  height: 120px;
+}
+.tb-tut-done {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--tb-display, sans-serif);
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--tb-green, #3fae5a);
+  opacity: 0;
+  transition: opacity 200ms;
+}
+.tb-tut-done.is-on {
+  opacity: 1;
+}
+
+/* the end: a title over the moving train, then the landing */
+.tb-tut-end {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(7, 10, 17, 0);
+  transition: background 900ms;
+}
+.tb-tut-end.is-on {
+  background: rgba(7, 10, 17, 0.55);
+}
+.tb-tut-end-box {
+  text-align: center;
+  padding: 28px 40px;
+  border: 1px solid var(--tb-amber, #ffb61e);
+  border-radius: 10px;
+  background: rgba(7, 10, 17, 0.9);
+  max-width: 640px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 600ms,
+    transform 600ms;
+}
+.tb-tut-end.is-on .tb-tut-end-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+.tb-tut-end-title {
+  font-family: var(--tb-display, 'Archivo', sans-serif);
+  font-weight: 800;
+  font-size: 46px;
+  line-height: 1.05;
+  margin: 8px 0 10px;
+}
+.tb-tut-go {
+  position: static;
+  margin-top: 22px;
+}

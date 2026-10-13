@@ -1,0 +1,193 @@
+/* BETWEEN RIDES (rideDone.ts): the victory, then the ride to come */
+#tb-ride-done {
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(5, 7, 12, 0.82);
+  color: var(--tb-ink, #edf1f7);
+  font-family: var(--tb-ui, 'Barlow', 'Helvetica Neue', Arial, sans-serif);
+  animation: tb-rd-in 260ms ease-out;
+}
+/* the ride to come sits under the world you are standing in: the camera
+   centres on you, so the panel keeps to the bottom edge */
+#tb-ride-done.tb-rd-soft {
+  background: rgba(5, 7, 12, 0.25);
+  align-items: flex-end;
+  padding-bottom: 16px;
+}
+.tb-rd-soft .tb-rd-box {
+  padding: 16px 24px 12px;
+}
+.tb-rd-soft .tb-rd-btn {
+  margin-top: 10px;
+}
+@keyframes tb-rd-in {
+  from {
+    opacity: 0;
+  }
+}
+.tb-rd-box {
+  width: min(520px, 100%);
+  padding: 26px 30px 20px;
+  border: 1px solid var(--tb-edge, #1e2938);
+  border-top: 4px solid var(--tb-amber, #ffb61e);
+  border-radius: 10px;
+  background: var(--tb-surface, #0e141e);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  animation: tb-rd-rise 320ms cubic-bezier(0.2, 0.8, 0.3, 1.2);
+}
+@keyframes tb-rd-rise {
+  from {
+    transform: translateY(18px) scale(0.97);
+  }
+}
+.tb-rd-wrong {
+  border-top-color: var(--tb-red, #d6584f);
+}
+.tb-rd-next {
+  border-top-color: var(--tb-green, #3fae5a);
+  background: rgba(14, 20, 30, 0.94);
+}
+.tb-rd-kicker {
+  font-family: var(--tb-data, monospace);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--tb-amber, #ffb61e);
+}
+.tb-rd-wrong .tb-rd-kicker {
+  color: var(--tb-red, #d6584f);
+}
+.tb-rd-next .tb-rd-kicker {
+  color: var(--tb-green, #3fae5a);
+}
+.tb-rd-title {
+  font-family: var(--tb-display, 'Archivo', sans-serif);
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.15;
+  margin: 8px 0 4px;
+}
+.tb-rd-title span {
+  color: var(--tb-dimmer, #4c566a);
+}
+.tb-rd-title em {
+  font-style: normal;
+  color: #8ef0a8;
+}
+.tb-rd-sub {
+  color: var(--tb-dim, #79849a);
+  font-size: 14px;
+}
+.tb-rd-rows {
+  margin: 18px 0 10px;
+  text-align: left;
+}
+.tb-rd-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 0;
+  border-bottom: 1px dashed var(--tb-edge, #1e2938);
+  font-size: 14px;
+  color: var(--tb-dim, #79849a);
+}
+.tb-rd-row b {
+  font-family: var(--tb-data, monospace);
+  color: var(--tb-ink, #edf1f7);
+  white-space: nowrap;
+}
+.tb-rd-worth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 14px 0 6px;
+}
+.tb-rd-worth span {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--tb-dim, #79849a);
+}
+.tb-rd-worth b {
+  font-family: var(--tb-data, monospace);
+  font-size: 44px;
+  color: var(--tb-amber, #ffb61e);
+  text-shadow: 0 0 24px rgba(255, 182, 30, 0.35);
+}
+.tb-rd-pay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 18px;
+  font-size: 14px;
+  color: var(--tb-dim, #79849a);
+}
+.tb-rd-pay b {
+  color: var(--tb-ink, #edf1f7);
+  font-family: var(--tb-data, monospace);
+}
+.tb-rd-route {
+  list-style: none;
+  margin: 14px 0 6px;
+  padding: 0;
+  text-align: left;
+  font-size: 15px;
+}
+.tb-rd-route li {
+  padding: 3px 0;
+}
+.tb-rd-route i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.tb-rd-route span {
+  color: var(--tb-dim, #79849a);
+}
+.tb-rd-warn {
+  margin-top: 8px;
+  color: var(--tb-red, #d6584f);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+.tb-rd-btn {
+  margin-top: 18px;
+  min-width: 220px;
+  padding: 12px 22px;
+  border: 2px solid var(--tb-amber, #ffb61e);
+  border-radius: 8px;
+  background: rgba(255, 182, 30, 0.12);
+  color: var(--tb-ink, #edf1f7);
+  font: 700 18px var(--tb-display, sans-serif);
+  cursor: pointer;
+}
+.tb-rd-btn:hover,
+.tb-rd-btn:focus-visible {
+  background: rgba(255, 182, 30, 0.25);
+  outline: none;
+}
+.tb-rd-go {
+  border-color: #8ef0a8;
+  background: #1c6b3c;
+}
+.tb-rd-go:hover,
+.tb-rd-go:focus-visible {
+  background: #23844a;
+}
+.tb-rd-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.tb-rd-keys {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--tb-dimmer, #4c566a);
+  font-family: var(--tb-data, monospace);
+}

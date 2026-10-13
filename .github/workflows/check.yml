@@ -1,0 +1,32 @@
+# The gate: whatever `npm run check` says, CI says.
+#
+# It runs the determinism suite as well as the linters, and that is the point.
+# A pull request that puts Math.random or the wall clock into simulation code,
+# or that quietly changes what a seed replays to, fails here rather than in
+# somebody's game weeks later.
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # 22+: the checks run TypeScript directly, via --experimental-strip-types
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: typecheck, lint, format and the determinism suite
+        run: npm run check
+
+      - name: the production build
+        run: npm run build

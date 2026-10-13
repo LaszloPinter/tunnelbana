@@ -1,0 +1,3036 @@
+{
+ "source": "OpenStreetMap via Overpass, ODbL",
+ "built": "2026-08-21T18:03:19.654Z",
+ "stations": {
+  "Åkeshov": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 170187373,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 145.8,
+       "widthM": 9.8,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Brommaplan": {
+   "levels": [
+    {
+     "level": 1,
+     "platforms": [
+      {
+       "osmId": 198990846,
+       "osmType": "way",
+       "level": 1,
+       "lengthM": 167.9,
+       "widthM": 10.8,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "19",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Abrahamsberg": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 141784105,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 143.2,
+       "widthM": 6.7,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Stora mossen": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 141784104,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 159.7,
+       "widthM": 7.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Alvik": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 241944511,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 138.5,
+       "widthM": 7.1,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Kristineberg": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 56259271,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 138.5,
+       "widthM": 0,
+       "closed": false,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Thorildsplan": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 62194314,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 151.1,
+       "widthM": 10,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        },
+        {
+         "service": "19",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Fridhemsplan": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 20514996,
+       "osmType": "relation",
+       "level": -2,
+       "lengthM": 139.6,
+       "widthM": 11.2,
+       "closed": false,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      },
+      {
+       "osmId": 20514998,
+       "osmType": "relation",
+       "level": -2,
+       "lengthM": 144.8,
+       "widthM": 12.9,
+       "closed": false,
+       "serves": [
+        {
+         "service": "17",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "19",
+         "dir": -1,
+         "to": "Hässelby strand"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "level": -4,
+     "platforms": [
+      {
+       "osmId": 967978319,
+       "osmType": "way",
+       "level": -4,
+       "lengthM": 180.4,
+       "widthM": 6.7,
+       "closed": true,
+       "serves": [
+        {
+         "service": "10",
+         "dir": -1,
+         "to": "Hjulsta"
+        },
+        {
+         "service": "11",
+         "dir": -1,
+         "to": "Akalla"
+        }
+       ]
+      },
+      {
+       "osmId": 967978320,
+       "osmType": "way",
+       "level": -4,
+       "lengthM": 180.3,
+       "widthM": 8.2,
+       "closed": true,
+       "serves": [
+        {
+         "service": "10",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        },
+        {
+         "service": "11",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Odenplan": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 776357706,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 148.6,
+       "widthM": 9.1,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        },
+        {
+         "service": "19",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Hötorget": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 1524278620,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 130.4,
+       "widthM": 7.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "T-Centralen": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 12966439,
+       "osmType": "relation",
+       "level": -2,
+       "lengthM": 151.5,
+       "widthM": 16,
+       "closed": false,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        },
+        {
+         "service": "17",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "19",
+         "dir": -1,
+         "to": "Hässelby strand"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "level": -3,
+     "platforms": [
+      {
+       "osmId": 12966438,
+       "osmType": "relation",
+       "level": -3,
+       "lengthM": 151.5,
+       "widthM": 16.2,
+       "closed": false,
+       "serves": [
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        },
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        },
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "level": -4,
+     "platforms": [
+      {
+       "osmId": 552402838,
+       "osmType": "way",
+       "level": -4,
+       "lengthM": 180.8,
+       "widthM": 4.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "10",
+         "dir": -1,
+         "to": "Hjulsta"
+        },
+        {
+         "service": "11",
+         "dir": -1,
+         "to": "Akalla"
+        }
+       ]
+      },
+      {
+       "osmId": 552402839,
+       "osmType": "way",
+       "level": -4,
+       "lengthM": 180.8,
+       "widthM": 5.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "10",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        },
+        {
+         "service": "11",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Gamla stan": {
+   "levels": [
+    {
+     "level": -1,
+     "platforms": [
+      {
+       "osmId": 964356237,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 131.7,
+       "widthM": 11.2,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        },
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        },
+        {
+         "service": "17",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "19",
+         "dir": -1,
+         "to": "Hässelby strand"
+        }
+       ]
+      },
+      {
+       "osmId": 964356238,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 129.9,
+       "widthM": 8.6,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        },
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Slussen": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 964573295,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 148.2,
+       "widthM": 15.7,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        },
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      },
+      {
+       "osmId": 964573296,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 145.6,
+       "widthM": 15.4,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        },
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        },
+        {
+         "service": "17",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "19",
+         "dir": -1,
+         "to": "Hässelby strand"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Medborgarplatsen": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 1510468774,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 107.1,
+       "widthM": 8.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Skanstull": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 1510455419,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 179.6,
+       "widthM": 9.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Gullmarsplan": {
+   "levels": [
+    {
+     "level": -1,
+     "platforms": [
+      {
+       "osmId": 151117078,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 137.2,
+       "widthM": 18.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Skärmarbrink": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 110311733,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 165.6,
+       "widthM": 18.4,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        },
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Hammarbyhöjden": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 162241069,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 143.2,
+       "widthM": 9.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Björkhagen": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 161604801,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 150,
+       "widthM": 11.7,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Kärrtorp": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 161808791,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 162.6,
+       "widthM": 12.8,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Bagarmossen": {
+   "levels": [
+    {
+     "level": -1,
+     "platforms": [
+      {
+       "osmId": 1509712530,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 88.4,
+       "widthM": 8.1,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Skarpnäck": {
+   "levels": [
+    {
+     "level": -1,
+     "platforms": [
+      {
+       "osmId": 1509707544,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 141,
+       "widthM": 9.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "17",
+         "dir": 1,
+         "to": "Skarpnäck"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Blåsut": {
+   "levels": [
+    {
+     "level": 1,
+     "platforms": [
+      {
+       "osmId": 110387788,
+       "osmType": "way",
+       "level": 1,
+       "lengthM": 104.1,
+       "widthM": 8.6,
+       "closed": true,
+       "serves": [
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Sandsborg": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 104387737,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 144.4,
+       "widthM": 6.4,
+       "closed": true,
+       "serves": [
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Skogskyrkogården": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 104387738,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 142.7,
+       "widthM": 8.4,
+       "closed": true,
+       "serves": [
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Tallkrogen": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 1147168694,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 162.2,
+       "widthM": 7.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Hökarängen": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 114720156,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 157.3,
+       "widthM": 15.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Farsta": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 114719956,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 143.5,
+       "widthM": 14.2,
+       "closed": true,
+       "serves": [
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Farsta strand": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 1510213446,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 127,
+       "widthM": 10,
+       "closed": true,
+       "serves": [
+        {
+         "service": "18",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "18",
+         "dir": 1,
+         "to": "Farsta strand"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Hässelby strand": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 547510646,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 149.2,
+       "widthM": 10.8,
+       "closed": true,
+       "serves": [
+        {
+         "service": "19",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Hässelby gård": {
+   "levels": [
+    {
+     "level": 1,
+     "platforms": [
+      {
+       "osmId": 547510645,
+       "osmType": "way",
+       "level": 1,
+       "lengthM": 144.1,
+       "widthM": 11.5,
+       "closed": true,
+       "serves": [
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Johannelund": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 1505563413,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 145.4,
+       "widthM": 6.4,
+       "closed": true,
+       "serves": [
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Råcksta": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 198989342,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 144.2,
+       "widthM": 9.2,
+       "closed": true,
+       "serves": [
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Blackeberg": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 198989345,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 93.9,
+       "widthM": 8.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Islandstorget": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 171362486,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 157.4,
+       "widthM": 8,
+       "closed": true,
+       "serves": [
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Ängbyplan": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 198990845,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 147.1,
+       "widthM": 14.5,
+       "closed": true,
+       "serves": [
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Globen": {
+   "levels": [
+    {
+     "level": 1,
+     "platforms": [
+      {
+       "osmId": 114114005,
+       "osmType": "way",
+       "level": 1,
+       "lengthM": 146.6,
+       "widthM": 18.4,
+       "closed": true,
+       "serves": [
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Enskede gård": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 114114009,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 143.2,
+       "widthM": 9.8,
+       "closed": true,
+       "serves": [
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Sockenplan": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 105374039,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 147.8,
+       "widthM": 12.1,
+       "closed": true,
+       "serves": [
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Svedmyra": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 114114820,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 146.4,
+       "widthM": 12,
+       "closed": true,
+       "serves": [
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Bandhagen": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 160969293,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 86.1,
+       "widthM": 9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Högdalen": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 196670109,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 112.3,
+       "widthM": 7.1,
+       "closed": true,
+       "serves": [
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Hagsätra": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 146396284,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 158.3,
+       "widthM": 11.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "19",
+         "dir": -1,
+         "to": "Hässelby strand"
+        },
+        {
+         "service": "19",
+         "dir": 1,
+         "to": "Hagsätra"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Hallunda": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 1061683569,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 149,
+       "widthM": 15.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Alby": {
+   "levels": [
+    {
+     "level": -1,
+     "platforms": [
+      {
+       "osmId": 1502418641,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 115.5,
+       "widthM": 7.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      },
+      {
+       "osmId": 1502418642,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 115.5,
+       "widthM": 7.2,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Fittja": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 1061527193,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 138.9,
+       "widthM": 14.2,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Masmo": {
+   "levels": [
+    {
+     "level": -1,
+     "platforms": [
+      {
+       "osmId": 20510215,
+       "osmType": "relation",
+       "level": -1,
+       "lengthM": 43.9,
+       "widthM": 7.8,
+       "closed": false,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Vårby gård": {
+   "levels": [
+    {
+     "level": 1,
+     "platforms": [
+      {
+       "osmId": 1501388773,
+       "osmType": "way",
+       "level": 1,
+       "lengthM": 143.2,
+       "widthM": 12.2,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Vårberg": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 997551804,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 144.9,
+       "widthM": 14.4,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Skärholmen": {
+   "levels": [
+    {
+     "level": -1,
+     "platforms": [
+      {
+       "osmId": 1502772744,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 140,
+       "widthM": 11.7,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Sätra": {
+   "levels": [
+    {
+     "level": -1,
+     "platforms": [
+      {
+       "osmId": 504877039,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 163.7,
+       "widthM": 9.8,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      },
+      {
+       "osmId": 504877040,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 164.1,
+       "widthM": 12.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Bredäng": {
+   "levels": [
+    {
+     "level": 2,
+     "platforms": [
+      {
+       "osmId": 180805649,
+       "osmType": "way",
+       "level": 2,
+       "lengthM": 185.5,
+       "widthM": 13.4,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Mälarhöjden": {
+   "levels": [
+    {
+     "level": -1,
+     "platforms": [
+      {
+       "osmId": 1502792297,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 181.6,
+       "widthM": 23,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Axelsberg": {
+   "levels": [
+    {
+     "level": -1,
+     "platforms": [
+      {
+       "osmId": 181159281,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 147.6,
+       "widthM": 9.8,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Örnsberg": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 568505696,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 138.7,
+       "widthM": 10.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Aspudden": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 984412926,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 144,
+       "widthM": 11.4,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        }
+       ]
+      },
+      {
+       "osmId": 984412927,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 145.2,
+       "widthM": 13.5,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Liljeholmen": {
+   "levels": [
+    {
+     "level": -1,
+     "platforms": [
+      {
+       "osmId": 984486468,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 143.3,
+       "widthM": 8.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        }
+       ]
+      },
+      {
+       "osmId": 984486469,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 141,
+       "widthM": 9.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        },
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Hornstull": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 984483510,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 134,
+       "widthM": 6.2,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        }
+       ]
+      },
+      {
+       "osmId": 984483511,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 134,
+       "widthM": 6.4,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        },
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Zinkensdamm": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 1504348399,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 134.1,
+       "widthM": 6.2,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      },
+      {
+       "osmId": 1504348400,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 134.1,
+       "widthM": 5.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        },
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Mariatorget": {
+   "levels": [
+    {
+     "level": -3,
+     "platforms": [
+      {
+       "osmId": 968196192,
+       "osmType": "way",
+       "level": -3,
+       "lengthM": 151.8,
+       "widthM": 5.5,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        }
+       ]
+      },
+      {
+       "osmId": 968196193,
+       "osmType": "way",
+       "level": -3,
+       "lengthM": 151.8,
+       "widthM": 5.5,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        },
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Östermalmstorg": {
+   "levels": [
+    {
+     "level": -3,
+     "platforms": [
+      {
+       "osmId": 968213454,
+       "osmType": "way",
+       "level": -3,
+       "lengthM": 143.7,
+       "widthM": 6.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        }
+       ]
+      },
+      {
+       "osmId": 968213455,
+       "osmType": "way",
+       "level": -3,
+       "lengthM": 143.7,
+       "widthM": 5.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        },
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Karlaplan": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 1516994813,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 159.1,
+       "widthM": 23.5,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        },
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Gärdet": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 967993165,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 144.3,
+       "widthM": 6.6,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      },
+      {
+       "osmId": 967993166,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 144.9,
+       "widthM": 6.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Ropsten": {
+   "levels": [
+    {
+     "level": 2,
+     "platforms": [
+      {
+       "osmId": 348442501,
+       "osmType": "way",
+       "level": 2,
+       "lengthM": 142.1,
+       "widthM": 5.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": 1,
+         "to": "Ropsten"
+        }
+       ]
+      },
+      {
+       "osmId": 617008671,
+       "osmType": "way",
+       "level": 2,
+       "lengthM": 142.7,
+       "widthM": 5.7,
+       "closed": true,
+       "serves": [
+        {
+         "service": "13",
+         "dir": -1,
+         "to": "Norsborg"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Fruängen": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 1183033749,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 144.3,
+       "widthM": 9.1,
+       "closed": true,
+       "serves": [
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        },
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Västertorp": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 145840458,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 150.6,
+       "widthM": 15.7,
+       "closed": true,
+       "serves": [
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Telefonplan": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 180569550,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 173.1,
+       "widthM": 12.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        },
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Midsommarkransen": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 984385381,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 133.7,
+       "widthM": 7.5,
+       "closed": true,
+       "serves": [
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        }
+       ]
+      },
+      {
+       "osmId": 984385382,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 133.7,
+       "widthM": 5.8,
+       "closed": true,
+       "serves": [
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Universitetet": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 1516912351,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 144.5,
+       "widthM": 11.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        },
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Bergshamra": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 984497317,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 175.8,
+       "widthM": 9.2,
+       "closed": true,
+       "serves": [
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        }
+       ]
+      },
+      {
+       "osmId": 984497318,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 177,
+       "widthM": 8.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Danderyds sjukhus": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 1516079216,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 187.1,
+       "widthM": 10.6,
+       "closed": true,
+       "serves": [
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        },
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Mörby centrum": {
+   "levels": [
+    {
+     "level": -1,
+     "platforms": [
+      {
+       "osmId": 1516045114,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 132.5,
+       "widthM": 27.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "14",
+         "dir": -1,
+         "to": "Fruängen"
+        },
+        {
+         "service": "14",
+         "dir": 1,
+         "to": "Mörby centrum"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Hjulsta": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 1499261869,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 191.9,
+       "widthM": 19.6,
+       "closed": true,
+       "serves": [
+        {
+         "service": "10",
+         "dir": -1,
+         "to": "Hjulsta"
+        },
+        {
+         "service": "10",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Rinkeby": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 1499526938,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 192.9,
+       "widthM": 9.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "10",
+         "dir": -1,
+         "to": "Hjulsta"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Sundbybergs centrum": {
+   "levels": [
+    {
+     "level": 0,
+     "platforms": [
+      {
+       "osmId": 121183735,
+       "osmType": "way",
+       "level": 0,
+       "lengthM": 236.1,
+       "widthM": 5.2,
+       "closed": true,
+       "serves": [
+        {
+         "service": "10",
+         "dir": -1,
+         "to": "Hjulsta"
+        },
+        {
+         "service": "10",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Västra skogen": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 778738544,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 179.2,
+       "widthM": 4.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "10",
+         "dir": -1,
+         "to": "Hjulsta"
+        },
+        {
+         "service": "11",
+         "dir": -1,
+         "to": "Akalla"
+        }
+       ]
+      },
+      {
+       "osmId": 778738545,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 179.2,
+       "widthM": 5.5,
+       "closed": true,
+       "serves": [
+        {
+         "service": "10",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      },
+      {
+       "osmId": 965953972,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 179.2,
+       "widthM": 5.1,
+       "closed": true,
+       "serves": [
+        {
+         "service": "11",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Stadshagen": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 999989505,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 180.1,
+       "widthM": 6.1,
+       "closed": true,
+       "serves": [
+        {
+         "service": "10",
+         "dir": -1,
+         "to": "Hjulsta"
+        },
+        {
+         "service": "11",
+         "dir": -1,
+         "to": "Akalla"
+        }
+       ]
+      },
+      {
+       "osmId": 999989506,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 180,
+       "widthM": 6.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "10",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        },
+        {
+         "service": "11",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Rådhuset": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 999894362,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 180.8,
+       "widthM": 6.1,
+       "closed": true,
+       "serves": [
+        {
+         "service": "10",
+         "dir": -1,
+         "to": "Hjulsta"
+        },
+        {
+         "service": "11",
+         "dir": -1,
+         "to": "Akalla"
+        }
+       ]
+      },
+      {
+       "osmId": 999894363,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 180.8,
+       "widthM": 7.3,
+       "closed": true,
+       "serves": [
+        {
+         "service": "10",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        },
+        {
+         "service": "11",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Kungsträdgården": {
+   "levels": [
+    {
+     "level": -3,
+     "platforms": [
+      {
+       "osmId": 984504784,
+       "osmType": "way",
+       "level": -3,
+       "lengthM": 179,
+       "widthM": 6.7,
+       "closed": true,
+       "serves": [
+        {
+         "service": "10",
+         "dir": -1,
+         "to": "Hjulsta"
+        },
+        {
+         "service": "10",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      },
+      {
+       "osmId": 984504785,
+       "osmType": "way",
+       "level": -3,
+       "lengthM": 179,
+       "widthM": 5.6,
+       "closed": true,
+       "serves": [
+        {
+         "service": "11",
+         "dir": -1,
+         "to": "Akalla"
+        },
+        {
+         "service": "11",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Akalla": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 1500162896,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 168.2,
+       "widthM": 39.4,
+       "closed": true,
+       "serves": [
+        {
+         "service": "11",
+         "dir": -1,
+         "to": "Akalla"
+        },
+        {
+         "service": "11",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Husby": {
+   "levels": [
+    {
+     "level": -1,
+     "platforms": [
+      {
+       "osmId": 1499549035,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 152.9,
+       "widthM": 9.1,
+       "closed": true,
+       "serves": [
+        {
+         "service": "11",
+         "dir": -1,
+         "to": "Akalla"
+        },
+        {
+         "service": "11",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Kista": {
+   "levels": [
+    {
+     "level": 2,
+     "platforms": [
+      {
+       "osmId": 1500174928,
+       "osmType": "way",
+       "level": 2,
+       "lengthM": 176.3,
+       "widthM": 26.5,
+       "closed": true,
+       "serves": [
+        {
+         "service": "11",
+         "dir": -1,
+         "to": "Akalla"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Hallonbergen": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 913321325,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 113.1,
+       "widthM": 20.1,
+       "closed": true,
+       "serves": [
+        {
+         "service": "11",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Näckrosen": {
+   "levels": [
+    {
+     "level": -2,
+     "platforms": [
+      {
+       "osmId": 965915472,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 183.2,
+       "widthM": 4.9,
+       "closed": true,
+       "serves": [
+        {
+         "service": "11",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      },
+      {
+       "osmId": 965915473,
+       "osmType": "way",
+       "level": -2,
+       "lengthM": 183.2,
+       "widthM": 4.5,
+       "closed": true,
+       "serves": [
+        {
+         "service": "11",
+         "dir": -1,
+         "to": "Akalla"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Solna centrum": {
+   "levels": [
+    {
+     "level": -1,
+     "platforms": [
+      {
+       "osmId": 965928892,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 180.3,
+       "widthM": 4.4,
+       "closed": true,
+       "serves": [
+        {
+         "service": "11",
+         "dir": -1,
+         "to": "Akalla"
+        }
+       ]
+      },
+      {
+       "osmId": 965928893,
+       "osmType": "way",
+       "level": -1,
+       "lengthM": 179.9,
+       "widthM": 6,
+       "closed": true,
+       "serves": [
+        {
+         "service": "11",
+         "dir": 1,
+         "to": "Kungsträdgården"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
