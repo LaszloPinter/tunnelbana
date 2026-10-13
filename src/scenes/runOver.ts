@@ -47,6 +47,27 @@ function postScore(session: Session, result: RunResult, score: number) {
   })();
 }
 
+/**
+ * A RIDE BANKED IS ON THE BOARD AT ONCE. What is banked can never be taken
+ * from you, so it goes up the moment it is banked, not only when the run
+ * ends: a daily died in once and then ridden well showed its 0 all day,
+ * because the good run was still going (from play 2026-10-13). The board's
+ * ratchet takes only an improvement, so posting more often costs nothing.
+ */
+export function postBanked(session: Session) {
+  const sim = session.scene.sim;
+  if (sim.over || sim.banked <= 0) return;
+  const result: RunResult = {
+    outcome: 'extract',
+    kr: sim.me.money,
+    stops: sim.stopsTraveled,
+    kills: sim.players.reduce((a, p) => a + p.kills, 0),
+    bosses: sim.bossKills,
+    seconds: Math.round((sim.gameNow - sim.runWallStart) / 1000),
+  };
+  postScore(session, result, finalScore(sim, sim.gameNow));
+}
+
 /** the run-over overlay, from the sim's verdict */
 export function showRunOver(session: Session) {
   const scene = session.scene;

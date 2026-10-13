@@ -3,6 +3,7 @@ import * as account from '../net/account.ts';
 import * as save from '../save.ts';
 import type { Session } from './session.ts';
 import { hideResumeBar, setResumeProgress, showResumeBar } from '../ui/dom/resumeBar.ts';
+import { postBanked } from './runOver.ts';
 
 /**
  * THE RUN, SAVED AND PICKED BACK UP. A run is a function of its seed and its
@@ -135,6 +136,8 @@ export function resumeFrame(session: Session, budgetMs = 110): boolean {
     session.useLocalTicks();
     session.lastAutosave = performance.now();
     session.scene.hostMsg(`Back on the line: ride ${sim.ride + 1}, get to ${sim.destStation}!`);
+    // what this run had banked goes on the daily's board (runOver.ts postBanked)
+    postBanked(session);
     return false;
   }
   return true;

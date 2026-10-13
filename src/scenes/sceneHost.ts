@@ -2,6 +2,7 @@ import type Phaser from 'phaser';
 import type { RunHost } from '../sim/run.ts';
 import type { DemoScene } from './DemoScene.ts';
 import { nextRide } from './betweenRides.ts';
+import { postBanked } from './runOver.ts';
 
 /**
  * THE RUN HOST: everything the simulation may ask of the picture, a HUD
@@ -50,6 +51,8 @@ export function makeRunHost(scene: DemoScene): RunHost {
       if (scene.session.resuming) return;
       scene.rideDone.victory(summary, nextRide(scene.sim));
       scene.session.saveRun();
+      // the daily's board gets what was just banked (runOver.ts postBanked)
+      if (!summary.wrong) postBanked(scene.session);
     },
   };
 }
