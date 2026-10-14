@@ -4,7 +4,7 @@ import { drawY } from './drawAt.ts';
 import type { Player } from '../sim/player.ts';
 import { applyKnock } from './enemies.ts';
 import { hurtEnemy } from './enemyDeath.ts';
-import { pushFx, ring, shake } from './fx.ts';
+import { pushFx, ring } from './fx.ts';
 import type { CombatHost, Enemy, Proj } from './types.ts';
 import { chargeHit } from './charge.ts';
 
@@ -34,8 +34,8 @@ export function ramBlast(
   // (from play 2026-09-05).
   pushFx(ctx.run.fx, ring(x, cy, radius * 0.55, 0xff9a5c, 1 / 0.55, 320, 0.95, 6.4));
   pushFx(ctx.run.fx, ring(x, cy, radius * 0.25, 0xffe0b0, 2, 200, 0.85, 6.42));
-  // ...and it is felt, for whoever threw it
-  if (owner.id === ctx.run.localId) pushFx(ctx.run.fx, shake(150, 0.004));
+  // NO SCREEN SHAKE: a late ram build casts several a second, and a shake on
+  // every one shook the whole screen without pause (from play 2026-10-14)
   for (const e of ctx.st.enemies) {
     if (e.hp <= 0) continue;
     if (e.frame.kind !== 'world') continue;
