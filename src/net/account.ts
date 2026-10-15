@@ -62,6 +62,8 @@ export interface ScoreRow {
   won: boolean;
   date: string;
   attempts: number;
+  /** the journeys made, "from|to" each (rows before 2026-10-14 have none) */
+  rides?: string[];
 }
 
 export interface SubmitRun {
@@ -77,6 +79,7 @@ export interface SubmitRun {
   bosses: number;
   seconds: number;
   won: boolean;
+  rides?: string[];
   /** the packed input log, gzipped and base64'd, the evidence for the score */
   log?: { ticks: number; base64: string };
 }
@@ -98,11 +101,8 @@ export function onAccount(f: (a: Account | null) => void): () => void {
 
 export const account = (): Account | null => current;
 
-/**
- * Bring the account up. Safe to call once at boot and never again; if the
- * network is unreachable this simply never produces an account and the game
- * carries on without a board.
- */
+/** Bring the account up, once at boot. Offline, there is simply no account
+ * and the game carries on without a board. */
 export async function start(name: string): Promise<Account | null> {
   try {
     app = initializeApp(FIREBASE_CONFIG);
@@ -209,6 +209,7 @@ export async function submit(run: SubmitRun): Promise<boolean> {
       bosses: run.bosses,
       seconds: run.seconds,
       won: run.won,
+      ...(run.rides ? { rides: run.rides.slice(0, 100) } : {}),
       attempts: attempts + 1,
       build: __BUILD_SHA__,
       updatedAt: serverTimestamp(),

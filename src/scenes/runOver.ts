@@ -40,6 +40,7 @@ function postScore(session: Session, result: RunResult, score: number) {
       bosses: sim.bossKills,
       seconds: result.seconds,
       won: sim.ride > 0,
+      rides: sim.rides.map((r) => `${r.from}|${r.to}`),
       log,
     });
     if (posted) track('daily-submitted');

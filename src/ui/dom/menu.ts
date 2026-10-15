@@ -68,8 +68,29 @@ export interface BoardLine {
   name: string;
   score: number;
   stops: number;
+  /** the journeys made, "from|to" each */
+  rides?: string[];
   /** this browser's own row */
   mine?: boolean;
+}
+
+/**
+ * A RUN'S ROUTE, as the board shows it: one chain of stations, "A → B → C",
+ * broken by a dot where the next ride started somewhere else. The stops
+ * count alone said 6 for a run that crossed half the city (from play
+ * 2026-10-14).
+ */
+function routeOf(rides: string[]): string {
+  let out = '';
+  let at = '';
+  for (const r of rides) {
+    const [from, to] = r.split('|');
+    if (!from || !to) continue;
+    if (from !== at) out += (out ? ' · ' : '') + esc(from);
+    out += ' → ' + esc(to);
+    at = to;
+  }
+  return out;
 }
 
 const esc = (s: string) =>
@@ -242,7 +263,7 @@ export class Menu {
             : `<ol class="tb-board-list">${rows
                 .map(
                   (r, i) =>
-                    `<li class="${r.mine ? 'is-mine' : ''}"><span class="tb-board-rank">${i + 1}</span><span class="tb-board-name">${esc(r.name)}${r.mine ? ' <em>you</em>' : ''}</span><span class="tb-board-stops">${r.stops} stops</span><span class="tb-board-score">${r.score.toLocaleString('sv-SE')}</span></li>`,
+                    `<li class="${r.mine ? 'is-mine' : ''}"><span class="tb-board-rank">${i + 1}</span><span class="tb-board-name">${esc(r.name)}${r.mine ? ' <em>you</em>' : ''}${r.rides?.length ? `<small class="tb-board-route">${routeOf(r.rides)}</small>` : ''}</span><span class="tb-board-stops">${r.rides?.length ? `${r.rides.length} ride${r.rides.length === 1 ? '' : 's'} · ` : ''}${r.stops} stops</span><span class="tb-board-score">${r.score.toLocaleString('sv-SE')}</span></li>`,
                 )
                 .join('')}</ol>`;
     dlg.innerHTML = `<div class="tb-panel-head"><h2>Daily · ${esc(date)}</h2><button class="tb-btn" type="button">Close</button></div><div class="tb-panel-body">${body}</div>`;

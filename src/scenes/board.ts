@@ -21,7 +21,13 @@ export async function showBoard(menu: Menu | null) {
   menu?.showBoard(
     d.date,
     rows
-      ? rows.map((r) => ({ name: r.name, score: r.score, stops: r.stops, mine: r.uid === me }))
+      ? rows.map((r) => ({
+          name: r.name,
+          score: r.score,
+          stops: r.stops,
+          rides: r.rides,
+          mine: r.uid === me,
+        }))
       : 'offline',
   );
 }

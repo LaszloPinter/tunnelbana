@@ -24,6 +24,9 @@ import { settleIn } from './rideArrival.ts';
 export function arriveOnFoot(run: Run, st: Station, p: Player, now: number) {
   run.route = findRoute(st.name, run.destStation) ?? [];
   run.stopsTraveled += 1;
+  // ...and the run's total: a stop walked to is a stop (the board counted
+  // only trains, and a run made mostly on foot showed 6, from play 2026-10-14)
+  run.stopsTotal += 1;
   st.stationEnteredAt = now;
   st.manaBuysHere = 0;
   run.host.banner(st.name);

@@ -799,6 +799,13 @@ a.tb-tea-text:hover {
 .tb-board-list li.is-mine {
   background: rgba(255, 182, 30, 0.08);
 }
+.tb-board-route {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--tb-dim);
+}
 .tb-board-list em {
   font-style: normal;
   font-size: 11px;
