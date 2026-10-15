@@ -56,8 +56,8 @@ export const STAGES: Stage[] = [
     id: 'mana',
     title: 'Mana',
     hint: {
-      keys: 'Casts cost mana. Walk to the <b>MANA</b> machine and press <b>E</b>: it costs kronor, and you have some',
-      pad: 'Casts cost mana. Walk to the <b>MANA</b> machine and press <b>X</b>: it costs kronor, and you have some',
+      keys: 'Casts cost mana. Run past the <b>MANA</b> machine: below 60% it tops you up for kronor (or press <b>E</b>)',
+      pad: 'Casts cost mana. Run past the <b>MANA</b> machine: below 60% it tops you up for kronor (or press <b>X</b>)',
     },
     caps: { keys: ['E'], pad: ['X'] },
   },

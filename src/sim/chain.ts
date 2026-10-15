@@ -102,14 +102,14 @@ export function rideWorth(run: Run, now: number): number {
 }
 
 /**
- * THE FINAL SCORE. Dying keeps what is banked, the chain is the point,
- * and a death on the fourth ride is still three rides made. Walking out
- * early adds what is in hand at face value: the arrival doubling is for
- * arriving.
+ * THE FINAL SCORE. What is banked stands, and what is in hand counts at face
+ * value, by the clock, whether you walked out early or went down: the
+ * arrival's doubling and the chain are what arriving is for. A death used to
+ * throw the ride in hand away, and a first ride lost scored 0 for four
+ * stations and a platform of kills (from play 2026-10-15: "why 0 score?").
  */
 export function finalScore(run: Run, now: number): number {
   if (!run.over) return run.banked;
-  if (run.over.kind === 'died') return run.banked;
   if (run.over.kind === 'win') return run.banked + rideWorth(run, now);
   const secs = (now - run.rideStart) / 1000;
   const onTime = run.rideScheduleS > 0 ? punctuality(run.rideScheduleS, secs) : 1;

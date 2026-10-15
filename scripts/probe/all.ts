@@ -59,6 +59,7 @@ const PROBES = [
   'paxtalk',
   'langaren',
   'terminus',
+  'autobuy',
 ];
 
 const run = (name: string) =>

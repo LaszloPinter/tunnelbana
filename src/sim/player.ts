@@ -131,6 +131,8 @@ export interface Player {
   iframesUntil: number;
   /** a bumped train does not bump twice: grace after a tumble */
   noTrainHitUntil: number;
+  /** the machines' auto-buy rests until then (combat/machines.ts autoBuy) */
+  autoBuyAt: number;
 
   // ---- the dash ----
   /** 0 = not dashing; otherwise the ms the dash began at */
@@ -210,6 +212,7 @@ export function makePlayer(id: number): Player {
     money: 0,
     iframesUntil: 0,
     noTrainHitUntil: 0,
+    autoBuyAt: 0,
     jumpStart: 0,
     jumpCdUntil: 0,
     gliding: false,

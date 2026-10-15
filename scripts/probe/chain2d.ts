@@ -153,10 +153,14 @@ for (let seed = 1; seed <= 4; seed++) {
   const score = finalScore(sim, sim.gameNow);
   if (score < banked + 100)
     faults.push(`seed ${seed}: cashing out with ${banked} banked and 200 kr scored ${score}`);
-  // dying keeps the bank
+  // dying keeps the bank, and what was carried counts as it does cashing
+  // out (sim/chain.ts finalScore, from play 2026-10-15)
   sim.over = { kind: 'died', reason: 'test' };
-  if (finalScore(sim, sim.gameNow) !== banked)
-    faults.push(`seed ${seed}: dying lost the bank (${finalScore(sim, sim.gameNow)} vs ${banked})`);
+  const died = finalScore(sim, sim.gameNow);
+  if (died < banked + 100 || died !== score)
+    faults.push(
+      `seed ${seed}: dying with ${banked} banked and 200 kr scored ${died} (cashing out: ${score})`,
+    );
 }
 
 const ok = faults.length === 0;

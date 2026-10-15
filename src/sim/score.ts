@@ -92,7 +92,6 @@ export function punctuality(scheduledS: number, actualS: number): number {
 }
 
 export function scoreOf(r: RunResult): number {
-  if (r.outcome === 'died') return 0;
   const banked = Math.max(0, Math.round(r.kr));
   const arrival = r.outcome === 'win' ? ARRIVAL_MULTIPLIER : 1;
   const onTime = r.scheduledS ? punctuality(r.scheduledS, r.seconds) : 1;

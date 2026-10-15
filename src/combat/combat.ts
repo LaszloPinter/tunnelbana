@@ -11,6 +11,7 @@ import { stepProjectiles } from './projectiles.ts';
 import { stepWaves, keepDummies } from './waves.ts';
 import { stepRideAttacks } from './rideAttacks.ts';
 import { stepPlayerCombat } from './casting.ts';
+import { autoBuy } from './machines.ts';
 import type { CombatHost } from './types.ts';
 import { activePlayers, alivePlayers, type Player } from '../sim/player.ts';
 
@@ -23,7 +24,11 @@ import { activePlayers, alivePlayers, type Player } from '../sim/player.ts';
 /** `waves`: the station's wave clock runs only while somebody stands ON its
  * platform, a walker out in a leg fights, but the tunnel stays quiet */
 export function stepCombat(ctx: CombatHost, dt: number, now: number, waves = true) {
-  for (const p of activePlayers(ctx.players)) stepPlayerCombat(ctx, p, dt, now);
+  for (const p of activePlayers(ctx.players)) {
+    stepPlayerCombat(ctx, p, dt, now);
+    // running past a mana or health machine tops you up (machines.ts)
+    autoBuy(ctx, p, now);
+  }
   stepStains(ctx, now);
   stepAcidPools(ctx, now);
 

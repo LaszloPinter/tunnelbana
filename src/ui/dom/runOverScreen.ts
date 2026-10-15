@@ -59,8 +59,8 @@ export function showRunOverScreen(v: RunOverView): { remove(): void } {
   const verdict =
     v.kind === 'died'
       ? made
-        ? `What was in hand is lost; ${v.ride === 1 ? 'the ride you banked stands' : `the ${v.ride} rides you banked stand`}.`
-        : 'Nothing was banked: make the first arrival and it can never be taken from you.'
+        ? `${v.ride === 1 ? 'The ride you banked stands' : `The ${v.ride} rides you banked stand`}, and what you carried counts. Arriving pays double.`
+        : 'What you carried counts. Get off at your stop to bank a ride: arriving pays double.'
       : v.kind === 'extract'
         ? 'You walked out with what you had.'
         : 'Arrived.';
