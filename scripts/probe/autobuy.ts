@@ -77,7 +77,7 @@ function atMachine(kind: 'mana' | 'health', mana: number, hp: number, money: num
 // a death keeps what was carried
 {
   const { sim, me } = atMachine('mana', 1, 1, 500, 1);
-  sim.die(me, 'probe', sim.gameNow);
+  sim.die(me, 'probe');
   const s = finalScore(sim, sim.gameNow);
   if (s <= 0) faults.push(`a death with 500 kr in hand scored ${s}`);
   else console.log(`  died with 500 kr in hand, nothing banked: scored ${s}`);
