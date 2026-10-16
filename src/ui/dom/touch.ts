@@ -19,6 +19,10 @@ export interface TouchState {
   /** the stick, in SCREEN axes, -1..1 */
   mx: number;
   my: number;
+  /** the right thumb aiming: a direction in SCREEN axes, and whether it is down */
+  aiming: boolean;
+  ax: number;
+  ay: number;
   dash: boolean;
   stot: boolean;
   use: boolean;
@@ -33,6 +37,9 @@ export const touch: TouchState = {
   active: false,
   mx: 0,
   my: 0,
+  aiming: false,
+  ax: 0,
+  ay: 0,
   dash: false,
   stot: false,
   use: false,
@@ -55,10 +62,13 @@ let root: HTMLDivElement | null = null;
 export function installTouch() {
   if (root || !isTouchDevice()) return;
   touch.active = true;
+  // pages can drop what only a keyboard or a pad can do (Enter, Esc)
+  document.documentElement.classList.add('tb-touchdev');
   root = document.createElement('div');
   root.id = 'tb-touch';
   root.innerHTML = `
     <div class="tb-touch-stick-zone"><div class="tb-touch-base"><div class="tb-touch-knob"></div></div></div>
+    <div class="tb-touch-aim-zone"><div class="tb-touch-base tb-aim-base"><div class="tb-touch-knob"></div></div></div>
     <div class="tb-touch-pad">
       <button class="tb-tb tb-tb-dash" data-k="dash">DASH</button>
       <button class="tb-tb tb-tb-stot" data-k="stot">STÖT</button>
@@ -70,56 +80,20 @@ export function installTouch() {
       <button class="tb-tb tb-tb-small tb-tb-menu" data-tap="menu">MENU</button>
       <button class="tb-tb tb-tb-small" data-tap="pause">II</button>
     </div>
-    <div class="tb-rotate"><div>Turn your phone sideways<small>Tunnelbana plays in landscape</small></div></div>`;
+`;
   document.body.appendChild(root);
 
-  // THE STICK: wherever the left thumb lands, that is its centre
-  const zone = root.querySelector<HTMLDivElement>('.tb-touch-stick-zone')!;
-  const base = root.querySelector<HTMLDivElement>('.tb-touch-base')!;
-  const knob = root.querySelector<HTMLDivElement>('.tb-touch-knob')!;
-  let id: number | null = null;
-  let ox = 0;
-  let oy = 0;
-  const move = (x: number, y: number) => {
-    let dx = x - ox;
-    let dy = y - oy;
-    const d = Math.hypot(dx, dy);
-    if (d > STICK_R) {
-      dx = (dx / d) * STICK_R;
-      dy = (dy / d) * STICK_R;
-    }
-    knob.style.transform = `translate(${dx}px, ${dy}px)`;
-    // a small dead centre, and full speed well before the rim
-    const k = Math.min(1, d / (STICK_R * 0.8));
-    const m = d > 6 ? k / (d || 1) : 0;
-    touch.mx = (x - ox) * m;
-    touch.my = (y - oy) * m;
-  };
-  zone.addEventListener('pointerdown', (e) => {
-    if (id !== null) return;
-    id = e.pointerId;
-    zone.setPointerCapture(e.pointerId);
-    ox = e.clientX;
-    oy = e.clientY;
-    base.style.left = `${ox}px`;
-    base.style.top = `${oy}px`;
-    base.classList.add('is-on');
-    move(ox, oy);
-    goFullscreen();
+  // TWO THUMBS (from play 2026-10-16): the left half walks, the right half
+  // aims and casts that way while held; let go, and casting is automatic again
+  stick(root.querySelector('.tb-touch-stick-zone')!, (x, y) => {
+    touch.mx = x;
+    touch.my = y;
   });
-  zone.addEventListener('pointermove', (e) => {
-    if (e.pointerId === id) move(e.clientX, e.clientY);
+  stick(root.querySelector('.tb-touch-aim-zone')!, (x, y, down) => {
+    touch.aiming = down;
+    touch.ax = x;
+    touch.ay = y;
   });
-  const end = (e: PointerEvent) => {
-    if (e.pointerId !== id) return;
-    id = null;
-    touch.mx = 0;
-    touch.my = 0;
-    knob.style.transform = '';
-    base.classList.remove('is-on');
-  };
-  zone.addEventListener('pointerup', end);
-  zone.addEventListener('pointercancel', end);
 
   // THE BUTTONS: held while a finger is on them
   for (const b of Array.from(root.querySelectorAll<HTMLButtonElement>('[data-k]'))) {
@@ -167,6 +141,63 @@ export function installTouch() {
   setInterval(sync, 250);
 }
 
+/** a finger's point in the turned stage's own axes (render/display.ts sideways) */
+function stageOf(e: PointerEvent): { x: number; y: number } {
+  return document.documentElement.classList.contains('tb-sideways')
+    ? { x: e.clientY, y: window.innerWidth - e.clientX }
+    : { x: e.clientX, y: e.clientY };
+}
+
+/** a thumbstick in `zone`, centred wherever the thumb lands */
+function stick(zone: HTMLDivElement, out: (x: number, y: number, down: boolean) => void) {
+  const base = zone.querySelector<HTMLDivElement>('.tb-touch-base')!;
+  const knob = zone.querySelector<HTMLDivElement>('.tb-touch-knob')!;
+  let id: number | null = null;
+  let ox = 0;
+  let oy = 0;
+  const move = (e: PointerEvent) => {
+    const p = stageOf(e);
+    let dx = p.x - ox;
+    let dy = p.y - oy;
+    const d = Math.hypot(dx, dy);
+    if (d > STICK_R) {
+      dx = (dx / d) * STICK_R;
+      dy = (dy / d) * STICK_R;
+    }
+    knob.style.transform = `translate(${dx}px, ${dy}px)`;
+    // a small dead centre, and full speed well before the rim
+    const k = Math.min(1, d / (STICK_R * 0.8));
+    const m = d > 6 ? k / (d || 1) : 0;
+    out((p.x - ox) * m, (p.y - oy) * m, true);
+  };
+  zone.addEventListener('pointerdown', (e) => {
+    if (id !== null) return;
+    id = e.pointerId;
+    zone.setPointerCapture(e.pointerId);
+    const p = stageOf(e);
+    ox = p.x;
+    oy = p.y;
+    // (the base sits in the zone; the point is the stage's)
+    base.style.left = `${ox - zone.offsetLeft}px`;
+    base.style.top = `${oy - zone.offsetTop}px`;
+    base.classList.add('is-on');
+    move(e);
+    goFullscreen();
+  });
+  zone.addEventListener('pointermove', (e) => {
+    if (e.pointerId === id) move(e);
+  });
+  const end = (e: PointerEvent) => {
+    if (e.pointerId !== id) return;
+    id = null;
+    out(0, 0, false);
+    knob.style.transform = '';
+    base.classList.remove('is-on');
+  };
+  zone.addEventListener('pointerup', end);
+  zone.addEventListener('pointercancel', end);
+}
+
 /** read a tap once: true the first time after it happened */
 export function takeTap(k: 'pause' | 'menu'): boolean {
   const v = touch[k];
@@ -185,7 +216,7 @@ function goFullscreen() {
     void p
       ?.then(() =>
         (screen.orientation as unknown as { lock?: (o: string) => Promise<void> })
-          .lock?.('landscape')
+          .lock?.('portrait-primary')
           .catch(() => {}),
       )
       .catch(() => {});

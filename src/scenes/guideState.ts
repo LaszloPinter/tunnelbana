@@ -9,7 +9,7 @@ import * as save from '../save.ts';
  * machine has topped you up, you have boarded a train and banked a ride,
  * the guide stops pointing at that, in this browser, for good.
  */
-export type Lesson = 'coin' | 'machine' | 'board' | 'exit';
+export type Lesson = 'move' | 'coin' | 'machine' | 'board' | 'exit';
 
 const prefs = save.load().prefs;
 export const guideState = {
@@ -39,6 +39,24 @@ function learn(k: Lesson) {
 }
 
 let lastMoney: number | null = null;
+/** when the player last pushed to move (wall time: this is presentation) */
+let lastMoveAt = performance.now();
+/** this long standing still, and the guide shows the controls again */
+const IDLE_MS = 6000;
+
+/**
+ * THE CONTROLS, SHOWN when they are wanted: a player who has not moved yet,
+ * or has stood still a while on foot. Keys and a mouse on a desk, the two
+ * thumb zones on a phone (ui/dom/controlsHint.ts). This replaces the
+ * tutorial (from play 2026-10-16: "remove the tutorial altogether and merge
+ * it with the guide").
+ */
+export function wantsControls(sim: Run): boolean {
+  const me = sim.me;
+  if (!guideState.on || sim.over || sim.briefing || sim.pause || me.offer || !me.alive) return false;
+  if (me.frame.kind !== 'world') return false;
+  return !knows('move') || performance.now() - lastMoveAt > IDLE_MS;
+}
 
 /** once a frame: has the player just done one of the lessons? */
 export function observeLessons(sim: Run) {
@@ -47,6 +65,12 @@ export function observeLessons(sim: Run) {
     lastMoney = null;
     return;
   }
+  if (me.input.mx !== 0 || me.input.my !== 0) {
+    learn('move');
+    lastMoveAt = performance.now();
+  }
+  // a held world (a pick, the pause) is not standing still
+  if (sim.pause || me.offer || sim.briefing) lastMoveAt = performance.now();
   if (me.frame.kind === 'aboard') learn('board');
   if (sim.ride > 0) learn('exit');
   // a pack bought anywhere live: the machine counts its sales

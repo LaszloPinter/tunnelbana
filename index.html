@@ -56,6 +56,22 @@
         background: #0b0b10;
         overflow: hidden;
       }
+      /* SIDEWAYS (render/display.ts): the canvas and the overlays over a run
+         are laid out landscape and turned a quarter clockwise */
+      html.tb-sideways body > canvas,
+      html.tb-sideways #tb-touch,
+      html.tb-sideways #tb-ride-done,
+      html.tb-sideways #tb-resume {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: auto;
+        bottom: auto;
+        width: var(--tb-sh) !important;
+        height: var(--tb-sw) !important;
+        transform-origin: top left;
+        transform: rotate(90deg) translateY(-100%);
+      }
       canvas {
         display: block;
         /* a finger on the game is a control, never a scroll or a zoom */

@@ -237,7 +237,8 @@ export class InputSampler {
       }
     }
     // TOUCH (ui/dom/touch.ts): the same bits again. The swap button flips
-    // between the bolt and the torrent; casting is automatic (autoAim.ts)
+    // between the bolt and the torrent; the right thumb aims, and without it
+    // casting is automatic (autoAim.ts)
     let auto: { x: number; y: number } | null = null;
     if (touch.active) {
       if (touch.dash) held |= BTN.dash;
@@ -251,8 +252,22 @@ export class InputSampler {
         my = touch.my;
         this.lastDevice = 'touch';
       }
-      auto = autoAimTarget(this.scene.sim);
-      if (auto) held |= BTN.fire;
+      // the right thumb aims and casts that way while it is down (turned
+      // with the view, as a pad's right stick is); otherwise it is automatic
+      if (touch.aiming && (touch.ax !== 0 || touch.ay !== 0)) {
+        const va = this.scene.viewAngle();
+        const me = this.scene.playerWorld();
+        const c = Math.cos(va);
+        const sn = Math.sin(va);
+        auto = {
+          x: me.x + (touch.ax * c - touch.ay * sn) * STICK_AIM,
+          y: me.y + (touch.ax * sn + touch.ay * c) * STICK_AIM,
+        };
+        held |= BTN.fire;
+      } else {
+        auto = autoAimTarget(this.scene.sim);
+        if (auto) held |= BTN.fire;
+      }
       if (touch.dash || touch.stot || touch.use || touch.swap) this.lastDevice = 'touch';
     }
     // THE KEYS MEAN WHAT THEY LOOK LIKE. The camera turns with the world so

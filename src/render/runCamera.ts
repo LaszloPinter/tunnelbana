@@ -3,6 +3,7 @@ import { turnCamera } from '../world/bearing.ts';
 import { arrivalAt, arrivalTurn, arrivalZoom } from './arrival.ts';
 import type { Player } from '../sim/player.ts';
 import type { Run } from '../sim/run.ts';
+import { worldBoost } from '../scenes/viewport.ts';
 
 /**
  * WHERE THE VIEW IS POINTED, and how it got there.
@@ -54,7 +55,8 @@ export class RunCamera {
     this.angle = turnCamera(run, me, this.angle, cam, arrivalTurn(k));
     if (this.opened <= 0 || held) return;
     if (k >= 1) this.opened = 0;
-    cam.setZoom(arrivalZoom(playZoom, k));
+    // ...a phone's a little closer (scenes/viewport.ts worldBoost)
+    cam.setZoom(arrivalZoom(playZoom * worldBoost(), k));
   }
 
   /** the dev overrides, which take the camera off all of the above */

@@ -7,7 +7,8 @@ import type { Run } from '../sim/run.ts';
 import type { DemoScene } from './DemoScene.ts';
 import { GuideView, guideGoal } from './guide.ts';
 import { STRIP_H } from './hudStatus.ts';
-import { guideState, observeLessons, setGuide } from './guideState.ts';
+import { guideState, observeLessons, setGuide, wantsControls } from './guideState.ts';
+import { setControlsHint } from '../ui/dom/controlsHint.ts';
 
 /**
  * THE MARKS IN THE WORLD: the tutorial's pulsing "go here" ring (ui/dom/
@@ -39,6 +40,8 @@ export class TutorialMarks {
       this.scene.hostMsg(guideState.on ? 'Guide on (G)' : 'Guide off (G)');
     }
     observeLessons(sim);
+    // the controls, when the player seems not to know them (guideState.ts)
+    setControlsHint(!mark && wantsControls(sim));
     if (guideState.on && !mark) this.guide.draw(guideGoal(sim), this.scene.drawnAt(sim.me), wallNow);
     else this.guide.hide();
     this.ring.setVisible(!!mark);

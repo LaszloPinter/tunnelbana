@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import { deviceRatio } from './config.ts';
-import { applyDeviceResolution } from './render/display.ts';
+import { applyDeviceResolution, installSidewaysInput } from './render/display.ts';
 import { DemoScene } from './scenes/DemoScene.ts';
 import { replayCheck, type ReplayOptions } from './dev/replay.ts';
 import * as account from './net/account.ts';
@@ -38,6 +38,10 @@ const game = new Phaser.Game({
 
 // a phone: the thumbstick and buttons over the canvas (ui/dom/touch.ts)
 installTouch();
+// a phone held upright plays turned: taps are turned with it (render/display.ts)
+installSidewaysInput(game);
+// ...and laid out turned from the first frame, not only after a resize
+applyDeviceResolution(game);
 // the guide's on/off switch over a run (ui/dom/guideButton.ts)
 installGuideButton();
 

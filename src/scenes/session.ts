@@ -116,8 +116,8 @@ export class Session {
     const roomName = __MULTIPLAYER__ ? q.get('room') : null;
     if (!roomName && !peeking) {
       if (__MULTIPLAYER__ && joinCode) enterLobby(this, joinCode.toUpperCase(), false);
-      // a browser that has never played opens on the tutorial, not the board
-      else if (!save.load().prefs.tutorialDone) this.startTutorial();
+      // (a browser that had never played opened on the tutorial; the guide
+      // teaches in the run itself now, from play 2026-10-16)
       else this.showLanding();
     }
     if (roomName) {

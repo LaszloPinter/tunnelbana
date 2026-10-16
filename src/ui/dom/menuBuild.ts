@@ -185,8 +185,7 @@ export function buildMenu(root: HTMLDivElement, state: MenuState, on: MenuHandle
   const lb = mk('Leaderboard', "Today's daily, ranked");
   const ctrl = mk('Controls', 'Keyboard and mouse, or a pad');
   const about = mk('About', 'What this is, and why');
-  const tut = mk('Tutorial', 'The keys, on a quiet platform');
-  more.append(lb, ctrl, tut, about);
+  more.append(lb, ctrl, about);
 
   const notice = el('div', 'tb-notice');
   // A PHONE OR A TABLET cannot play this: no keys, no cursor. Said up front,
@@ -214,7 +213,7 @@ export function buildMenu(root: HTMLDivElement, state: MenuState, on: MenuHandle
   // a phone is told before anything else, not under the fold
   if (touchOnly) frame.append(head, notice, board, more, foot);
   else frame.append(head, board, more, notice, foot);
-  root.append(lines, frame, controlsPanel(on.onTutorial), aboutPanel(), avatar.dialog);
+  root.append(lines, frame, controlsPanel(), aboutPanel(), avatar.dialog);
 
   // ---- wiring ----
   reroll.addEventListener('click', on.onReroll);
@@ -230,7 +229,6 @@ export function buildMenu(root: HTMLDivElement, state: MenuState, on: MenuHandle
   lb.addEventListener('click', on.onLeaderboard);
   ctrl.addEventListener('click', () => (root.querySelector('#tb-controls') as HTMLDialogElement).showModal());
   about.addEventListener('click', () => (root.querySelector('#tb-about') as HTMLDialogElement).showModal());
-  tut.addEventListener('click', on.onTutorial);
   // ENTER PLAYS: the lit button, Continue when there is a run to go back
   // to, else Quick play, unless a field or a button has the key already
   window.addEventListener('keydown', (e) => {

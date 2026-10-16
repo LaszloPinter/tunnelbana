@@ -192,39 +192,38 @@
   font-family: var(--tb-data, monospace);
 }
 
-/* A PHONE ON ITS SIDE: under 500 px of height the card is pressed flat and
-   wide so the score and the buttons fit without scrolling (touch.ts) */
-@media (max-height: 500px) {
-  .tb-rd-box,
-  .tb-ro-box {
-    width: min(760px, 100%);
-    padding: 12px 20px 10px;
-  }
-  .tb-rd-worth b {
-    font-size: 30px;
-  }
-  .tb-ro-who canvas {
-    width: 52px;
-    height: 52px;
-  }
-  .tb-ro-name {
-    font-size: 20px;
-  }
-  .tb-ro-verdict {
-    margin-top: 6px;
-    font-size: 13px;
-  }
-  .tb-ro-stats {
-    grid-template-columns: repeat(5, 1fr);
-    margin: 6px 0 4px;
-  }
-  .tb-ro-stat {
-    padding: 4px;
-  }
-  .tb-ro-stat b {
-    font-size: 15px;
-  }
-  .tb-rd-btn {
-    padding: 8px 18px;
-  }
+/* A PHONE ON ITS SIDE: under 500 px of height, as the game sees it (turned
+   or not, render/display.ts tb-short), the card is pressed flat and wide so
+   the score and the buttons fit without scrolling */
+html.tb-short .tb-rd-box,
+html.tb-short .tb-ro-box {
+  width: min(760px, 100%);
+  padding: 12px 20px 10px;
+}
+html.tb-short .tb-rd-worth b {
+  font-size: 30px;
+}
+html.tb-short .tb-ro-who canvas {
+  width: 52px;
+  height: 52px;
+}
+html.tb-short .tb-ro-name {
+  font-size: 20px;
+}
+html.tb-short .tb-ro-verdict {
+  margin-top: 6px;
+  font-size: 13px;
+}
+html.tb-short .tb-ro-stats {
+  grid-template-columns: repeat(5, 1fr);
+  margin: 6px 0 4px;
+}
+html.tb-short .tb-ro-stat {
+  padding: 4px;
+}
+html.tb-short .tb-ro-stat b {
+  font-size: 15px;
+}
+html.tb-short .tb-rd-btn {
+  padding: 8px 18px;
 }

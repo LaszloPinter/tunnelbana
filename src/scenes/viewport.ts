@@ -4,6 +4,7 @@ import { getRatioCap, setRatioCap } from '../config.ts';
 import { applyDeviceResolution } from '../render/display.ts';
 import { stationGeo } from '../data/stationGeometry.ts';
 import type { Run } from '../sim/run.ts';
+import { isTouchDevice } from '../ui/dom/touch.ts';
 
 /**
  * Fit the GAME_WIDTH x GAME_HEIGHT layout box into the device-pixel canvas:
@@ -20,13 +21,19 @@ export function fitViewports(scene: Phaser.Scene, uiCam: Phaser.Cameras.Scene2D.
   const vh = C.GAME_HEIGHT * s;
   const vx = (w - vw) / 2;
   const vy = (h - vh) / 2;
-  // the world camera keeps its default centre origin: following the player
-  // and the camera bounds are both computed around it
-  scene.cameras.main.setViewport(vx, vy, vw, vh).setZoom(s);
+  // THE WORLD FILLS THE SCREEN, edge to edge: letterboxed with the HUD, a
+  // phone's long screen had black bars down both sides (from play
+  // 2026-10-16: "as full screen as possible, no black margins"). The world
+  // camera takes the whole canvas at the same scale, and a phone sees it a
+  // little closer (worldBoost). The HUD keeps its 16:9 box, centred.
+  scene.cameras.main.setViewport(0, 0, w, h).setZoom(s * worldBoost());
   // the HUD camera is pinned to the layout box's top-left corner
   uiCam.setViewport(vx, vy, vw, vh).setZoom(s).setScroll(0, 0);
   return s;
 }
+
+/** how much closer a phone sees the world: a small screen, and thumbs */
+export const worldBoost = (): number => (isTouchDevice() ? 1.3 : 1);
 
 /**
  * G: cut the render resolution and put it back. A frame-rate problem is

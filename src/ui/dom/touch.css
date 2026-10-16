@@ -15,17 +15,27 @@
 #tb-touch.is-hidden {
   display: none;
 }
-.tb-touch-stick-zone {
+.tb-touch-stick-zone,
+.tb-touch-aim-zone {
   position: absolute;
-  left: 0;
-  top: 18%;
+  top: 0;
   bottom: 0;
-  width: 46%;
   pointer-events: auto;
   touch-action: none;
 }
+.tb-touch-stick-zone {
+  left: 0;
+  width: 50%;
+}
+.tb-touch-aim-zone {
+  right: 0;
+  width: 50%;
+}
+.tb-aim-base {
+  border-color: rgba(255, 182, 30, 0.4);
+}
 .tb-touch-base {
-  position: fixed;
+  position: absolute;
   width: 112px;
   height: 112px;
   margin: -56px 0 0 -56px;
@@ -133,37 +143,6 @@
   font-size: 12px;
 }
 
-/* PORTRAIT: the game is landscape; say so instead of drawing it tiny */
-.tb-rotate {
-  display: none;
-}
-@media (orientation: portrait) {
-  .tb-rotate {
-    position: fixed;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    background: #070a11;
-    color: #edf1f7;
-    pointer-events: auto;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 600;
-  }
-  .tb-rotate small {
-    display: block;
-    margin-top: 8px;
-    font-size: 14px;
-    color: #79849a;
-    font-weight: 400;
-  }
-  .tb-touch-pad,
-  .tb-touch-top,
-  .tb-touch-stick-zone {
-    display: none;
-  }
-}
-
 /* THE GUIDE'S SWITCH (guideButton.ts): a pill top right over a run */
 #tb-guide-btn {
   position: fixed;
@@ -194,4 +173,90 @@
   border-radius: 10px;
   padding: 0;
   font-size: 11px;
+}
+
+/* THE CONTROLS, SHOWN (controlsHint.ts): on a phone the two zones say what they are */
+.tb-touch-stick-zone::after,
+.tb-touch-aim-zone::after {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 16px;
+  border: 2px dashed rgba(237, 241, 247, 0.45);
+  border-radius: 14px;
+  background: rgba(7, 10, 17, 0.55);
+  color: #edf1f7;
+  font:
+    600 15px/1.3 'Barlow',
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.tb-touch-stick-zone::after {
+  content: 'drag here to walk';
+}
+.tb-touch-aim-zone::after {
+  content: 'drag here to aim';
+  left: 35%;
+}
+#tb-touch.is-hinting .tb-touch-stick-zone::after,
+#tb-touch.is-hinting .tb-touch-aim-zone::after {
+  opacity: 1;
+}
+
+/* ...and on a desk, the keys */
+#tb-keys-hint {
+  position: fixed;
+  left: 50%;
+  bottom: 26%;
+  transform: translateX(-50%);
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: rgba(7, 10, 17, 0.72);
+  color: #edf1f7;
+  font:
+    15px/1.45 'Barlow',
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+#tb-keys-hint.is-on {
+  opacity: 1;
+}
+.tb-kh-keys {
+  display: grid;
+  grid-template-columns: repeat(3, 38px);
+  gap: 5px;
+}
+.tb-kh-keys kbd {
+  display: grid;
+  place-items: center;
+  height: 38px;
+  border: 1px solid rgba(237, 241, 247, 0.5);
+  border-bottom-width: 3px;
+  border-radius: 6px;
+  font:
+    700 16px/1 'IBM Plex Mono',
+    monospace;
+}
+.tb-kh-text b {
+  color: #ffd23f;
+}
+
+/* a phone has no Enter or Esc: the end cards' key hints go */
+html.tb-touchdev .tb-rd-keys {
+  display: none;
 }
