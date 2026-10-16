@@ -199,7 +199,7 @@ export function buildMenu(root: HTMLDivElement, state: MenuState, on: MenuHandle
       'p',
       undefined,
       touchOnly
-        ? 'On a phone: turn it sideways. Your left thumb walks, the buttons dash and STÖT, and casting is automatic. Free: no ads, no purchases. Alpha: no sound yet.'
+        ? 'On a phone: turn it sideways. Your left thumb walks; your right thumb taps to cast at the nearest, or drags to aim. Free: no ads, no purchases. Alpha: no sound yet.'
         : 'Free: no ads, no purchases, ever. The kronor are the game’s own money. Alpha: no sound yet, single player.',
     ),
   );

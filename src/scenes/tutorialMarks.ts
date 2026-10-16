@@ -40,6 +40,11 @@ export class TutorialMarks {
       this.scene.hostMsg(guideState.on ? 'Guide on (G)' : 'Guide off (G)');
     }
     observeLessons(sim);
+    // a picture asking to be tapped (cards to pick, the kiosk, the bag): the
+    // thumb zones step aside so the tap reaches it (ui/dom/touch.css is-ui)
+    document
+      .getElementById('tb-touch')
+      ?.classList.toggle('is-ui', !!this.scene.choosing || !!sim.me.offer || !!sim.pause);
     // the controls, when the player seems not to know them (guideState.ts)
     setControlsHint(!mark && wantsControls(sim));
     if (guideState.on && !mark) this.guide.draw(guideGoal(sim), this.scene.drawnAt(sim.me), wallNow);

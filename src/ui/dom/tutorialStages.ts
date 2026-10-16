@@ -32,7 +32,7 @@ export const STAGES: Stage[] = [
     hint: {
       keys: 'Move the <b>mouse</b> to aim · the <b>left button</b> casts a bolt',
       pad: 'Aim with the <b>right stick</b> · <b>RT</b> casts a bolt',
-      touch: 'Casting is <b>automatic</b> on a phone: walk toward the dummies and your bolts fly at them',
+      touch: '<b>Tap the right side</b> to cast at the nearest dummy, or drag there to aim',
     },
     caps: { keys: [], pad: ['RT'], touch: [] },
   },

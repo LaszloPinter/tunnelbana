@@ -89,11 +89,16 @@ export function installTouch() {
     touch.mx = x;
     touch.my = y;
   });
-  stick(root.querySelector('.tb-touch-aim-zone')!, (x, y, down) => {
-    touch.aiming = down;
-    touch.ax = x;
-    touch.ay = y;
-  });
+  // (a tap is a tap: the aim thumb's dead zone is wide enough to land in)
+  stick(
+    root.querySelector('.tb-touch-aim-zone')!,
+    (x, y, down) => {
+      touch.aiming = down;
+      touch.ax = x;
+      touch.ay = y;
+    },
+    14,
+  );
 
   // THE BUTTONS: held while a finger is on them
   for (const b of Array.from(root.querySelectorAll<HTMLButtonElement>('[data-k]'))) {
@@ -149,7 +154,7 @@ function stageOf(e: PointerEvent): { x: number; y: number } {
 }
 
 /** a thumbstick in `zone`, centred wherever the thumb lands */
-function stick(zone: HTMLDivElement, out: (x: number, y: number, down: boolean) => void) {
+function stick(zone: HTMLDivElement, out: (x: number, y: number, down: boolean) => void, dead = 6) {
   const base = zone.querySelector<HTMLDivElement>('.tb-touch-base')!;
   const knob = zone.querySelector<HTMLDivElement>('.tb-touch-knob')!;
   let id: number | null = null;
@@ -167,7 +172,7 @@ function stick(zone: HTMLDivElement, out: (x: number, y: number, down: boolean) 
     knob.style.transform = `translate(${dx}px, ${dy}px)`;
     // a small dead centre, and full speed well before the rim
     const k = Math.min(1, d / (STICK_R * 0.8));
-    const m = d > 6 ? k / (d || 1) : 0;
+    const m = d > dead ? k / (d || 1) : 0;
     out((p.x - ox) * m, (p.y - oy) * m, true);
   };
   zone.addEventListener('pointerdown', (e) => {

@@ -1,8 +1,8 @@
 import * as C from '../config.ts';
 import type { Run } from '../sim/run.ts';
 
-/** how far a phone's casts reach for something to hit */
-export const AUTO_AIM_RANGE = C.M(14);
+/** how far a phone's tap reaches for something to hit: about what is on screen */
+export const AUTO_AIM_RANGE = C.M(24);
 
 /**
  * WHAT A PHONE AIMS AT: the nearest of the horde within reach, on the same

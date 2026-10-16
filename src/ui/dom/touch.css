@@ -202,7 +202,7 @@
   content: 'drag here to walk';
 }
 .tb-touch-aim-zone::after {
-  content: 'drag here to aim';
+  content: 'tap to cast · drag to aim';
   left: 35%;
 }
 #tb-touch.is-hinting .tb-touch-stick-zone::after,
@@ -259,4 +259,13 @@
 /* a phone has no Enter or Esc: the end cards' key hints go */
 html.tb-touchdev .tb-rd-keys {
   display: none;
+}
+
+/* an in-game screen wants the tap (tutorialMarks.ts is-ui), or the game is
+   paused over the travelcard: the thumb zones let it through */
+#tb-touch.is-ui .tb-touch-stick-zone,
+#tb-touch.is-ui .tb-touch-aim-zone,
+#tb-touch.is-paused .tb-touch-stick-zone,
+#tb-touch.is-paused .tb-touch-aim-zone {
+  pointer-events: none;
 }

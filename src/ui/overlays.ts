@@ -155,7 +155,7 @@ export function showStartScreen(host: OverlayHost) {
         btnY + 48,
         (touch.active
           ? [
-              'LEFT THUMB walk   ·   DASH   ·   casting is automatic',
+              'LEFT THUMB walk   ·   RIGHT THUMB tap to cast, drag to aim',
               'STÖT the shockwave   ·   ⇄ bolt / torrent   ·   E kiosk / exit',
               'CARD your perks   ·   II pause',
             ]

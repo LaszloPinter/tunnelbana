@@ -199,8 +199,10 @@ export class InputSampler {
     const k = this.keys;
     const pointer = this.scene.input.activePointer;
     let held = 0;
-    if (pointer.leftButtonDown()) held |= BTN.fire;
-    if (pointer.rightButtonDown()) held |= BTN.shield;
+    // (not on a phone: a thumb on the glass reads as a pressed button there,
+    // and the left one only walks; casting is the right thumb's, below)
+    if (!touch.active && pointer.leftButtonDown()) held |= BTN.fire;
+    if (!touch.active && pointer.rightButtonDown()) held |= BTN.shield;
     if (k.SPACE.isDown) held |= BTN.dash;
     if (k.E.isDown) held |= BTN.use;
     if (k.Q.isDown) held |= BTN.ult;
@@ -237,8 +239,7 @@ export class InputSampler {
       }
     }
     // TOUCH (ui/dom/touch.ts): the same bits again. The swap button flips
-    // between the bolt and the torrent; the right thumb aims, and without it
-    // casting is automatic (autoAim.ts)
+    // between the bolt and the torrent; the right thumb casts (autoAim.ts)
     let auto: { x: number; y: number } | null = null;
     if (touch.active) {
       if (touch.dash) held |= BTN.dash;
@@ -252,20 +253,25 @@ export class InputSampler {
         my = touch.my;
         this.lastDevice = 'touch';
       }
-      // the right thumb aims and casts that way while it is down (turned
-      // with the view, as a pad's right stick is); otherwise it is automatic
-      if (touch.aiming && (touch.ax !== 0 || touch.ay !== 0)) {
-        const va = this.scene.viewAngle();
-        const me = this.scene.playerWorld();
-        const c = Math.cos(va);
-        const sn = Math.sin(va);
-        auto = {
-          x: me.x + (touch.ax * c - touch.ay * sn) * STICK_AIM,
-          y: me.y + (touch.ax * sn + touch.ay * c) * STICK_AIM,
-        };
-        held |= BTN.fire;
-      } else {
-        auto = autoAimTarget(this.scene.sim);
+      // CASTING IS THE RIGHT THUMB'S, and only while it is down (from play
+      // 2026-10-16: "it shoots with only the left stick down"). Landed and
+      // not yet dragged, it casts at the nearest of the horde, so tap, tap,
+      // tap is a bolt at the closest each time; dragged past the dead zone,
+      // it casts the way it is pushed (turned with the view, as a pad's
+      // right stick is), starting from where the thumb landed rather than
+      // swinging round from the last aim through the wall.
+      if (touch.aiming) {
+        if (touch.ax !== 0 || touch.ay !== 0) {
+          const va = this.scene.viewAngle();
+          const me = this.scene.playerWorld();
+          const c = Math.cos(va);
+          const sn = Math.sin(va);
+          auto = {
+            x: me.x + (touch.ax * c - touch.ay * sn) * STICK_AIM,
+            y: me.y + (touch.ax * sn + touch.ay * c) * STICK_AIM,
+          };
+        } else auto = autoAimTarget(this.scene.sim);
+        // nothing near and no direction: a tap into the dark would only spend mana
         if (auto) held |= BTN.fire;
       }
       if (touch.dash || touch.stot || touch.use || touch.swap) this.lastDevice = 'touch';
