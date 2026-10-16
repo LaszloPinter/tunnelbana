@@ -4,6 +4,7 @@ import { dist } from '../sim/det.ts';
 import { manaMax, nearestPlayer } from '../sim/player.ts';
 import { ticketCount } from '../core/cards.ts';
 import { aboardPoint } from '../world/trainSeat.ts';
+import { pushFx } from './fx.ts';
 
 /**
  * Coins and lost-property drops: they follow their train, they expire, and
@@ -68,6 +69,15 @@ export function stepLoot(ctx: CombatHost, now: number) {
       // Reskassa: the holder's share is bigger
       for (const q of ctx.run.players)
         if (q.alive) q.money += Math.round((c.value ?? 5) * (1 + 0.4 * ticketCount(q, 'reskassa')));
+      // SAID ON THE SPOT: a yellow dot is money (from play 2026-10-15: "is
+      // the yellow dot money?"), the taker's share as it lands
+      pushFx(ctx.run.fx, {
+        kind: 'text',
+        x: wx,
+        y: wy,
+        text: `+${Math.round((c.value ?? 5) * (1 + 0.4 * ticketCount(p, 'reskassa')))} kr`,
+        color: '#ffd23f',
+      });
       return false;
     }
     return true;

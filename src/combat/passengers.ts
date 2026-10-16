@@ -151,6 +151,20 @@ function act(ctx: CombatHost, run: Run, ps: Passenger, dt: number, now: number) 
   // waiting, they shift about (combat/paxIdle.ts), at a stroll, unless far off
   const st = asStation(ctx.st);
   if (st) idle(run, st, ps, now);
+  // PERSONAL SPACE: nobody waits pressed against a stranger, or a friend.
+  // Two spots a metre apart, each reached to within 0.6 m from the near
+  // side, left two people standing in one another (probe paxride)
+  const crowd = run.pax.find(
+    (q) =>
+      q !== ps && q.mode === 'foot' && q.placeId === ps.placeId && dist(q.x - ps.x, q.y - ps.y) < C.M(0.6),
+  );
+  if (crowd) {
+    // ...so the spot itself moves a metre off, and they walk there: stepping
+    // aside alone, each walked straight back to the spot it had
+    const dc = dist(ps.x - crowd.x, ps.y - crowd.y) || 1;
+    ps.homeX = ps.x + ((ps.x - crowd.x) / dc) * C.M(1);
+    ps.homeY = ps.y + ((ps.y - crowd.y) / dc) * C.M(1);
+  }
   const far = dist(ps.homeX - ps.x, ps.homeY - ps.y);
   if (far > C.M(0.6)) walkToward(ctx, ps, ps.homeX, ps.homeY, dt, k.pace * (far > C.M(10) ? 0.85 : 0.5));
 }

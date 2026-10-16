@@ -34,7 +34,9 @@ export type Fx =
       depth: number;
     }
   | { kind: 'chain'; points: number[]; color: number; delay: number }
-  | { kind: 'shake'; ms: number; power: number };
+  | { kind: 'shake'; ms: number; power: number }
+  /** a few words that rise off a point and fade: "+5 kr" over a coin taken */
+  | { kind: 'text'; x: number; y: number; text: string; color: string };
 
 /** the queue never grows without bound, even when nothing is draining it */
 export const FX_CAP = 256;

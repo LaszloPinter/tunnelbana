@@ -1,0 +1,165 @@
+/* TOUCH CONTROLS (touch.ts): a thumbstick on the left, buttons on the right,
+   over the canvas. Only the controls themselves take touches; the rest of
+   the overlay lets them through to the game. */
+#tb-touch {
+  position: fixed;
+  inset: 0;
+  z-index: 8;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: none;
+  font-family: 'Barlow', 'Helvetica Neue', Arial, sans-serif;
+}
+#tb-touch.is-hidden {
+  display: none;
+}
+.tb-touch-stick-zone {
+  position: absolute;
+  left: 0;
+  top: 18%;
+  bottom: 0;
+  width: 46%;
+  pointer-events: auto;
+  touch-action: none;
+}
+.tb-touch-base {
+  position: fixed;
+  width: 112px;
+  height: 112px;
+  margin: -56px 0 0 -56px;
+  border-radius: 50%;
+  border: 2px solid rgba(237, 241, 247, 0.28);
+  background: rgba(7, 10, 17, 0.25);
+  opacity: 0;
+  transition: opacity 0.12s;
+  pointer-events: none;
+}
+.tb-touch-base.is-on {
+  opacity: 1;
+}
+.tb-touch-knob {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 52px;
+  height: 52px;
+  margin: -26px 0 0 -26px;
+  border-radius: 50%;
+  background: rgba(237, 241, 247, 0.55);
+}
+
+/* the right thumb's cluster: the big button nearest the thumb */
+.tb-touch-pad {
+  position: absolute;
+  right: max(14px, env(safe-area-inset-right));
+  bottom: 18px;
+  width: 196px;
+  height: 176px;
+}
+.tb-tb {
+  position: absolute;
+  pointer-events: auto;
+  touch-action: none;
+  border-radius: 50%;
+  border: 2px solid rgba(237, 241, 247, 0.35);
+  background: rgba(14, 20, 30, 0.55);
+  color: #edf1f7;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+.tb-tb.is-down {
+  background: rgba(255, 182, 30, 0.45);
+  border-color: #ffb61e;
+}
+.tb-tb-dash {
+  right: 0;
+  bottom: 0;
+  width: 84px;
+  height: 84px;
+  font-size: 15px;
+}
+.tb-tb-stot {
+  right: 92px;
+  bottom: 6px;
+  width: 64px;
+  height: 64px;
+  border-color: rgba(127, 201, 245, 0.6);
+}
+.tb-tb-use {
+  right: 16px;
+  bottom: 96px;
+  width: 58px;
+  height: 58px;
+  font-size: 18px;
+  border-color: rgba(255, 210, 63, 0.6);
+}
+.tb-tb-swap {
+  right: 96px;
+  bottom: 84px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+}
+.tb-touch-top {
+  position: absolute;
+  top: max(10px, env(safe-area-inset-top));
+  right: max(14px, env(safe-area-inset-right));
+  display: flex;
+  gap: 10px;
+}
+.tb-touch-top .tb-tb {
+  position: static;
+}
+.tb-tb-menu {
+  display: none;
+}
+#tb-touch.is-paused .tb-tb-menu {
+  display: grid;
+}
+#tb-touch.is-tutorial .tb-touch-top {
+  display: none;
+}
+.tb-tb-small {
+  width: 52px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* PORTRAIT: the game is landscape; say so instead of drawing it tiny */
+.tb-rotate {
+  display: none;
+}
+@media (orientation: portrait) {
+  .tb-rotate {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: #070a11;
+    color: #edf1f7;
+    pointer-events: auto;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .tb-rotate small {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #79849a;
+    font-weight: 400;
+  }
+  .tb-touch-pad,
+  .tb-touch-top,
+  .tb-touch-stick-zone {
+    display: none;
+  }
+}

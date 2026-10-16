@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import * as C from '../config.ts';
 import type { RouteLeg } from '../core/network.ts';
 import { type Party, type Player } from '../sim/player.ts';
+import { touch } from './dom/touch.ts';
 
 /**
  * The screens that stop the world: the briefing a run starts from, and the
@@ -152,11 +153,18 @@ export function showStartScreen(host: OverlayHost) {
       .text(
         C.GAME_WIDTH / 2,
         btnY + 48,
-        [
-          'WASD move   ·   SPACE dash   ·   MOUSE aim & cast',
-          'RMB / Q STÖT   2 bolt   3 torrent   ·   E buy / exit',
-          'TAB perks   ·   P pause & controls   ·   R restart',
-        ].join('\n'),
+        (touch.active
+          ? [
+              'LEFT THUMB walk   ·   DASH   ·   casting is automatic',
+              'STÖT the shockwave   ·   ⇄ bolt / torrent   ·   E kiosk / exit',
+              'CARD your perks   ·   II pause',
+            ]
+          : [
+              'WASD move   ·   SPACE dash   ·   MOUSE aim & cast',
+              'RMB / Q STÖT   2 bolt   3 torrent   ·   E buy / exit',
+              'TAB perks   ·   G guide   ·   P pause & controls   ·   R restart',
+            ]
+        ).join('\n'),
         {
           fontFamily: 'monospace',
           fontSize: '12px',

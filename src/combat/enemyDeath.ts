@@ -6,7 +6,7 @@ import { addStain } from './hazards.ts';
 import { dist } from '../sim/det.ts';
 import { manaMax, maxHp, nearestPlayer, xpToNext, type Player } from '../sim/player.ts';
 import { LANE_EVERY } from '../core/lanes.ts';
-import { HP_PER_LEVEL, rideXpMul } from '../sim/chain.ts';
+import { HP_PER_LEVEL, rideXpMul, easeOf } from '../sim/chain.ts';
 import { chainFrom } from './laneBolts.ts';
 import { paxCheer, paxSaved } from './paxTalk.ts';
 import { ticketCount } from '../core/cards.ts';
@@ -35,7 +35,8 @@ export function gainXp(ctx: CombatHost, n: number) {
   const party = ctx.run.party;
   // later rides pay more (sim/chain.ts): the build keeps pace with the horde
   // the tutorial's dummies teach the casts, not the level-up
-  if (!ctx.run.tutorial) party.xp += Math.round(n * rideXpMul(ctx.run.ride));
+  // ...and the gentle start pays more a kill, for its fewer kills (chain.ts easeOf)
+  if (!ctx.run.tutorial) party.xp += Math.round((n * rideXpMul(ctx.run.ride)) / easeOf(ctx.run));
   while (party.xp >= party.xpNext) {
     party.xp -= party.xpNext;
     party.level += 1;

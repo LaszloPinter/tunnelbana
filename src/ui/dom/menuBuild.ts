@@ -200,11 +200,10 @@ export function buildMenu(root: HTMLDivElement, state: MenuState, on: MenuHandle
       'p',
       undefined,
       touchOnly
-        ? 'This is a keyboard-and-mouse game, or a controller. It cannot be played by touch. Come back on a computer, or plug a pad into this device.'
-        : 'Initial alpha launch. No sound yet, and single player only. Desktop: keyboard and mouse, or a pad.',
+        ? 'On a phone: turn it sideways. Your left thumb walks, the buttons dash and STÖT, and casting is automatic. Free: no ads, no purchases. Alpha: no sound yet.'
+        : 'Free: no ads, no purchases, ever. The kronor are the game’s own money. Alpha: no sound yet, single player.',
     ),
   );
-  if (touchOnly) notice.classList.add('is-warning');
 
   const foot = el('div', 'tb-foot');
   foot.append(

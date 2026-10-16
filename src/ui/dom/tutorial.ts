@@ -148,6 +148,12 @@ export class Tutorial {
     }
   }
 
+  /** the cap a lesson lights, on this device */
+  private cap(keys: string, pad: string, onTouch: string): string {
+    return this.device === 'keys' ? keys : this.device === 'pad' ? pad : onTouch;
+  }
+  private moveTicks = 0;
+
   private allCapsDone(): boolean {
     return this.caps.filter((c) => c.el.textContent !== '').every((c) => c.done);
   }
@@ -179,13 +185,16 @@ export class Tutorial {
           this.light('A', t.keyDown('A'));
           this.light('S', t.keyDown('S'));
           this.light('D', t.keyDown('D'));
+        } else if (this.device === 'touch') {
+          // no caps to light on glass: half a second of walking is the lesson
+          if (t.input.mx !== 0 || t.input.my !== 0) this.moveTicks += 1;
         } else if (t.pad) {
           this.light('↑', t.pad.ly < -0.5);
           this.light('↓', t.pad.ly > 0.5);
           this.light('←', t.pad.lx < -0.5);
           this.light('→', t.pad.lx > 0.5);
         }
-        done = this.allCapsDone();
+        done = this.device === 'touch' ? this.moveTicks > 30 : this.allCapsDone();
         break;
       }
       case 'aim': {
@@ -193,6 +202,8 @@ export class Tutorial {
           this.pointerTravel += t.pointerMoved;
           if (this.pointerTravel > 120) this.aimed = true;
         } else if (t.pad && Math.hypot(t.pad.rx, t.pad.ry) > 0.5) this.aimed = true;
+        // a phone aims for you (scenes/input.ts autoAim)
+        if (this.device === 'touch') this.aimed = true;
         if (pressed & BTN.fire) this.fired = true;
         this.light('RT', (t.input.held & BTN.fire) !== 0);
         const pic = this.side.firstElementChild;
@@ -201,20 +212,20 @@ export class Tutorial {
         break;
       }
       case 'dash': {
-        this.light(this.device === 'keys' ? 'SPACE' : 'A', (t.input.held & BTN.dash) !== 0);
+        this.light(this.cap('SPACE', 'A', 'DASH'), (t.input.held & BTN.dash) !== 0);
         done = (pressed & BTN.dash) !== 0 || this.allCapsDone();
         break;
       }
       case 'casts': {
         if (pressed & BTN.weapon1) this.cast1 = true;
         if (pressed & (BTN.weapon2 | BTN.weapon3)) this.cast2 = true;
-        this.light(this.device === 'keys' ? '2' : 'LB', (t.input.held & BTN.weapon1) !== 0);
-        this.light(this.device === 'keys' ? '3' : 'RB', (t.input.held & (BTN.weapon2 | BTN.weapon3)) !== 0);
+        this.light(this.cap('2', 'LB', '⇄'), (t.input.held & BTN.weapon1) !== 0);
+        this.light(this.cap('3', 'RB', '⇄'), (t.input.held & (BTN.weapon2 | BTN.weapon3)) !== 0);
         done = this.cast1 && this.cast2;
         break;
       }
       case 'mana': {
-        this.light(this.device === 'keys' ? 'E' : 'X', (t.input.held & BTN.use) !== 0);
+        this.light(this.cap('E', 'X', 'E'), (t.input.held & BTN.use) !== 0);
         const here = asStation(t.sim.placeOf(t.sim.me));
         // ring the nearest machine, so "walk to it" points somewhere
         if (here && here.manaMachines.length > 0) {
@@ -236,7 +247,7 @@ export class Tutorial {
         break;
       }
       case 'stot': {
-        this.light(this.device === 'keys' ? 'Q' : 'LT', (t.input.held & (BTN.ult | BTN.shield)) !== 0);
+        this.light(this.cap('Q', 'LT', 'STÖT'), (t.input.held & (BTN.ult | BTN.shield)) !== 0);
         done = (pressed & (BTN.ult | BTN.shield)) !== 0;
         break;
       }
@@ -261,7 +272,7 @@ export class Tutorial {
         break;
       }
       case 'exit': {
-        this.light(this.device === 'keys' ? 'E' : 'X', (t.input.held & BTN.use) !== 0);
+        this.light(this.cap('E', 'X', 'E'), (t.input.held & BTN.use) !== 0);
         // ring the way out, so "walk to the EXIT" points somewhere
         const st2 = asStation(t.sim.here);
         const me = t.sim.me;

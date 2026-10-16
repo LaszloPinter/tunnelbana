@@ -5,7 +5,7 @@ import { clearSpot } from '../world/walk2d.ts';
 import type { Run } from '../sim/run.ts';
 import type { EntityFrame } from '../core/world.ts';
 import type { EnemyKind } from './types.ts';
-import { rideHpMul, rideSmartChance } from '../sim/chain.ts';
+import { rideHpMul, rideSmartChance, easeOf } from '../sim/chain.ts';
 import { sameFrameAs, type Player } from '../sim/player.ts';
 import { ENEMY_R, type Approach, type CombatHost, type Enemy, type Tempo, type Variant } from './types.ts';
 
@@ -112,8 +112,10 @@ export function spawnEnemy(
   const ride = ctx.run.ride;
   const deep = (1 + 0.1 * stops) * rideHpMul(ride);
   const hpByType: Record<EnemyKind, number> = {
-    runner: (2 + 0.35 * L) * deep,
-    spitter: (2 + 0.3 * L) * deep,
+    // ...and gentler on the party's level than it was (0.35 and 0.3): the
+    // bolt never kept pace with it (sim/chain.ts rideHpMul)
+    runner: (2 + 0.25 * L) * deep,
+    spitter: (2 + 0.2 * L) * deep,
     troll: (30 + 2 * L) * deep,
     spider: (40 + 3 * L) * deep,
     // the king scales with how deep into the night you meet him
@@ -197,7 +199,9 @@ export function spawnEnemy(
     speedMul:
       (1 + Math.min(0.55, t * 0.0012 + ctx.run.stopsTraveled * 0.025) + Math.min(0.2, 0.05 * ride)) *
       paceJitter *
-      varPace,
+      varPace *
+      // slower on the first ride's first stops (sim/chain.ts easeOf)
+      (0.75 + 0.25 * easeOf(ctx.run)),
     smart,
     dodgeAt: 0,
     slide: 0,

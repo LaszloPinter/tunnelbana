@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import type { Fx } from '../combat/fx.ts';
+import * as C from '../config.ts';
 
 /**
  * Draws what the simulation said happened.
@@ -64,6 +65,28 @@ export class FxView {
     }
     if (fx.kind === 'chain') {
       this.pending.push({ fx: { ...fx, points: fx.points.slice() }, at: now + fx.delay });
+      return;
+    }
+    if (fx.kind === 'text') {
+      // a few words, rising a metre and fading in 0.8 s
+      const t = this.scene.add
+        .text(fx.x, fx.y, fx.text, {
+          fontFamily: 'Barlow, Helvetica, Arial, sans-serif',
+          fontSize: '15px',
+          fontStyle: 'bold',
+          color: fx.color,
+          stroke: '#0b0f16',
+          strokeThickness: 3,
+        })
+        .setOrigin(0.5)
+        .setDepth(6.6);
+      this.scene.tweens.add({
+        targets: t,
+        y: fx.y - C.M(1.2),
+        alpha: 0,
+        duration: 800,
+        onComplete: () => t.destroy(),
+      });
       return;
     }
     const x = fx.x;

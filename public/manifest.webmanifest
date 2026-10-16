@@ -1,0 +1,15 @@
+{
+  "name": "Tunnelbana",
+  "short_name": "Tunnelbana",
+  "description": "A top-down action roguelite in the real Stockholm metro.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#070a11",
+  "theme_color": "#0b0f16",
+  "icons": [
+    { "src": "favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

@@ -2,7 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <!-- a phone: added to the home screen it runs fullscreen and landscape -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Tunnelbana" />
     <title>Tunnelbana</title>
     <meta
       name="description"
@@ -49,6 +58,10 @@
       }
       canvas {
         display: block;
+        /* a finger on the game is a control, never a scroll or a zoom */
+        touch-action: none;
+        -webkit-user-select: none;
+        user-select: none;
       }
     </style>
   </head>

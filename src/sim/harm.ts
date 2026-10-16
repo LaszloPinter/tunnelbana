@@ -6,7 +6,7 @@ import { dist } from './det.ts';
 import { dashing, maxHp, type Player } from './player.ts';
 import { PINGS } from './tick.ts';
 import type { Run } from './run.ts';
-import { rideDmgMul } from './chain.ts';
+import { easeOf, rideDmgMul } from './chain.ts';
 
 /**
  * What hurts a commuter, and what it means for the run: damage, going
@@ -40,7 +40,8 @@ export function hurt(
   }
   p.iframesUntil = now + 700;
   // every ride of the chain the horde hits harder (sim/chain.ts)
-  p.health -= n * rideDmgMul(run.ride);
+  // ...and softer on the first ride's first stops (chain.ts easeOf)
+  p.health -= n * rideDmgMul(run.ride) * easeOf(run);
   run.host.feel(p.id, 'hit');
   run.showMsg(reason, now, p);
   // Panic Wave perk: getting hit may shove everything nearby away

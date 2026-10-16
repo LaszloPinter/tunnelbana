@@ -12,13 +12,15 @@ import { pushFx, ring } from './fx.ts';
 import type { CombatHost } from './types.ts';
 import { activePlayers, aimWorld, manaMax, maxHp, type Player } from '../sim/player.ts';
 import { seatDrift } from '../world/trainSeat.ts';
+import { easeOf } from '../sim/chain.ts';
 
 /** one player's own casting: regen, the passives, the trigger, STÖT */
 export function stepPlayerCombat(ctx: CombatHost, p: Player, dt: number, now: number) {
   const m = p.mods;
   // mana trickles back slowly; buying is still the real supply line.
   if (now >= p.nextManaAt) {
-    p.nextManaAt = now + C.MANA_REGEN_MS / m.manaRegen;
+    // ...faster while the first ride is still easing in (sim/chain.ts easeOf)
+    p.nextManaAt = now + (C.MANA_REGEN_MS / m.manaRegen) * easeOf(ctx.run);
     if (p.mana < manaMax(ctx.run.party, p)) p.mana += 1;
   }
 

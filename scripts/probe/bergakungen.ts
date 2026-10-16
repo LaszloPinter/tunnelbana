@@ -16,6 +16,7 @@ import { spawnEnemy } from '../../src/combat/enemies.ts';
 import { onPlatform } from '../../src/world/floor.ts';
 import { clearSpot } from '../../src/world/walk2d.ts';
 import * as C from '../../src/config.ts';
+import { EASE_STOPS } from '../../src/sim/chain.ts';
 
 const faults: string[] = [];
 const sim = new Run(NULL_HOST);
@@ -24,6 +25,9 @@ sim.runSeed = 4;
 sim.station = 'T-Centralen';
 sim.startRun();
 sim.beginRun();
+// met as he usually is, past the first ride's gentle start (sim/chain.ts easeOf):
+// the probe is about his marks, not about the ease
+sim.stopsTraveled = EASE_STOPS;
 goFlat(sim);
 const me = sim.me;
 const edges = new InputEdges();

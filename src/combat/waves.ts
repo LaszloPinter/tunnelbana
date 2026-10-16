@@ -5,7 +5,7 @@ import { activePlayers, alivePlayers } from '../sim/player.ts';
 import { ENEMY_R, type CombatHost } from './types.ts';
 import { asStation } from '../sim/place.ts';
 import type { Station } from '../sim/station.ts';
-import { rideCountMul } from '../sim/chain.ts';
+import { easeOf, rideCountMul } from '../sim/chain.ts';
 // the station's quieter moments, in their own files; re-exported so nothing moves
 export { onTrainMissedAfterClearing } from './missedTrain.ts';
 export { keepDummies } from './dummies.ts';
@@ -68,8 +68,16 @@ function waveSize(ctx: CombatHost, wave: number): number {
   const base = Math.min(11 + Math.floor(t / 45) + Math.floor(ctx.run.stopsTraveled * 0.8), 20);
   const later = 1 + (wave - 1) * 0.3;
   // every ride of the chain the waves grow (sim/chain.ts)
-  return Math.round(
-    base * later * rideCountMul(ctx.run.ride) * partyCountMul(alivePlayers(ctx.run.players).length),
+  // ...and the first ride starts gentle (sim/chain.ts easeOf)
+  return Math.max(
+    3,
+    Math.round(
+      base *
+        later *
+        rideCountMul(ctx.run.ride) *
+        partyCountMul(alivePlayers(ctx.run.players).length) *
+        easeOf(ctx.run),
+    ),
   );
 }
 
@@ -156,7 +164,8 @@ export function beginStationWaves(ctx: CombatHost, now: number) {
   const scatter = Math.round(
     (4 + Math.floor(ctx.run.stopsTraveled * 0.5)) *
       rideCountMul(ctx.run.ride) *
-      partyCountMul(alivePlayers(ctx.run.players).length),
+      partyCountMul(alivePlayers(ctx.run.players).length) *
+      easeOf(ctx.run),
   );
   const hpMul = partyHpMul(alivePlayers(ctx.run.players).length);
   const island = st.platforms[0];
@@ -190,16 +199,23 @@ export function spawnWave(ctx: CombatHost, now: number, arrivedByTrain = false) 
   for (let i = 0; i < n && st.enemies.length < 55; i++) {
     const esc = stairs[i % stairs.length];
     // a pinch of spit from the second wave on, whatever the hour
-    const type = rollEnemyType(ctx, t, arrivedByTrain ? 0.3 : st.wave >= 2 ? 0.15 : t > 45 ? 0.22 : 0, rng);
+    const spit = arrivedByTrain ? 0.3 : st.wave >= 2 ? 0.15 : t > 45 ? 0.22 : 0;
+    const type = rollEnemyType(ctx, t, spit * easeOf(ctx.run), rng);
     // a wave is AWAKE: it comes for you the moment it is up the stairs.
     // Idle spawns meant running the length of the platform to wake the last
     // two, which is a chore, not a fight.
     const spot = safeSpot(ctx, esc.x + (rng() - 0.5) * C.M(3), esc.y - rng() * C.M(2), ENEMY_R + 2);
     spawnEnemy(ctx, type, { kind: 'world' }, spot.x, spot.y, true, 0, 1, hpMul, rng);
   }
-  // the first station's last wave brings one troll, the first real problem,
-  // timed to land just before the class moment
-  if (ctx.run.stopsTraveled === 0 && st.wave === st.waveTotal && st.name !== 'T-Centralen') {
+  // the SECOND station's last wave brings one troll, the first real problem.
+  // At the first, it met players who had not yet learned to back off or
+  // find a machine (from play 2026-10-15: casual players dying at once)
+  if (
+    ctx.run.ride === 0 &&
+    ctx.run.stopsTraveled === 1 &&
+    st.wave === st.waveTotal &&
+    st.name !== 'T-Centralen'
+  ) {
     const cx = (st.platformX0 + st.platformX1) / 2;
     const gy = (st.platforms[0].top + st.platforms[0].bottom) / 2;
     spawnEnemy(
@@ -215,12 +231,13 @@ export function spawnWave(ctx: CombatHost, now: number, arrivedByTrain = false) 
       rng,
     );
   }
-  // THE MID-BOSS (decided in chat 2026-08-25): from the second stop, a
+  // THE MID-BOSS (decided in chat 2026-08-25): from the third stop of the
+  // first ride (the second, before the gentle start of 2026-10-15), a
   // station's last wave brings a cacodaemon, a stalker that only ever
   // lunges, with a station's worth of hp. Not at T-Centralen, which has
   // its king.
   if (
-    (ctx.run.stopsTraveled >= 2 || ctx.run.ride >= 1) &&
+    (ctx.run.stopsTraveled >= 3 || ctx.run.ride >= 1) &&
     st.wave === st.waveTotal &&
     st.name !== 'T-Centralen'
   ) {

@@ -105,6 +105,11 @@ export function stepTunnelAmbush(run: Run, leg: Leg, p: Player, s: number): bool
     leg.cleared = true;
     return false;
   }
+  // NOT WHILE A TRAIN IS PASSING where either side would rise: hatched under
+  // its metal, that side was crushed the same tick and the ambush came from
+  // one way only (probe ambush, seed 6, Mariatorget to Slussen). It waits
+  // for the train to go by, a few seconds, the walker still deep inside.
+  if (underMetal(run, leg, s + NEAR) || underMetal(run, leg, s - NEAR)) return false;
   leg.cleared = true;
   for (const sib of siblings) sib.cleared = true;
 

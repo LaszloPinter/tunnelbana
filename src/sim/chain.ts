@@ -34,7 +34,14 @@ import type { Run } from './run.ts';
  *   score     the banked ride is worth ×2.5 per ride already made
  */
 
-export const rideHpMul = (ride: number): number => 1 + 0.8 * ride + 0.15 * ride * ride;
+/**
+ * The horde's hp, ride by ride: LINEAR. It was quadratic (×4.75 by the
+ * fourth ride, on top of the party's level), and a 41-minute run measured a
+ * plain runner at 0.9 bolts on ride one and 7.8 on ride four, while the
+ * bolt grew 4 to 22 (from play 2026-10-14: "the mobs had so much HP they
+ * took a long time to kill"). Rides still harden by count, damage and wits.
+ */
+export const rideHpMul = (ride: number): number => 1 + 0.45 * ride;
 /** xp comes faster on later rides, so the lanes keep pace with the ramp:
  * with every ride 7–8 stops and every station cleared, the eighth lane pick
  * lands at the end of ride four (~340 kills a ride at first, +35%/ride) */
@@ -48,6 +55,18 @@ export const rideScoreMul = (ride: number): number => {
   for (let i = 0; i < ride; i++) m *= 2.5;
   return m;
 };
+/**
+ * EASY AT THE START (from play 2026-10-15: casual players "dying all the
+ * time"). On the FIRST ride the horde comes in at EASE_FLOOR of itself
+ * (fewer, slower, softer-hitting, fewer spitters) and grows to the whole
+ * horde by its EASE_STOPS-th stop; every later ride is untouched. The xp a
+ * kill pays rises by the same factor, so the build keeps its pace with
+ * fewer bodies to earn it from.
+ */
+export const EASE_FLOOR = 0.45;
+export const EASE_STOPS = 5;
+export const easeOf = (run: { ride: number; stopsTraveled: number }): number =>
+  run.ride > 0 ? 1 : Math.min(1, EASE_FLOOR + ((1 - EASE_FLOOR) * run.stopsTraveled) / EASE_STOPS);
 export const rideSmartChance = (ride: number): number => Math.min(0.9, 0.45 * ride);
 export const rideDark = (ride: number): number => Math.min(0.65, 0.22 * ride);
 

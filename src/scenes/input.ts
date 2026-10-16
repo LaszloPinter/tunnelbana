@@ -3,6 +3,10 @@ import * as C from '../config.ts';
 import { BTN, CHOICE, InputEdges, isSwapChoice, type TickInput } from '../sim/tick.ts';
 import type { Controls } from '../sim/ticks.ts';
 import type { Player } from '../sim/player.ts';
+import { isTouchDevice, takeTap, touch } from '../ui/dom/touch.ts';
+import { autoAimTarget } from './autoAim.ts';
+import type { Device } from '../ui/dom/tutorialStages.ts';
+import type { Run } from '../sim/run.ts';
 
 // single source of truth for keys: the type AND the addKeys() call derive from
 // this list, so they can never drift apart again
@@ -41,6 +45,8 @@ export interface InputScene extends Phaser.Scene {
   viewAngle(): number;
   /** where the local body stands: a stick aims from there */
   playerWorld(): { x: number; y: number };
+  /** the run, for a phone's automatic aim (scenes/autoAim.ts) */
+  readonly sim: Run;
 }
 
 /** the pad's buttons that mean something here, by the standard mapping's index */
@@ -101,7 +107,10 @@ export class InputSampler {
   // ---- the pad ----
   private padNow: PadState | null = null;
   private padWas: PadState | null = null;
-  private lastDevice: 'keys' | 'pad' = 'keys';
+  private lastDevice: Device = isTouchDevice() ? 'touch' : 'keys';
+  /** the weapon the touch swap button last chose: the bolt (1) or the torrent (2) */
+  private touchWeapon = 1;
+  private touchSwapWas = false;
   /** where the right stick last pointed, in the world; kept while it rests */
   private padAim: { x: number; y: number } | null = null;
   private lastPtr = { x: 0, y: 0 };
@@ -146,14 +155,20 @@ export class InputSampler {
   }
 
   padJustDown(name: PadName): boolean {
+    // the touch pause button is a pad's start (ui/dom/touch.ts)
+    if (name === 'start' && takeTap('pause')) return true;
+    // ...and its MENU a pad's back: to the landing, the run saved
+    if (name === 'back' && takeTap('menu')) return true;
     return !!this.padNow?.down[name] && !this.padWas?.down[name];
   }
   padHeld(name: PadName): boolean {
+    // ...and the touch CARD button a pad's Y
+    if (name === 'Y' && touch.card) return true;
     return !!this.padNow?.down[name];
   }
 
   /** which device was touched last: keys and mouse, or a pad */
-  get device(): 'keys' | 'pad' {
+  get device(): Device {
     return this.lastDevice;
   }
   /** the pad's sticks, when one is in hand */
@@ -203,7 +218,8 @@ export class InputSampler {
     // the keys and the mouse, when touched, take the picture back from the pad
     const ptrMoved = pointer.x !== this.lastPtr.x || pointer.y !== this.lastPtr.y;
     this.lastPtr = { x: pointer.x, y: pointer.y };
-    if (held !== 0 || mx !== 0 || my !== 0 || ptrMoved) this.lastDevice = 'keys';
+    // (a finger on a phone moves the pointer too: that is not the keyboard)
+    if (held !== 0 || mx !== 0 || my !== 0 || (ptrMoved && !touch.active)) this.lastDevice = 'keys';
     // THE PAD, on top: a trigger casts, the left stick walks at the pace it
     // is pushed, the right stick aims from the body. Its bits are the same
     // bits, so the sim, the log and the tutorial never learn which it was.
@@ -220,6 +236,25 @@ export class InputSampler {
         my = pad.ly;
       }
     }
+    // TOUCH (ui/dom/touch.ts): the same bits again. The swap button flips
+    // between the bolt and the torrent; casting is automatic (autoAim.ts)
+    let auto: { x: number; y: number } | null = null;
+    if (touch.active) {
+      if (touch.dash) held |= BTN.dash;
+      if (touch.stot) held |= BTN.ult;
+      if (touch.use) held |= BTN.use;
+      if (touch.swap && !this.touchSwapWas) this.touchWeapon = this.touchWeapon === 1 ? 2 : 1;
+      this.touchSwapWas = touch.swap;
+      if (touch.swap) held |= this.touchWeapon === 1 ? BTN.weapon1 : BTN.weapon2;
+      if (mx === 0 && my === 0 && (touch.mx !== 0 || touch.my !== 0)) {
+        mx = touch.mx;
+        my = touch.my;
+        this.lastDevice = 'touch';
+      }
+      auto = autoAimTarget(this.scene.sim);
+      if (auto) held |= BTN.fire;
+      if (touch.dash || touch.stot || touch.use || touch.swap) this.lastDevice = 'touch';
+    }
     // THE KEYS MEAN WHAT THEY LOOK LIKE. The camera turns with the world so
     // the platform you are on lies across the screen, and W is toward the
     // top of the screen whatever bearing that is in Stockholm, so a push
@@ -234,7 +269,7 @@ export class InputSampler {
         y: me.y + (pad.rx * sin + pad.ry * cos) * STICK_AIM,
       };
     }
-    const w = this.lastDevice === 'pad' && this.padAim ? this.padAim : this.scene.pointerWorld();
+    const w = auto ?? (this.lastDevice === 'pad' && this.padAim ? this.padAim : this.scene.pointerWorld());
     return {
       held,
       mx: mx * cos - my * sin,

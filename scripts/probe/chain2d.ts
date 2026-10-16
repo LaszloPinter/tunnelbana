@@ -6,8 +6,9 @@
 //   - the ride was banked and counted, the next destination dealt from HERE
 //   - the world holds for the card, then runs on
 //   - the platform is the horde's again (waves re-armed, bodies on the floor)
-//   - a vätte of the second ride is far tougher than one of the first, and
-//     some of the pack is smart
+//   - a vätte of the second ride is tougher than one of the first (by a
+//     linear ×1.45 since 2026-10-15; rides harden by count, damage and wits
+//     as much as hp), and some of the pack is smart
 //   - cashing out elsewhere keeps the bank plus what is in hand; dying
 //     keeps the bank
 import { NULL_HOST, Run } from '../../src/sim/run.ts';
@@ -133,8 +134,7 @@ for (let seed = 1; seed <= 4; seed++) {
     () => 0.5,
     'plain',
   ).hp;
-  if (hp1 < hp0 * 1.6)
-    faults.push(`seed ${seed}: a second-ride vätte has ${hp1} hp against ${hp0} on the first`);
+  if (hp1 <= hp0) faults.push(`seed ${seed}: a second-ride vätte has ${hp1} hp against ${hp0} on the first`);
   let smart = 0;
   const N = 40;
   let r = 0.01;

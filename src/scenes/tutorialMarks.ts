@@ -4,10 +4,16 @@ import { fromPlatform } from '../world/floor.ts';
 import { asStation } from '../sim/place.ts';
 import { Station } from '../sim/station.ts';
 import type { Run } from '../sim/run.ts';
+import type { DemoScene } from './DemoScene.ts';
+import { GuideView, guideGoal } from './guide.ts';
+import { STRIP_H } from './hudStatus.ts';
+import * as save from '../save.ts';
 
 /**
- * THE TUTORIAL'S MARKS IN THE WORLD: the pulsing "go here" ring the overlay
- * asks for (ui/dom/tutorial.ts marker), and Tutorialstorg's two barriers.
+ * THE MARKS IN THE WORLD: the tutorial's pulsing "go here" ring (ui/dom/
+ * tutorial.ts marker), Tutorialstorg's two barriers, and the live guide
+ * that points the way for the rest of the game (scenes/guide.ts), toggled
+ * with G.
  */
 export class TutorialMarks {
   private readonly ring: Phaser.GameObjects.Arc;
@@ -15,7 +21,11 @@ export class TutorialMarks {
   private fence: Phaser.GameObjects.Graphics | null = null;
   private fenceFor: unknown = null;
 
-  constructor(private readonly scene: Phaser.Scene) {
+  private readonly guide: GuideView;
+  private guideOn = save.load().prefs.guide;
+
+  constructor(private readonly scene: DemoScene) {
+    this.guide = new GuideView(scene, C.GAME_HEIGHT - STRIP_H - 64, C.GAME_WIDTH);
     this.ring = scene.add
       .circle(0, 0, C.M(1.5), 0xffd23f, 0.001)
       .setStrokeStyle(3, 0xffd23f, 0.9)
@@ -25,6 +35,13 @@ export class TutorialMarks {
 
   draw(sim: Run, mark: { x: number; y: number } | null, wallNow: number) {
     this.drawFence(sim);
+    if (this.scene.inputs.justDown('G')) {
+      this.guideOn = !this.guideOn;
+      save.savePrefs({ guide: this.guideOn });
+      this.scene.hostMsg(this.guideOn ? 'Guide on (G)' : 'Guide off (G)');
+    }
+    if (this.guideOn && !mark) this.guide.draw(guideGoal(sim), this.scene.drawnAt(sim.me), wallNow);
+    else this.guide.hide();
     this.ring.setVisible(!!mark);
     if (mark) this.ring.setPosition(mark.x, mark.y).setScale(1 + 0.12 * Math.sin(wallNow / 160));
   }

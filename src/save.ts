@@ -48,6 +48,8 @@ export interface Prefs {
   /** what your commuter looks like (render/look.ts), chosen on the landing;
    * null until the first visit rolls one */
   look: PlayerLook | null;
+  /** the live guide's arrows and tips (scenes/guide.ts), G to toggle */
+  guide: boolean;
 }
 
 export interface Save {
@@ -65,6 +67,7 @@ export const DEFAULT_PREFS: Prefs = {
   tutorialDone: false,
   playedOnce: false,
   look: null,
+  guide: true,
 };
 
 const EMPTY: Save = { best: null, daily: [], prefs: { ...DEFAULT_PREFS } };
