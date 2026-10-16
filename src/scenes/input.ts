@@ -111,6 +111,8 @@ export class InputSampler {
   /** the weapon the touch swap button last chose: the bolt (1) or the torrent (2) */
   private touchWeapon = 1;
   private touchSwapWas = false;
+  /** a phone's facing when it is not casting: the way it last walked (world axes) */
+  private touchLook = { x: 1, y: 0 };
   /** where the right stick last pointed, in the world; kept while it rests */
   private padAim: { x: number; y: number } | null = null;
   private lastPtr = { x: 0, y: 0 };
@@ -290,11 +292,24 @@ export class InputSampler {
         y: me.y + (pad.rx * sin + pad.ry * cos) * STICK_AIM,
       };
     }
+    // A PHONE FACES WHERE IT GOES, or where it casts: the pointer is the
+    // last finger down, the walking thumb as often as not, and the body
+    // turned to stare at it (from play 2026-10-16). Not casting, the aim is
+    // a step ahead along the walk, kept when standing still. A desk is
+    // unchanged: the body faces the mouse.
+    const wx = mx * cos - my * sin;
+    const wy = mx * sin + my * cos;
+    if (touch.active && this.lastDevice !== 'pad' && !auto) {
+      const len = Math.hypot(wx, wy);
+      if (len > 0.05) this.touchLook = { x: wx / len, y: wy / len };
+      const me = this.scene.playerWorld();
+      auto = { x: me.x + this.touchLook.x * STICK_AIM, y: me.y + this.touchLook.y * STICK_AIM };
+    }
     const w = auto ?? (this.lastDevice === 'pad' && this.padAim ? this.padAim : this.scene.pointerWorld());
     return {
       held,
-      mx: mx * cos - my * sin,
-      my: mx * sin + my * cos,
+      mx: wx,
+      my: wy,
       aimX: Math.round(w.x),
       aimY: Math.round(w.y),
     };

@@ -139,6 +139,13 @@ export function installTouch() {
       paused = false;
       root!.classList.remove('is-paused');
     }
+    // A CONTROLLER ON A PHONE (a Bluetooth pad: Safari and Chrome both read
+    // them, scenes/input.ts pollPad): the thumb controls step out of the way
+    const pads = navigator.getGamepads?.() ?? [];
+    root!.classList.toggle(
+      'is-pad',
+      Array.from(pads).some((g) => !!g && g.connected),
+    );
     // the tutorial's SKIP sits where CARD and pause are
     root!.classList.toggle('is-tutorial', !!document.getElementById('tb-tutorial'));
   };

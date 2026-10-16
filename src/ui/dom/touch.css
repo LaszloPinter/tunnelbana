@@ -269,3 +269,10 @@ html.tb-touchdev .tb-rd-keys {
 #tb-touch.is-paused .tb-touch-aim-zone {
   pointer-events: none;
 }
+
+/* a controller is connected: the thumb zones and buttons go, the pad has them */
+#tb-touch.is-pad .tb-touch-stick-zone,
+#tb-touch.is-pad .tb-touch-aim-zone,
+#tb-touch.is-pad .tb-touch-pad {
+  display: none;
+}
