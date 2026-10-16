@@ -7,7 +7,7 @@ import type { Run } from '../sim/run.ts';
 import type { DemoScene } from './DemoScene.ts';
 import { GuideView, guideGoal } from './guide.ts';
 import { STRIP_H } from './hudStatus.ts';
-import * as save from '../save.ts';
+import { guideState, observeLessons, setGuide } from './guideState.ts';
 
 /**
  * THE MARKS IN THE WORLD: the tutorial's pulsing "go here" ring (ui/dom/
@@ -22,7 +22,6 @@ export class TutorialMarks {
   private fenceFor: unknown = null;
 
   private readonly guide: GuideView;
-  private guideOn = save.load().prefs.guide;
 
   constructor(private readonly scene: DemoScene) {
     this.guide = new GuideView(scene, C.GAME_HEIGHT - STRIP_H - 64, C.GAME_WIDTH);
@@ -36,11 +35,11 @@ export class TutorialMarks {
   draw(sim: Run, mark: { x: number; y: number } | null, wallNow: number) {
     this.drawFence(sim);
     if (this.scene.inputs.justDown('G')) {
-      this.guideOn = !this.guideOn;
-      save.savePrefs({ guide: this.guideOn });
-      this.scene.hostMsg(this.guideOn ? 'Guide on (G)' : 'Guide off (G)');
+      setGuide(!guideState.on);
+      this.scene.hostMsg(guideState.on ? 'Guide on (G)' : 'Guide off (G)');
     }
-    if (this.guideOn && !mark) this.guide.draw(guideGoal(sim), this.scene.drawnAt(sim.me), wallNow);
+    observeLessons(sim);
+    if (guideState.on && !mark) this.guide.draw(guideGoal(sim), this.scene.drawnAt(sim.me), wallNow);
     else this.guide.hide();
     this.ring.setVisible(!!mark);
     if (mark) this.ring.setPosition(mark.x, mark.y).setScale(1 + 0.12 * Math.sin(wallNow / 160));

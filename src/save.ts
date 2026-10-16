@@ -50,6 +50,10 @@ export interface Prefs {
   look: PlayerLook | null;
   /** the live guide's arrows and tips (scenes/guide.ts), G to toggle */
   guide: boolean;
+  /** what the guide no longer points out, because it has been done once
+   * (scenes/guideState.ts): kronor picked up, a machine used, a train
+   * boarded, a ride banked */
+  guideLearned: string[];
 }
 
 export interface Save {
@@ -68,6 +72,7 @@ export const DEFAULT_PREFS: Prefs = {
   playedOnce: false,
   look: null,
   guide: true,
+  guideLearned: [],
 };
 
 const EMPTY: Save = { best: null, daily: [], prefs: { ...DEFAULT_PREFS } };

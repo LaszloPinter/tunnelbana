@@ -8,16 +8,20 @@ import { manaMax, maxHp } from '../sim/player.ts';
 import type { Run } from '../sim/run.ts';
 import type { Station } from '../sim/station.ts';
 import { shortName } from '../core/network.ts';
+import { nextArrivalAt } from '../sim/fleetRealise.ts';
+import { knows } from './guideState.ts';
 
 /**
  * THE GUIDE: what to do next, pointed at in the world, all game long, not
  * once in a tutorial (from play 2026-10-15: casual players did not know what
  * to do, where to go, or that the machine was the answer to an empty bar).
  * One goal at a time, in the order a commuter would want it: get off where
- * you change, an EXIT at your stop, a machine when a bar runs low, the doors
- * of your train when it stands open, and otherwise the edge of your track.
- * A ring on the goal, an arrow from you toward it, and one short line.
- * G turns it off and on, and the choice is kept (save.ts prefs.guide).
+ * you change, an EXIT at your stop, a machine when a bar runs low, kronor
+ * on the floor, the doors of your train when it stands open, the right
+ * platform when you are on the wrong one, and a word when your train is
+ * near. A ring on the goal, an arrow from you toward it, and one short
+ * line. What you have done once it stops pointing out (guideState.ts).
+ * G, or the GUIDE button, turns it off and on.
  *
  * Presentation only: it reads the run and never writes to it.
  */
@@ -27,8 +31,19 @@ export interface GuideGoal {
   tip: string;
 }
 
-/** a bar under this share points at its machine */
-const LOW = 0.3;
+/** a bar under this share, and the money to fix it, points at its machine */
+const LOW = 0.5;
+/** your train is "coming" this long before it pulls in */
+const COMING_MS = 15_000;
+
+/** the name a train goes by: the one actually coming, else the board's next */
+function trainName(st: Station, ti: number, fallback: string): string {
+  const rail = st.rails[ti];
+  const j = rail.journey ? journeyById(rail.journey) : undefined;
+  const to = j?.stops.at(-1)?.station ?? rail.current?.terminus ?? fallback;
+  const id = j?.service.id ?? rail.current?.service.id ?? '';
+  return `the ${id} → ${shortName(to)}`;
+}
 
 export function guideGoal(sim: Run): GuideGoal | null {
   const me = sim.me;
@@ -49,10 +64,10 @@ export function guideGoal(sim: Run): GuideGoal | null {
     const j = me.frame.jid ? journeyById(me.frame.jid) : undefined;
     const rightTrain = !!j && !!leg && j.service.id === leg.service.id && j.dir === leg.dir;
     if (standing && !rightTrain && leg)
-      return { at: null, tip: `Get off here: change to the ${leg.service.id} → ${shortName(leg.to)}` };
-    return { at: null, tip: leg ? `Ride on toward ${leg.to}` : `Ride on toward ${sim.destStation}` };
+      return { at: null, tip: `Get off here: change to the ${leg.service.id} toward ${shortName(leg.to)}` };
+    return null;
   }
-  if (!st) return { at: null, tip: `Follow the tunnel to ${leg?.to ?? sim.destStation}` };
+  if (!st) return null;
   const l = onPlatform(st, me.x, me.y);
   const island = l ? st.platformAt(l.y) : -1;
   const nearestOn = (list: { x: number; y: number }[]) => {
@@ -69,19 +84,21 @@ export function guideGoal(sim: Run): GuideGoal | null {
     }
     return best;
   };
-  // YOUR STOP: an EXIT banks the ride
-  if (atGoal) {
-    const exit = nearestOn(st.escalators);
-    return { at: exit, tip: 'Your stop: go to an EXIT and press E to bank the ride' };
+  // YOUR STOP: an EXIT banks the ride (pointed at until the first ride is banked)
+  if (atGoal)
+    return knows('exit')
+      ? { at: null, tip: 'Your stop: an EXIT banks the ride' }
+      : { at: nearestOn(st.escalators), tip: 'Your stop: go to an EXIT and press E to bank the ride' };
+  // A BAR RUNNING LOW, and the money to fix it, until a machine has been used once
+  if (!knows('machine')) {
+    const manaPrice = 20 + st.manaBuysHere * 15;
+    if (me.health < maxHp(me) * LOW && me.money >= 30 && st.healthMachines.length > 0)
+      return { at: nearestOn(st.healthMachines), tip: 'Low health: run past the HEALTH machine to buy some' };
+    if (me.mana < manaMax(sim.party, me) * LOW && me.money >= manaPrice && st.manaMachines.length > 0)
+      return { at: nearestOn(st.manaMachines), tip: 'Low mana: run past the MANA machine to buy some' };
   }
-  // A BAR RUNNING LOW, and money to fix it
-  if (me.health < maxHp(me) * LOW && me.money >= 30 && st.healthMachines.length > 0)
-    return { at: nearestOn(st.healthMachines), tip: 'Low health: run past the HEALTH machine' };
-  if (me.mana < manaMax(sim.party, me) * LOW && me.money >= 20 && st.manaMachines.length > 0)
-    return { at: nearestOn(st.manaMachines), tip: 'Low mana: run past the MANA machine' };
-  // KRONOR ON THE FLOOR, on the first ride while the pocket is light: "is
-  // the yellow dot money?" (from play 2026-10-15)
-  if (sim.ride === 0 && me.money < 40) {
+  // KRONOR ON THE FLOOR, until the first is picked up
+  if (!knows('coin')) {
     let coin: { x: number; y: number } | null = null;
     let cd = C.M(10);
     for (const c of st.coins) {
@@ -100,9 +117,10 @@ export function guideGoal(sim: Run): GuideGoal | null {
   );
   if (ti < 0) return null;
   const rail = st.rails[ti];
+  const name = trainName(st, ti, leg.to);
   const jid = rail.journey;
   const ours = jid ? journeyById(jid) : undefined;
-  // YOUR TRAIN, STANDING OPEN: its nearest doorway
+  // YOUR TRAIN, STANDING OPEN: its nearest doorway, until you have boarded one
   if (
     jid &&
     ours &&
@@ -110,20 +128,25 @@ export function guideGoal(sim: Run): GuideGoal | null {
     rail.train.phase === 'dwell' &&
     rail.train.doorsOpen
   ) {
+    if (knows('board')) return { at: null, tip: `Your train is in: ${name}` };
     const door = nearestDoor(st, ti, jid, me.x, me.y, sim.gameNow);
-    if (door) return { at: door, tip: `Board! The ${leg.service.id} takes you toward ${leg.to}` };
+    if (door) return { at: door, tip: `Board! ${name}, walk in through the open doors` };
   }
-  // otherwise the edge of your track, beside you
+  // ON THE WRONG ISLAND: point at the right one. On the right one, say
+  // nothing until the train is near: pointing you at where you already
+  // stand was "silly" (from play 2026-10-16)
   const pf = st.platforms.findIndex((p) => p.railTop === ti || p.railBottom === ti);
   const plat = st.platforms[pf];
   if (!plat || !l) return null;
-  const edgeY = plat.railTop === ti ? plat.top + C.M(1.5) : plat.bottom - C.M(1.5);
-  const x = Math.max(st.platformX0 + C.M(6), Math.min(st.platformX1 - C.M(6), l.x));
-  const fight = st.enemies.some((e) => e.hp > 0);
-  return {
-    at: fromPlatform(st, x, edgeY),
-    tip: `Your train stops here: the ${leg.service.id} → ${shortName(rail.options.find((o) => o.service.id === leg.service.id)?.terminus ?? leg.to)}${fight ? '. Fight while you wait' : ''}`,
-  };
+  if (island >= 0 && island !== pf) {
+    const edgeY = plat.railTop === ti ? plat.top + C.M(1.5) : plat.bottom - C.M(1.5);
+    const x = Math.max(st.platformX0 + C.M(6), Math.min(st.platformX1 - C.M(6), l.x));
+    return { at: fromPlatform(st, x, edgeY), tip: `Your train goes from the other platform: ${name}` };
+  }
+  const due = nextArrivalAt(st, ti, sim.gameNow);
+  if (due !== null && due - sim.gameNow < COMING_MS)
+    return { at: null, tip: `Your train is coming: ${name}` };
+  return null;
 }
 
 /** the doorway of the train on track `ti` nearest a point, a step out on the platform */

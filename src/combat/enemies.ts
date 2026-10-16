@@ -147,7 +147,9 @@ export function spawnEnemy(
           : variant === 'elite'
             ? 2.2
             : 1;
-  const hp = Math.max(1, Math.round((hpByType[type] + hpBonus) * hpMul * varHp));
+  // softer on the first ride's first stops (sim/chain.ts easeOf)
+  const ease = 0.6 + 0.4 * easeOf(ctx.run);
+  const hp = Math.max(1, Math.round((hpByType[type] + hpBonus) * hpMul * varHp * ease));
   if (variant === 'runt') sizeMul = 0.78;
   if (variant === 'brute') sizeMul = 1.5;
   if (variant === 'stone') sizeMul = 1.2;

@@ -57,13 +57,13 @@ export const rideScoreMul = (ride: number): number => {
 };
 /**
  * EASY AT THE START (from play 2026-10-15: casual players "dying all the
- * time"). On the FIRST ride the horde comes in at EASE_FLOOR of itself
- * (fewer, slower, softer-hitting, fewer spitters) and grows to the whole
- * horde by its EASE_STOPS-th stop; every later ride is untouched. The xp a
- * kill pays rises by the same factor, so the build keeps its pace with
- * fewer bodies to earn it from.
+ * time"). On the FIRST ride the horde comes in at EASE_FLOOR of itself and
+ * grows to the whole horde by its EASE_STOPS-th stop; every later ride is
+ * untouched. It eases how hard each vätte is (hp, the damage it does, its
+ * pace, how many spit) and never how many there are: fewer bodies starved
+ * the build of xp and the pocket of kronor (from play 2026-10-16).
  */
-export const EASE_FLOOR = 0.45;
+export const EASE_FLOOR = 0.4;
 export const EASE_STOPS = 5;
 export const easeOf = (run: { ride: number; stopsTraveled: number }): number =>
   run.ride > 0 ? 1 : Math.min(1, EASE_FLOOR + ((1 - EASE_FLOOR) * run.stopsTraveled) / EASE_STOPS);

@@ -8,6 +8,7 @@ import * as save from './save.ts';
 import { randomPlayerName } from './ui/dom/names.ts';
 import { installCrashReporter, setCrashContext } from './net/crash.ts';
 import { installTouch } from './ui/dom/touch.ts';
+import { installGuideButton } from './ui/dom/guideButton.ts';
 
 // before anything else can go wrong: a crash in a player's browser is reported
 installCrashReporter();
@@ -37,6 +38,8 @@ const game = new Phaser.Game({
 
 // a phone: the thumbstick and buttons over the canvas (ui/dom/touch.ts)
 installTouch();
+// the guide's on/off switch over a run (ui/dom/guideButton.ts)
+installGuideButton();
 
 // dev convenience: poke the running game from the console
 // (game.scene.getScene('demo')) when chasing a frame-time problem, and

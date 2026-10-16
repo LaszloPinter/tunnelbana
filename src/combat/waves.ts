@@ -68,16 +68,11 @@ function waveSize(ctx: CombatHost, wave: number): number {
   const base = Math.min(11 + Math.floor(t / 45) + Math.floor(ctx.run.stopsTraveled * 0.8), 20);
   const later = 1 + (wave - 1) * 0.3;
   // every ride of the chain the waves grow (sim/chain.ts)
-  // ...and the first ride starts gentle (sim/chain.ts easeOf)
-  return Math.max(
-    3,
-    Math.round(
-      base *
-        later *
-        rideCountMul(ctx.run.ride) *
-        partyCountMul(alivePlayers(ctx.run.players).length) *
-        easeOf(ctx.run),
-    ),
+  // (the gentle start eases how hard each one is, never how many there
+  // are: fewer bodies starved the build of xp and the pocket of kronor,
+  // from play 2026-10-16)
+  return Math.round(
+    base * later * rideCountMul(ctx.run.ride) * partyCountMul(alivePlayers(ctx.run.players).length),
   );
 }
 
@@ -164,8 +159,7 @@ export function beginStationWaves(ctx: CombatHost, now: number) {
   const scatter = Math.round(
     (4 + Math.floor(ctx.run.stopsTraveled * 0.5)) *
       rideCountMul(ctx.run.ride) *
-      partyCountMul(alivePlayers(ctx.run.players).length) *
-      easeOf(ctx.run),
+      partyCountMul(alivePlayers(ctx.run.players).length),
   );
   const hpMul = partyHpMul(alivePlayers(ctx.run.players).length);
   const island = st.platforms[0];
