@@ -48,6 +48,10 @@
     />
     <meta name="twitter:image" content="https://teacentralen.com/og.png" />
     <style>
+      html {
+        /* a tap is a tap: no double-tap zoom (iOS ignores user-scalable=no) */
+        touch-action: manipulation;
+      }
       html,
       body {
         margin: 0;

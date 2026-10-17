@@ -62,6 +62,7 @@ let root: HTMLDivElement | null = null;
 export function installTouch() {
   if (root || !isTouchDevice()) return;
   touch.active = true;
+  noZoom();
   // pages can drop what only a keyboard or a pad can do (Enter, Esc)
   document.documentElement.classList.add('tb-touchdev');
   root = document.createElement('div');
@@ -208,6 +209,29 @@ function stick(zone: HTMLDivElement, out: (x: number, y: number, down: boolean) 
   };
   zone.addEventListener('pointerup', end);
   zone.addEventListener('pointercancel', end);
+}
+
+/**
+ * NO ZOOM ON A PHONE (from play 2026-10-17: tapping a button quickly twice
+ * zoomed Safari in, and the game was unplayable after). iOS ignores the
+ * viewport's user-scalable=no, so: the second of two quick taps is cancelled
+ * before Safari reads it as a double tap, and its pinch gesture is refused.
+ * A text field keeps its own taps, or the name could not be typed.
+ */
+function noZoom() {
+  let lastEnd = 0;
+  const typing = (t: EventTarget | null) => t instanceof HTMLInputElement || t instanceof HTMLTextAreaElement;
+  document.addEventListener(
+    'touchend',
+    (e) => {
+      const now = Date.now();
+      if (now - lastEnd < 350 && !typing(e.target)) e.preventDefault();
+      lastEnd = now;
+    },
+    { passive: false },
+  );
+  for (const ev of ['gesturestart', 'gesturechange', 'dblclick'])
+    document.addEventListener(ev, (e) => e.preventDefault(), { passive: false });
 }
 
 /** read a tap once: true the first time after it happened */
