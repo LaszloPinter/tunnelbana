@@ -9,6 +9,7 @@ import { GuideView, guideGoal } from './guide.ts';
 import { STRIP_H } from './hudStatus.ts';
 import { guideState, observeLessons, setGuide, wantsControls } from './guideState.ts';
 import { setControlsHint } from '../ui/dom/controlsHint.ts';
+import { touchPick } from './touchPick.ts';
 
 /**
  * THE MARKS IN THE WORLD: the tutorial's pulsing "go here" ring (ui/dom/
@@ -40,6 +41,8 @@ export class TutorialMarks {
       this.scene.hostMsg(guideState.on ? 'Guide on (G)' : 'Guide off (G)');
     }
     observeLessons(sim);
+    // a phone's pick screens: bigger, and tapped by us (scenes/touchPick.ts)
+    touchPick(this.scene);
     // a picture asking to be tapped (cards to pick, the kiosk, the bag): the
     // thumb zones step aside so the tap reaches it (ui/dom/touch.css is-ui)
     document

@@ -55,7 +55,9 @@ export function installSidewaysInput(game: Phaser.Game) {
   const orig = im.transformPointer.bind(im);
   im.transformPointer = (pointer, pageX, pageY, wasMove) => {
     if (!sideways()) return orig(pointer, pageX, pageY, wasMove);
-    const s = toStage(pageX, pageY);
+    // page to screen: Safari scrolls a fixed page a little (its bars, its
+    // bounce), and the turn is about the screen
+    const s = toStage(pageX - window.scrollX, pageY - window.scrollY);
     const d = deviceRatio();
     pointer.prevPosition.x = pointer.position.x;
     pointer.prevPosition.y = pointer.position.y;

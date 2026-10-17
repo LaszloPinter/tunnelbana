@@ -276,3 +276,15 @@ html.tb-touchdev .tb-rd-keys {
 #tb-touch.is-pad .tb-touch-pad {
   display: none;
 }
+
+/* a pick, the kiosk, the bag: taps go to scenes/touchPick.ts, not the canvas */
+.tb-tap-layer {
+  position: absolute;
+  inset: 0;
+  display: none;
+  pointer-events: auto;
+  touch-action: none;
+}
+.tb-tap-layer.is-on {
+  display: block;
+}
